@@ -399,3 +399,4 @@ F:\eloisnew-master\E.Loi\E.Loi\obj\Debug\net8.0\refint\E.Loi.dll
 F:\eloisnew-master\E.Loi\E.Loi\obj\Debug\net8.0\E.Loi.pdb
 F:\eloisnew-master\E.Loi\E.Loi\obj\Debug\net8.0\E.Loi.genruntimeconfig.cache
 F:\eloisnew-master\E.Loi\E.Loi\obj\Debug\net8.0\ref\E.Loi.dll
+F:\eloisnew-master\E.Loi\E.Loi\obj\Debug\net8.0\E.Loi.sourcelink.json

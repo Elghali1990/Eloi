@@ -55,3 +55,4 @@ F:\eloisnew-master\E.Loi\E.Loi.Services\obj\Debug\net8.0\refint\E.Loi.Services.d
 F:\eloisnew-master\E.Loi\E.Loi.Services\obj\Debug\net8.0\E.Loi.Services.pdb
 F:\eloisnew-master\E.Loi\E.Loi.Services\obj\Debug\net8.0\E.Loi.Services.genruntimeconfig.cache
 F:\eloisnew-master\E.Loi\E.Loi.Services\obj\Debug\net8.0\ref\E.Loi.Services.dll
+F:\eloisnew-master\E.Loi\E.Loi.Services\obj\Debug\net8.0\E.Loi.Services.sourcelink.json

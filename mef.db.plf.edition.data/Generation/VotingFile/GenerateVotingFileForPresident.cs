@@ -31,8 +31,19 @@ public class GenerateVotingFileForPresident(IUnitOfWork _uof, IViewRenderService
             {
                 var amendments = await _uof.Amendmnets.GetAmendmentsForVotingFile(node.Id);
                 node.AmendmentsCount = amendments.Count;
-                var teams = amendments.Select(t => new AmendmentTeam { Id = t.TeamId, TeamName = t.Team.Name }).ToList();
-                node.Teams=teams.DistinctBy(t=>t.Id).ToList();
+                var teams = amendments.Select(t => new AmendmentTeam { Id = t.TeamId, TeamName = t.Team.Name }).DistinctBy(t=>t.Id).ToList();
+                List<AmendmentTeam> amendmentTeams = new();
+                foreach (var team in teams)
+                {
+                    AmendmentTeam amendmentTeam = new()
+                    {
+                        Id = team.Id,
+                        TeamName = team.TeamName,
+                        AmendmentCount=amendments.Count(t=>t.TeamId == team.Id),
+                    };
+                    amendmentTeams.Add(amendmentTeam);
+                }
+                node.Teams = amendmentTeams;
             }
         }
 

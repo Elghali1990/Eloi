@@ -60,7 +60,7 @@
                         <td>
                             @foreach (var team in node.Teams)
                             {
-                                <p>@team.TeamName</p>
+                                <p>@team.TeamName @($" ({team.AmendmentCount})")</p>
                             }
                         </td>
                     </tr>

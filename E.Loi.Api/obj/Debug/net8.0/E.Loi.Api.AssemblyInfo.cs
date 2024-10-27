@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("E.Loi.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8396c34851b5928f3d2c5827a07abd714e7bb8a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("E.Loi.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("E.Loi.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

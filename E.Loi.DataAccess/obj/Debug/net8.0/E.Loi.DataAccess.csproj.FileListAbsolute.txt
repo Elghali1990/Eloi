@@ -46,3 +46,4 @@ F:\eloisnew-master\E.Loi\E.Loi.DataAccess\obj\Debug\net8.0\refint\E.Loi.DataAcce
 F:\eloisnew-master\E.Loi\E.Loi.DataAccess\obj\Debug\net8.0\E.Loi.DataAccess.pdb
 F:\eloisnew-master\E.Loi\E.Loi.DataAccess\obj\Debug\net8.0\E.Loi.DataAccess.genruntimeconfig.cache
 F:\eloisnew-master\E.Loi\E.Loi.DataAccess\obj\Debug\net8.0\ref\E.Loi.DataAccess.dll
+F:\eloisnew-master\E.Loi\E.Loi.DataAccess\obj\Debug\net8.0\E.Loi.DataAccess.sourcelink.json

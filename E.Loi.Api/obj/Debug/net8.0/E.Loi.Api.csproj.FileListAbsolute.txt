@@ -482,3 +482,4 @@ F:\eloisnew-master\E.Loi\E.Loi.Api\obj\Debug\net8.0\scopedcss\bundle\E.Loi.Api.s
 F:\eloisnew-master\E.Loi\E.Loi.Api\obj\Debug\net8.0\E.Loi.Api.csproj.Up2Date
 F:\eloisnew-master\E.Loi\E.Loi.Api\obj\Debug\net8.0\E.Loi.Api.genruntimeconfig.cache
 F:\eloisnew-master\E.Loi\E.Loi.Api\obj\Debug\net8.0\ref\E.Loi.Api.dll
+F:\eloisnew-master\E.Loi\E.Loi.Api\obj\Debug\net8.0\E.Loi.Api.sourcelink.json

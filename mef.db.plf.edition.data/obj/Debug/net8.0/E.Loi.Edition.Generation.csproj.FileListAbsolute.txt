@@ -61,3 +61,4 @@ F:\eloisnew-master\E.Loi\mef.db.plf.edition.data\obj\Debug\net8.0\E.Loi.Edition.
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.data\obj\Debug\net8.0\E.Loi.Edition.Generation.csproj.CoreCompileInputs.cache
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.data\obj\Debug\net8.0\E.Loi.Ed.6542155C.Up2Date
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.data\obj\Debug\net8.0\ref\E.Loi.Edition.Generation.dll
+F:\eloisnew-master\E.Loi\mef.db.plf.edition.data\obj\Debug\net8.0\E.Loi.Edition.Generation.sourcelink.json

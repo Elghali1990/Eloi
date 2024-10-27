@@ -68,6 +68,13 @@ public class AmendmentTeam
         get;
         set;
     }
+
+    public int AmendmentCount
+    {
+        get;
+
+        set;
+    }
 }
 
 

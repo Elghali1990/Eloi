@@ -325,3 +325,4 @@ F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\obj\Debug\net8.0\scopedcss\bundl
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\obj\Debug\net8.0\E.Loi.Ed.3AA79111.Up2Date
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\obj\Debug\net8.0\E.Loi.Edition.Api.genruntimeconfig.cache
 F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\obj\Debug\net8.0\ref\E.Loi.Edition.Api.dll
+F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\obj\Debug\net8.0\E.Loi.Edition.Api.sourcelink.json
