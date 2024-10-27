@@ -1,0 +1,183 @@
+/* _content/E.Loi/Components/Layout/MainLayout.razor.rz.scp.css */
+/* _content/E.Loi/Components/Layout/NavMenu.razor.rz.scp.css */
+/* _content/E.Loi/Components/Layout/Phases.razor.rz.scp.css */
+.card[b-wrebv70cc4], .steps[b-wrebv70cc4] {
+    position: relative;
+    cursor: pointer
+}
+
+.active-space[b-wrebv70cc4] {
+    background: #b32f31;
+    color: #fff;
+    text-align: center !important;
+    font-weight: 600;
+    border-color: #b32f31;
+}
+
+.steps[b-wrebv70cc4]::after {
+    content: '';
+    border: 1px solid #ccc;
+    width: 25px;
+    position: absolute;
+    top: 27px;
+    right: -25px;
+}
+/* _content/E.Loi/Components/Layout/PhasesConsultation.razor.rz.scp.css */
+.card[b-iqtofvhjup], .steps[b-iqtofvhjup] {
+    position: relative;
+    cursor: pointer
+}
+
+.active-space[b-iqtofvhjup] {
+    background: #b32f31;
+    color: #fff;
+    text-align: center !important;
+    font-weight: 600;
+    border-color: #b32f31;
+}
+
+.steps[b-iqtofvhjup]::after {
+    content: '';
+    border: 1px solid #ccc;
+    width: 25px;
+    position: absolute;
+    top: 27px;
+    right: -25px;
+}
+/* _content/E.Loi/Components/Pages/Amendments/AmendmentsList.razor.rz.scp.css */
+table thead tr th[b-f6in770k9x] {
+    font-size: 12px !important;
+    font-weight: 600;
+    border-top: 1px solid #dee2e6;
+}
+
+    table thead tr th input[b-f6in770k9x], table thead tr th select[b-f6in770k9x] {
+        font-size: 11px !important;
+        color: #000 !important;
+        font-weight: 700 !important;
+    }
+
+.pagination li a[b-f6in770k9x] {
+    padding: 5px 10px !important;
+}
+/* _content/E.Loi/Components/Pages/Amendments/PublicAmendmentsList.razor.rz.scp.css */
+.pagination li a[b-0nrk7e95cv] {
+    padding: 5px 10px !important;
+}
+
+input[b-0nrk7e95cv] {
+    font-size: 12px !important
+}
+
+table thead tr th[b-0nrk7e95cv] {
+    vertical-align: middle !important;
+    font-size: 11px
+}
+/* _content/E.Loi/Components/Pages/Laws/EditLaw.razor.rz.scp.css */
+.modal-footer[b-ee0vs9fprd] {
+    justify-content: center;
+}
+
+.dropdown-item[b-ee0vs9fprd] {
+    font-size: 12px;
+    font-weight: 700
+}
+
+    .dropdown-item i[b-ee0vs9fprd] {
+        font-size: 12px;
+    }
+
+.img-print[b-ee0vs9fprd] {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+/* _content/E.Loi/Components/Pages/Laws/FollowLaws.razor.rz.scp.css */
+.pagination li a[b-y1uk0l0e1g] {
+    padding: 5px 10px !important;
+}
+
+.item.selected[b-y1uk0l0e1g] {
+    background-color: #f1c40f !important;
+}
+
+.count-Amendmentelement[b-y1uk0l0e1g] {
+    background: #f1c40f3d;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* _content/E.Loi/Components/Pages/Laws/SpaceTeams.razor.rz.scp.css */
+.btn-check:checked + .btn[b-6fx93ymlx5], .btn.active[b-6fx93ymlx5], .btn.show[b-6fx93ymlx5], .btn:first-child:active[b-6fx93ymlx5], :not(.btn-check) + .btn:active[b-6fx93ymlx5] {
+    background-color: #f8f9fa !important;
+    border-color: #fff !important;
+    color: #000 !important;
+}
+
+.pagination li a.page-link[b-6fx93ymlx5], .pagination li a[b-6fx93ymlx5] {
+    font-size: 14px;
+    padding: 7px 12px !important;
+}
+
+element.style[b-6fx93ymlx5] {
+}
+
+.list-group-item[b-6fx93ymlx5] {
+    margin-bottom: 5px;
+}
+
+    .list-group-item + .list-group-item[b-6fx93ymlx5] {
+        border-top-width: 1px;
+        margin-bottom: 5px;
+    }
+
+    .list-group-item:first-child[b-6fx93ymlx5], .list-group-item + .list-group-item[b-6fx93ymlx5] {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+/* _content/E.Loi/Components/Pages/Statistics/Statistics.razor.rz.scp.css */
+.rz-tabview-panel[b-3ggulfhtoa] {
+    padding: 15px 0 !important;
+    overflow: hidden
+}
+
+.pagination li a[b-3ggulfhtoa] {
+    padding: 5px 10px !important;
+}
+
+.item.selected[b-3ggulfhtoa] {
+    background-color: #f1c40f !important;
+}
+
+table thead th[b-3ggulfhtoa] {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.th-background[b-3ggulfhtoa] {
+    background-color: #caf0f8 !important;
+    vertical-align: middle
+}
+
+.rz-tabview-nav li a[b-3ggulfhtoa] {
+    letter-spacing: 0;
+    font-weight: 600;
+    color: #000;
+}
+/* _content/E.Loi/Components/Pages/Utils/TreeView.razor.rz.scp.css */
+.item.selected[b-voy8pamdz1] {
+    background-color: #f1c40f !important;
+}
+
+ul li a[b-voy8pamdz1] {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+ul li a i[b-voy8pamdz1]{
+    font-size: 18px;
+}
+

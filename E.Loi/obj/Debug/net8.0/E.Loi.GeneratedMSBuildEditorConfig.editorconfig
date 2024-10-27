@@ -1,0 +1,239 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = E.Loi
+build_property.RootNamespace = E.Loi
+build_property.ProjectDir = F:\eloisnew-master\E.Loi\E.Loi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\eloisnew-master\E.Loi\E.Loi
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/DownloadWord.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRG93bmxvYWRXb3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/EditLawTreeView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRWRpdExhd1RyZWVWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/LawTreview.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTGF3VHJldmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/Loading.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9hZGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/LoadingSpinner.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9hZGluZ1NwaW5uZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/MapsNodeParent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFwc05vZGVQYXJlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/ReferenceLaw.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVmZXJlbmNlTGF3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/UnderMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVW5kZXJNZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/_404.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcXzQwNC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/AmendmentDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXEFtZW5kbWVudERldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/Amendments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXEFtZW5kbWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/BrowsAmendments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXEJyb3dzQW1lbmRtZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/ChangeAmendmentTeam.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXENoYW5nZUFtZW5kbWVudFRlYW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/OrderAmendments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXE9yZGVyQW1lbmRtZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/ReassignmentAmendment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXFJlYXNzaWdubWVudEFtZW5kbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/SuiviAmendments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXFN1aXZpQW1lbmRtZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/UploadAmendment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXFVwbG9hZEFtZW5kbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Echange/Echange.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFY2hhbmdlXEVjaGFuZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Edition/Print.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFZGl0aW9uXFByaW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Home/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lXEhvbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/AddLaw.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEFkZExhdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/BrowseReferences.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEJyb3dzZVJlZmVyZW5jZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/BrowsLaw.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEJyb3dzTGF3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/EditLawContent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEVkaXRMYXdDb250ZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/FollowTextLaws.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEZvbGxvd1RleHRMYXdzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/LawInformations.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXExhd0luZm9ybWF0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/ProposalsLaws.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXFByb3Bvc2Fsc0xhd3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Statistics/LawStatistic.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGF0aXN0aWNzXExhd1N0YXRpc3RpYy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Statistics/TableStatistic.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGF0aXN0aWNzXFRhYmxlU3RhdGlzdGljLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/SubmitedLaws/TextSubmitedToChamberAdvisors.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdWJtaXRlZExhd3NcVGV4dFN1Ym1pdGVkVG9DaGFtYmVyQWR2aXNvcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Teams/Teams.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUZWFtc1xUZWFtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/TrackSystem/TrackSystem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFja1N5c3RlbVxUcmFja1N5c3RlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Users/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2Vyc1xVc2Vycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Utils/GetRefeence.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVdGlsc1xHZXRSZWZlZW5jZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Utils/LawDocuments.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVdGlsc1xMYXdEb2N1bWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Utils/NodeContent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVdGlsc1xOb2RlQ29udGVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Vote/EnterVote.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RlXEVudGVyVm90ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Vote/Vote.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RlXFZvdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Vote/VoteAmendmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RlXFZvdGVBbWVuZG1lbnRzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wzy8s1seik
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-f2nkb8fkii
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/Phases.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUGhhc2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-wrebv70cc4
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Layout/PhasesConsultation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUGhhc2VzQ29uc3VsdGF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-iqtofvhjup
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/AmendmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXEFtZW5kbWVudHNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-f6in770k9x
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Amendments/PublicAmendmentsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbWVuZG1lbnRzXFB1YmxpY0FtZW5kbWVudHNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0nrk7e95cv
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/EditLaw.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEVkaXRMYXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ee0vs9fprd
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/FollowLaws.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXEZvbGxvd0xhd3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y1uk0l0e1g
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Laws/SpaceTeams.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXdzXFNwYWNlVGVhbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6fx93ymlx5
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Statistics/Statistics.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGF0aXN0aWNzXFN0YXRpc3RpY3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3ggulfhtoa
+
+[F:/eloisnew-master/E.Loi/E.Loi/Components/Pages/Utils/TreeView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVdGlsc1xUcmVlVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-voy8pamdz1

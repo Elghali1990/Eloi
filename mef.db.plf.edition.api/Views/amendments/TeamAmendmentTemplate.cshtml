@@ -1,0 +1,101 @@
+﻿@using E.Loi.Edition.Generation.Generation.amendment.ViewModels
+@model AmendmentsTemplate
+
+@{
+    int width1 = 35;
+    int width2= 35;
+    int width3 = 30;
+    string titreOriginal = "النص كما جاء في المشروع";
+    string intent = string.Empty;
+    if (Model.Intent == "إضافة")
+    {
+        titreOriginal = "النص الأصلي";
+    }
+    if (string.IsNullOrEmpty(Model.OriginalContent) || string.IsNullOrEmpty(Model.OriginalContent.Trim())){
+
+        width2= 60;
+        width3= 40;  
+    }    
+}
+<style>
+        .content-node table {
+            font-size: 0.43rem !important;
+            width:100% !important;
+        }
+
+        .content-node table tr td{
+            margin: 2px !important;
+            padding: 1px !important;
+        }
+        .content-node table tr td span{
+            margin: 2px !important;
+            padding: 1px !important;
+        }
+        .content-node table tr td p{
+            margin: 2px !important;
+            padding: 1px !important;
+        }
+</style>
+
+<table dir="rtl" style="width:100%;">
+    <tr>
+        <th style="width:30%;height:30px;text-align:right;border:none">
+            <bold> التعديل رقم : @Model.Number</bold><br />
+            <bold>  رقم النظام : @Model.NumberSystem</bold>
+            </th>
+        <th style="width:40%;height:30px;text-align:center;border:none">
+            <bold>@Model.Team</bold><br/>
+            <bold style="text-decoration:underline">@Model.AmendmentTitle</bold>
+            
+        </th>
+        <th style="width:30%;height:30px;text-align:left;border:none"> <bold>نوع التعديل : @Model.Intent</bold> </th>
+    </tr>
+</table>
+<br />
+
+<table dir="rtl" style="width:100%;border:1px solid black;min-height:500px;border-collapse: collapse;">
+    <thead>
+        <tr>
+            @if (!string.IsNullOrEmpty(Model.OriginalContent) && !string.IsNullOrEmpty(Model.OriginalContent.Trim()))
+            {
+                <th style="width:@width1%;background-color:lightgray;border:1px solid black;height:30px;">@titreOriginal</th>
+            }
+            <th style="width:@width2%;background-color:lightgray;border:1px solid black;height:30px;">نص التعديل</th>
+            <th style="width:@width3%;background-color:lightgray;border:1px solid black;height:30px;">التعليل</th>
+        </tr>
+    </thead>
+    <tbody style="height:500px;">
+        <tr>
+            @if (!string.IsNullOrEmpty(Model.OriginalContent) && !string.IsNullOrEmpty(Model.OriginalContent.Trim()))
+            {
+                <td style="width:@width1%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 20px !important;">
+                    <div style="margin:5px">
+                        <div class="content-node">
+                            <div style="text-align:center!important">
+                                @Model.LabelNode
+                            </div>
+                            @Model.OriginalContent
+                        </div>
+                    </div>
+                </td>
+            }
+            <td style="width:@width2%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 20px !important;">
+                <div style="margin:5px">
+                    <div class="content-node">
+                        <div style="text-align:center!important">
+                            @Model.LabelNode
+                        </div>
+                        @Model.Content
+                    </div>
+                </div>
+            </td>
+            <td style="width:@width3%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 20px !important;">
+                <div style="margin:5px">
+                    <div class="content-node">
+                        @Model.Justification
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

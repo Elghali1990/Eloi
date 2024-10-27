@@ -1,0 +1,21 @@
+.card[b-lktqev39yf], .steps[b-lktqev39yf] {
+    position: relative;
+    cursor: pointer
+}
+
+.active-space[b-lktqev39yf] {
+    background: #b32f31;
+    color: #fff;
+    text-align: center !important;
+    font-weight: 600;
+    border-color: #b32f31;
+}
+
+.steps[b-lktqev39yf]::after {
+    content: '';
+    border: 1px solid #ccc;
+    width: 25px;
+    position: absolute;
+    top: 27px;
+    right: -25px;
+}

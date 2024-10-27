@@ -1,0 +1,287 @@
+[
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintAmendmentsController",
+    "Method": "printTeamAmendments",
+    "RelativePath": "api/PrintAmendments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.SetAmendData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "printTeamAmendments"
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintAmendmentsController",
+    "Method": "printVoteAmendmentsResult",
+    "RelativePath": "api/PrintAmendments/printVoteAmendmentsResult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "outType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintAmendmentsController",
+    "Method": "printVotingFileCommission",
+    "RelativePath": "api/PrintAmendments/printVotingFileCommission",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "outType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "includeAmendmentRatraper",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintNodesController",
+    "Method": "Generate",
+    "RelativePath": "api/PrintNodes/generate/{LawId}/{PhaseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintNodesController",
+    "Method": "PrintEditorContent",
+    "RelativePath": "api/PrintNodes/printEditorContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editorContent",
+        "Type": "E.Loi.DataAccess.Vm.Editor.EditorContent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.PrintNodesController",
+    "Method": "printNode",
+    "RelativePath": "api/PrintNodes/printNode/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.TextLawController",
+    "Method": "generateTextLaw",
+    "RelativePath": "api/TextLaw/generateTextLaw",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "outType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.VotingFileSessionController",
+    "Method": "generateVotingFile",
+    "RelativePath": "api/VotingFileSession/generateVotingFile/{LawId}/{sectionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "sectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "outType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E.Loi.Edition.Api.Controllers.VotingFileSessionController",
+    "Method": "printVotingFileForPresident",
+    "RelativePath": "api/VotingFileSession/printVotingFileForPresident/{LawId}/{sectionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "sectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "outType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Byte[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

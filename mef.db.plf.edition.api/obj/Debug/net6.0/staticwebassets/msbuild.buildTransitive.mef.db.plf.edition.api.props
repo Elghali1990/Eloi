@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\mef.db.plf.edition.api.props" />
+</Project>

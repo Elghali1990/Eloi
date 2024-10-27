@@ -1,0 +1,65 @@
+﻿@inject ILogger<EnterVote> _logger
+
+<div class="modal fade" id="ModalVote" tabindex="-1" aria-labelledby="ModalVoteNodeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <EditForm Model="vote" FormName="formSetVote" OnValidSubmit="SetVoteResult">
+                <div class="modal-header">
+                    <p style="font-size: 16px;color:#000;margin-bottom: 0;">
+                        <Icon Type="edit" Theme="outline" />
+                        إدخال نتيجة التصويت
+                    </p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="row">
+                        <div class="col-md-12 mb-2">
+                            <label class="form-label">الموافقون</label>
+                            <input type="number" class="form-control" placeholder="موافقون" @bind-value="vote.InFavor" />
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label class="form-label">المعارضون</label>
+                            <input type="number" class="form-control" placeholder="معارضون" @bind-value="vote.Against" />
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label class="form-label">الممتنعون</label>
+                            <input type="number" class="form-control" placeholder="ممتنعون" @bind-value="vote.Neutral" />
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label class="form-label">نتيجة التصويت</label>
+                            <select class="form-select" @bind="vote.Result">
+                                <option selected>إختر من القائمة</option>
+                                <option value="VALID">مقبول</option>
+                                <option value="PARTIAL">مقبول جزءيا</option>
+                                <option value="REJECT">غير مقبول</option>
+                                <option value="UNANIMOUS">بالإجماع</option>
+                                <option value="CONSENSUS">توافقي</option>
+                                <option value="SUPPRESSED">مسحوب</option>
+                                <option value="َATTACHED">متشبث به</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">ملاحظات</label>
+                            <textarea class="form-control" placeholder="ملاحظات" rows="4" @bind="vote.Observation"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><Icon Type="close" Theme="outline" /> إخفاء</button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <Icon Type="check" Theme="outline" /> حفظ
+                        @if (IsProcessing)
+                        {
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span class="visually-hidden" role="status">Loading...</span>
+                        }
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+

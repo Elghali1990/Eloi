@@ -1,0 +1,20 @@
+﻿@inject ILogger<Phases> _logger
+<div class="phases py-3 px-5" style="background: #b32f31;margin-top: -16px;">
+    @foreach (var phase in phases)
+    {
+        <p class="d-inline mx-3 pointer-event" onclick="@(()=>TogglePhase(phase.Id))" style="cursor: pointer;">
+            @if (phase.IsActive != string.Empty)
+            {
+                <i class="fa-solid fa-check text-white ml-10" style="font-size: 20px;position: relative;top: 2px; margin-left: 5px"></i>
+            }
+            else
+            {
+                <i class="fa-solid fa-rotate ml-10" style="font-size: 20px;position: relative;top: 2px; margin-left: 5px"></i>
+            }
+            <span class="@(phase.IsActive != string.Empty?"text-white":"")">@phase.Label</span>
+        </p>
+    }
+</div>
+
+
+

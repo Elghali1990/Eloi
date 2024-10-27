@@ -1,0 +1,15 @@
+table thead tr th[b-5f5gr6bdnt] {
+    font-size: 12px !important;
+    font-weight: 600;
+    border-top: 1px solid #dee2e6;
+}
+
+    table thead tr th input[b-5f5gr6bdnt], table thead tr th select[b-5f5gr6bdnt] {
+        font-size: 11px !important;
+        color: #000 !important;
+        font-weight: 700 !important;
+    }
+
+.pagination li a[b-5f5gr6bdnt] {
+    padding: 5px 10px !important;
+}

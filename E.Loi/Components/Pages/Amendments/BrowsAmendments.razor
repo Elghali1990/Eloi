@@ -1,0 +1,49 @@
+﻿@inject ILogger<BrowsLaw> _logger
+
+<div class="offcanvas offcanvas-start w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasBrowsAmendment" aria-labelledby="canvasBrowsLawLabel">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title text-danger fw-bolder" id="canvasBrowsLawLabel">@LawTitle</h6>
+        <button type="button" class="btn-close" onclick="@(()=>CloseCanvase())"></button>
+    </div>
+    <div class="offcanvas-body">
+        @if (isLoadToBrowse)
+        {
+            <div class="position-relative" style="">
+                <div class="w-25" style="margin: 20% auto 0;">
+                    <Loading />
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <Phases PhaseIds="@(new List<string>(){IdPhase})" EventTogglePhase="phases=>ChangePhaseLaw(phases)" />
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <p style="margin-bottom: 0;">النص القانوني</p>
+                        </div>
+                        <div class="card-body" style="height: 79vh !important; overflow-y: auto !important;">
+
+                            <ul class="tree-view list-unstyled">
+                                <LawTreview nodes="nodes"
+                                              OnSelect="node => DisplayAllAmendments(node.Id)"></LawTreview>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    @if (showAmendmentList)
+                    {
+                        <PublicAmendmentsList NodeId="@IdNode" />
+                    }
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+

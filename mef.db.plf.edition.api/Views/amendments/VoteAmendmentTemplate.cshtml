@@ -1,0 +1,248 @@
+﻿ @using E.Loi.Edition.Generation.VMs.amendment
+    @model AmendmentVM;
+@{
+    int width1 = 35;
+    int width2 = 35;
+    int width3 = 30;
+    string titreOriginal = "النص كما جاء في المشروع";
+    if (Model.type.Trim() == "تتميم")
+    {
+        titreOriginal = "النص الأصلي";
+    }
+    if (string.IsNullOrEmpty(Model.originalContent) || string.IsNullOrEmpty(Model.originalContent.Trim()))
+    {
+
+        width2 = 60;
+        width3 = 40;
+    }
+
+    string GetAmendmentIntent(string AmendmentIntent) => AmendmentIntent switch
+    {
+        "MODIFICATION" => "تغيير أو تتميم",
+        "DELETION" => "نسخ",
+        _ => "تتميم"
+    };
+}
+
+<style>
+    p,
+    span {
+        line-break: anywhere !important;
+    }
+
+    .content-node table {
+        font-size: 0.43rem !important;
+        width: 100% !important;
+    }
+
+        .content-node table tr td {
+            margin: 2px !important;
+            padding: 1px !important;
+        }
+
+            .content-node table tr td span {
+                margin: 2px !important;
+                padding: 1px !important;
+            }
+
+            .content-node table tr td p {
+                margin: 2px !important;
+                padding: 1px !important;
+            }
+
+    ul li > ul li {
+        display: inline;
+    }
+</style>
+
+
+<table dir="rtl" style="width:100%;">
+    <tr>
+        <th style="width:30%;height:30px;text-align:right;border:none">
+            <p style="font-weight:bold !important;margin:0"> رقم التعديل بالفريق : @Model.number</p>
+            <p style="font-weight:bold !important;margin:0"> رقم التعديل بالنظام: @Model.numberSystem</p>
+            <p style="font-weight:bold !important;margin:0"> الرقم الترتيبي : @Model.ordre</p>
+        </th>
+        <th style="width:40%;height:30px;text-align:center;border:none">
+            <bold>@Model.teamTitle</bold><br />
+            <bold style="text-decoration:underline">@Model.titleParagraphe</bold>
+        </th>
+        <th style="width:30%;height:30px;text-align:left;border:none">
+            <bold>نوع التعديل : @GetAmendmentIntent(Model.type)</bold>
+        </th>
+    </tr>
+</table>
+<br />
+<table dir="rtl" style="width:100%;border:1px solid black;min-height:500px;border-collapse: collapse;">
+    <thead>
+        <tr>
+            @if (!string.IsNullOrEmpty(Model.originalContent) &&
+            !string.IsNullOrEmpty(Model.originalContent.Trim()))
+            {
+                <th style="width:@width1%;background-color:lightgray;border:1px solid black;height:30px;text-align:center">
+                    @titreOriginal
+                </th>
+            }
+            <th style="width:@width2%;background-color:lightgray;border:1px solid black;height:30px;text-align:center">
+                نص التعديل
+            </th>
+            <th style="width:@width3%;background-color:lightgray;border:1px solid black;height:30px;text-align:center">
+                التعليل
+            </th>
+        </tr>
+    </thead>
+    <tbody style="">
+        <tr>
+            @if (!string.IsNullOrEmpty(Model.originalContent) &&
+            !string.IsNullOrEmpty(Model.originalContent.Trim()))
+            {
+                <td style="width:@width1%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 16px !important;">
+                    <div style="margin:5px;line-break:anywhere">
+                        <div class="content-node">
+                            <div style="text-align:center!important">
+                                @Model.NodeTitle
+                            </div>
+                            @Model.originalContent.Replace("&quot;", "")
+                        </div>
+                    </div>
+                </td>
+            }
+            <td style="width:@width2%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 16px !important;">
+                <div style="margin:5px;line-break:anywhere">
+                    <div class="content-node">
+                        <div style="text-align:center!important">
+                            @Model.NodeTitle
+                        </div>
+                        @Model.content.Replace("&quot;", "")
+                    </div>
+                </div>
+            </td>
+            <td style="width:@width3%;border:1px solid black;min-height:500px;text-align:justify;vertical-align:top;font-family: Sakkal Majalla !important;direction: rtl !important;font-size: 16px !important;">
+                <div style="margin:5px;line-break:anywhere">
+                    <div class="content-node">
+                        @Model.justification.Replace("&quot;", "")
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table dir="rtl" style="width:100%;border:1px solid black;border-collapse: collapse;border-top:none">
+    <thead style="border-style: solid; border-width: 1px; border-top: none;min-height:30px">
+        <tr>
+            <th style="width: 30%; border-left: 1px solid #000; background-color: lightgray; text-align: center; font-size: 16px ">
+                موقف الحكومة
+            </th>
+            <th style="width: 70%; background-color: lightgray;text-align:center;font-size:16px">نتيجة التصويت</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border-left: 1px solid #000;">
+                <div style="margin: 5px ;">
+                    @Model.governmentPosition
+                </div>
+            </td>
+            <td>
+                <ul style="margin: 5px ;">
+                    <li style="font-size:16px;font-weight:bold">
+                        الموافقون : @if (Model.result != "" && Model.inFavor == null)
+                        {
+                            <span>لا أحد</span>
+                        }
+                        else
+                        {
+                            @Model.inFavor
+                        }
+                    </li>
+                    <li style="font-size:16px;font-weight:bold">
+                        المعارضون : @if (Model.result != "" && Model.against == null)
+                        {
+                            <span>لا أحد</span>
+                        }
+                        else
+                        {
+                            @Model.against
+                        }
+                    </li>
+                    <li style="font-size:16px;font-weight:bold">
+                        الممتنعون : @if (Model.result != "" && Model.neutral == null)
+                        {
+                            <span>لا أحد</span>
+                        }
+                        else
+                        {
+                            @Model.neutral
+                        }
+                    </li>
+                    <li style="font-size:16px;font-weight:bold">
+                        <span style="font-size: 16px;">نتيجة اللتصويت</span>
+                        <ul>
+                            <li>
+
+                                <ul style="list-style: none;">
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">مقبول&nbsp&nbsp</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">
+                                            مقبول&nbsp&nbsp
+                                            جزئيا
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">
+                                            غير&nbsp&nbsp
+                                            مقبول
+                                        </label>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">بالإجماع&nbsp&nbsp</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">توافقي&nbsp&nbsp</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">مسحوب&nbsp&nbsp</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="scales" name="scales"
+                                               style="width: 25px;height: 25px;" />
+                                        <label for="scales"
+                                               style="position: relative;top: -5px;font-size: 16px;">
+                                            متشبث&nbsp&nbsp
+                                            به
+                                        </label>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <br />
+                <br />
+                <br />
+            </td>
+        </tr>
+    </tbody>
+</table>

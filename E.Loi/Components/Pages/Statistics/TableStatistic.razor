@@ -1,0 +1,51 @@
+﻿
+<HeadContent>
+    <style>
+        .td-background {
+            background-color: #dce6f1
+        }
+    </style>
+</HeadContent>
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th style="width:40%;background:#dce6f1"></th>
+            <th style="width:15%;background:#dce6f1">التعديلات المقبولة</th>
+            <th style="width:15%;background:#dce6f1">التعديلات المرفوضة</th>           
+            <th style="width:15%;background:#dce6f1">التعديلات المسحوبة</th>
+            <th style="width:15%;background:#dce6f1">المجموع</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var amendment in amendments)
+        {
+            <tr>
+                <td>@amendment.TeamName</td>
+                <td>@amendment.Rejected</td>
+                <td>@amendment.Accepted</td>
+                <td>@amendment.Suppressed</td>
+                <td>@amendment.Totale</td>
+
+            </tr>
+        }
+        <tr>
+            <td style="background:#dce6f1">المجموع</td>
+            <td style="background:#dce6f1">@amendments.Sum(amd => amd.Accepted)</td>
+            <td style="background:#dce6f1">@amendments.Sum(amd => amd.Rejected)</td>          
+            <td style="background:#dce6f1">@amendments.Sum(amd => amd.Suppressed)</td>
+            <td style="background:#dce6f1">@amendments.Sum(amd => amd.Totale)</td>
+        </tr>
+    </tbody>
+</table>
+
+@code {
+    [Parameter]
+    public List<StatisticAmendment> amendments
+    {
+        get;
+        set;
+    }
+}

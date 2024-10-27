@@ -1,0 +1,29 @@
+﻿.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+    background-color: #f8f9fa !important;
+    border-color: #fff !important;
+    color: #000 !important;
+}
+
+.pagination li a.page-link, .pagination li a {
+    font-size: 14px;
+    padding: 7px 12px !important;
+}
+
+element.style {
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+}
+
+    .list-group-item + .list-group-item {
+        border-top-width: 1px;
+        margin-bottom: 5px;
+    }
+
+    .list-group-item:first-child, .list-group-item + .list-group-item {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }

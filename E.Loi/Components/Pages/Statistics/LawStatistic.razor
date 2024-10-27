@@ -1,0 +1,66 @@
+﻿@page "/law-statistic"
+@inject ILogger<LawStatistic> _logger
+
+<div class="container-fluid">
+    <div class="">
+        <UnderMenu pageName="إحصائيات" />
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label class="form-label">اللجنة  :</label>
+                    <select class="form-select" @onchange="@((e)=>getLaws(e))">
+                        <option selected> إختر اللجنة </option>
+                        @foreach (var com in commissions)
+                        {
+                            <option value="@com.Id">@com.Label</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="form-label">النصوص القانونية  :</label>
+                    <select class="form-select" @onchange="@((e)=>getLawPhases(e))">
+                        <option selected> إختر النص </option>
+                        @foreach (var law in laws)
+                        {
+                            <option value="@law.Id">@law.Label</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="form-label"> المرحلة:</label>
+                    <select class="form-select" @onchange="@((e)=>getStatistic(e))">
+                        <option selected> إختر النص </option>
+                        @foreach (var phase in phases)
+                        {
+                            <option value="@phase.Id">@phase.Title</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8" style="border-right: 1px solid #dee2e6;height:84vh;overflow:auto">
+            <div class="card">
+                <div class="card-body">
+                    <p>جميع التعديلات</p>
+                    <hr />
+                    <TableStatistic amendments="amendments"/>
+                </div>
+            </div>
+            <div class="mt-2 col-md-12">
+                <button type="button" class="btn btn-light btn-sm" @onclick="DownloadStatistic"><i class="fa-regular fa-file-word ml-10"></i> تحميل  إحصائيات   WORD</button>
+            </div>
+       </div>
+       
+      
+       
+        
+    </div>
+</div>
+
+@code {
+   
+}

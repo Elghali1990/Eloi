@@ -1,0 +1,141 @@
+﻿@page "/text-submited-to-chambre-advisors"
+@inject ILogger<TextSubmitedToChamberAdvisors> _logger
+<PageTitle>النصوص المحالى على مجلس المستشارين</PageTitle>
+
+
+<div class="container-fluid">
+<div class="">
+    <UnderMenu pageName="النصوص المحالى على مجلس المستشارين" />
+</div>
+
+
+@if (IsLoad)
+{
+    <div class="position-relative" style="">
+        <div class="w-25" style="margin: 20% auto 0;">
+            <Loading />
+        </div>
+    </div>
+}
+else
+{
+<div class="card mt-2 mb-4">
+    <div class="card-body">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" style="vertical-align:middle">
+                        النصوص القانونية
+                        <div>
+                                    <input type="text" class="form-control form-control-sm" placeholder="كلمة مفتاح" @oninput="@((e)=>Filter(e,"Label"))" />
+                        </div>
+                    </th>
+                    <th scope="col" style="vertical-align:middle">
+                        السنة
+                        <div>
+                                    <input type="number" class="form-control form-control-sm" placeholder="البحث بالسنة" @oninput="@((e)=>Filter(e,"Year"))" />
+                        </div>
+                    </th>
+                    <th scope="col" style="vertical-align:middle;">
+                        الرقم
+                        <div>
+                                    <input type="number" class="form-control form-control-sm" placeholder="البحث بالرقم" @oninput="@((e)=>Filter(e,"Number"))" />
+                        </div>
+                    </th>
+                   @*  <th scope="col" style="vertical-align:middle;">
+                        المرحلة
+                        <div>
+                        </div>
+
+                    </th> *@
+                    <th style="vertical-align:middle;">
+                        صاحب النص
+                        <div>
+                            <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"TeamName"))">
+                                <option value="" selected>البحث بصاحب النص</option>
+                                @foreach (var team in teams)
+                                {
+                                    <option value="@team.Label">@team.Label</option>
+                                }
+                            </select>
+                        </div>
+                    </th>
+                @*     <th tyle="vertical-align:middle;">ملفات</th> *@
+                    <th>
+                        اللجنة
+                        <div>
+                            <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"CommissionName"))">
+                                <option value="" selected>البحث باللجنة</option>
+                                @foreach (var commission in commissions)
+                                {
+                                    <option value="@commission.Label">@commission.Label</option>
+                                }
+                            </select>
+                        </div>
+                    </th>
+                    <th scope="col" style="width:18%"></th>
+                </tr>
+            </thead>
+                @if (laws.Count > 0)
+                {
+                    <tbody>
+
+                        @foreach (var law in laws!)
+                        {
+                            <tr>
+                                <td style="vertical-align:middle">@law.Label</td>
+                                <td style="vertical-align:middle">
+                                    <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-warning">@law.Year</span>
+                                </td>
+                                <td style="vertical-align:middle">
+                                    <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-primary">@law.Number</span>
+                                </td>
+                                @* <td style="vertical-align:middle">@law.PhaseName</td> *@
+                                <td style="vertical-align:middle;">@law.TeamName</td>
+                            @*     <td style="vertical-align:middle;">
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-folder-open text-warning"></i></button>
+                                </td> *@
+                                <td>@law.CommissionName</td>
+                                <td style="vertical-align:middle">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm ml-5" @onclick="()=>ShowPopup(law.Id)">
+                                        <i class="fa-solid fa-gavel fs-6 ml-10"></i>
+                                            تمت إحالة النص لقراءة ثانية
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                }
+                else
+                {
+                        <p class="text-danger my-2">لا توجد أي نتائج لعرضها.</p>
+                }
+            </table>
+    </div>
+</div>
+ }
+
+ </div>
+<div class="modal fade" id="ModalSetDateIhala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    إدخال تاريخ إحالة على المجلس قراءة ثانية
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+           <div class="my-2">
+               <label class="form-label">تاريخ الإحالة</label>
+               <input type="date" class="form-control form-control-sm" @bind="dateIhala"/>
+           </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm" @onclick="@(()=>createRootNodeAndSetLawStatu())"><i class="fa-solid fa-check ml-10"></i> حفظ</button>
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10"></i> إخفاء</button>
+            </div>
+        </div>
+    </div>
+</div>

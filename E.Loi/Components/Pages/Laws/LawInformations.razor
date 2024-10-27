@@ -1,0 +1,336 @@
+﻿@inject ILogger<LawInformations> _logger
+
+<div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasTopEditLawInfo" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">تحيين معلومات النص</h5>
+        <button type="button" class="btn-close" @onclick="@(()=>closeModel())"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        @if (isLoad)
+        {
+            <LoadingSpinner />
+        }
+
+        <EditForm FormName="from-set-law-info" Model="lawInfo">
+
+            <div class="row">
+                @if (errors.Count > 0)
+                {
+                    <div class="col-md-12">
+                        <ul>
+                            @foreach (var error in errors)
+                            {
+                                <li class="text-danger">@error</li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <div class="col-md-6">
+                    <p class="border-bottom text-primary border-primary pb-2 fs-6" style="border-color:#dee2e6 !important">القراءة الأولى</p>
+                    <div class="card mb-2">
+                        <div class="card-header">
+                            <span class="fs-6">معلومات عامة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">الولاية التشريعية</label>
+                                    <select class="form-select form-select-sm  mb-3" disabled="@IS_MEMBER_LEGISLATION" style="line-height: 2" @onchange="@((e)=>selectLegislative(e))">
+                                        <option selected>إختر الولاية التشريعية</option>
+                                        @foreach (var legislative in legislatives)
+                                        {
+                                            <option selected="@(legislative.Id==lawInfo.LegId)" value="@legislative.Id">@legislative.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label"> السنة التشريعية</label>
+                                    <select class="form-select form-select-sm   mb-3" disabled="@IS_MEMBER_LEGISLATION" style="line-height: 2" @onchange="@((e)=>selectYear(e))">
+                                        <option selected>إختر السنة التشريعي</option>
+                                        @foreach (var year in years)
+                                        {
+                                            <option selected="@(year.Id==lawInfo.YearId)" value="@year.Id">@year.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label"> الدورة التشريعية</label>
+                                    <select class="form-select form-select-sm  sm mb-3" disabled="@IS_MEMBER_LEGISLATION" style="line-height: 2" @bind="lawInfo.SessionId">
+                                        <option selected>إختر الدورة التشريعية</option>
+                                        @foreach (var session in sessions)
+                                        {
+                                            <option selected="@(session.Id==lawInfo.SessionId)" value="@session.Id">@session.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-2">
+                                    <label class="form-label">النص القانوني</label>
+                                    <input class="form-control" disabled="@IS_MEMBER_LEGISLATION" type="text" value="@lawInfo.LawLabel" />
+                                </div>
+                                <div class="col-md-4 mt-2">
+                                    <label class="form-label">صاحب النص</label>
+                                    <select class="form-select form-select-sm  sm mb-3" disabled="@IS_MEMBER_LEGISLATION" style="line-height: 2" @bind="lawInfo.IdTeam">
+                                        <option selected>إختر من القائمة</option>
+                                        @foreach (var team in teams)
+                                        {
+                                            <option selected="@(team.Id==lawInfo.IdTeam)" value="@team.Id">@team.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mt-2">
+                                    <label class="form-label">تاريخ الإحالة على مكتب المجلس</label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.DateAffectationBureau" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="fs-6">تاريخ الإحالة على اللجنة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">اللجنة</label>
+                                    <select class="form-select form-select-sm  sm mb-3" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.CommissionId" style="line-height: 2">
+                                        <option>إختر اللجنة</option>
+                                        @foreach (var com in commissions)
+                                        {
+
+                                            if (com.Id == lawInfo.CommissionId)
+                                            {
+                                                <option selected value="@com.Id">@com.Label</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@com.Id">@com.Label</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label"> تاريخ الإحالة على اللجنة </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.DateAffectationCommission1" />
+                                </div>
+                                @if (status.Count > 0)
+                                {
+                                    <div class="col-md-4">
+                                        <label class="form-label">الوضعية</label>
+                                        @* <select class="form-select form-select-sm  sm mb-3" @bind="lawInfo.IdStatu" disabled="@(IS_MEMBER_LEGISLATION)" style="line-height: 2"> *@
+                                        <select class="form-select form-select-sm  sm mb-3" @bind="lawInfo.IdStatu" style="line-height: 2">
+                                            <option selected value="@(Guid.Empty)">إختيار الوضعية</option>
+                                            @foreach (var statu in status)
+                                            {
+                                                <option value="@statu.Id">@statu.Label</option>
+                                            }
+                                        </select>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <span class="fs-6">البرمجة  على مستوى اللجنة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        قيد الدرس – برمجته اللجنة
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_COMMISSION" @bind="lawInfo.ProgrammedDateCommRead1" />
+                                </div>
+                                <div class="mt-2 col-md-4">
+
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label class="form-label">
+                                                أخر أجل لوضع التعديلات
+                                            </label>
+                                            <input class="form-control" type="date" @bind="lawInfo.DateFinAmendments1" disabled="@IS_MEMBER_COMMISSION" />
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label class="form-label">
+                                                الساعة
+                                            </label>
+                                            <input type="time" class="form-control" @bind="FirstTime" disabled="@IS_MEMBER_COMMISSION" />
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        قيد الدرس – صوتت عليه اللجنة
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_COMMISSION" @bind="lawInfo.DateVoteCommRead1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <span class="fs-6">البرمجة  على مستوى الجلسة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        تاريخ  إنعقاد الجلسة العامة
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_SEANCE" @bind="lawInfo.DateAffectationSeance1" />
+                                </div>
+
+
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        تاريخ المصادقة عليه
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_SEANCE" @bind="lawInfo.DateVoteSeanceRead1" />
+                                </div>
+
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        تاريخ الإحالة على مجلس المستشارين
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_SEANCE" @bind="lawInfo.DateAffectationCdc" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" style="border-right: 1px solid #dee2e6;">
+                    <p class="border-bottom text-primary pb-2 fs-6" style="border-color:#dee2e6 !important">القراءة الثانية </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="fs-6">إحالة على مكتب المجلس</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="w-100 mt-2">
+                                        <label class="form-label">تاريخ الإحالة على مكتب المجلس</label>
+                                        <input class="form-control" type="date" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.DateAffectationBureau2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="fs-6">إحالة على  اللجنة  قراءة 2</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="w-100 mt-2">
+                                        <label class="form-label"> تاريخ الإحالة على اللجنة </label>
+                                        <input class="form-control" type="date" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.DateAffectationCommission2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <span class="fs-6">البرمجة على مستوى اللجنة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        قيد الدرس  برمجته اللجنة
+                                    </label>
+                                    <input class="form-control" type="date" disabled="@IS_MEMBER_COMMISSION" @bind="lawInfo.ProgrammedDateCommRead2" />
+                                </div>
+                                <div class="mt-2 col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label class="form-label">
+                                                أخر أجل لوضع التعديلات
+                                            </label>
+                                            <input class="form-control" type="date" disabled="@IS_MEMBER_COMMISSION" @bind="lawInfo.DateFinAmendments2" />
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label class="form-label">
+                                                الساعة
+                                            </label>
+                                            <input type="time" @bind="SecondTime" class="form-control" disabled="@IS_MEMBER_COMMISSION" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 col-md-4">
+                                    <label class="form-label">
+                                        قيد الدرس صوتت عليه اللجنة
+                                    </label>
+                                    <input class="form-control " type="date" disabled="@IS_MEMBER_COMMISSION" @bind="lawInfo.DateVoteCommRead2" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <span class="fs-6">البرمجة على مستوى الجلسة</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="mt-2 col-md-6">
+                                    <label class="form-label">
+                                        تاريخ الإحالة على الجلسة العامة
+                                    </label>
+                                    <input class="form-control " type="date" disabled="@IS_MEMBER_SEANCE" @bind="lawInfo.DateAffectationSeance2" />
+                                </div>
+
+                                <div class="mt-2 col-md-6">
+                                    <label class="form-label">
+                                        صادق عليه مجلس النواب
+                                    </label>
+                                    <input class="form-control " type="date" disabled="@IS_MEMBER_SEANCE" @bind="lawInfo.DateVoteSeanceRead2" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <span class="fs-6">الجريدة الرسمية</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-2">
+                                <div class="col-md-4">
+                                    <label class="form-label">تاريخ النشر </label>
+                                    <input class="form-control " type="date" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.PublishedDate" />
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">العدد</label>
+                                    <input class="form-control" disabled="@IS_MEMBER_LEGISLATION" @bind="lawInfo.Number" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </EditForm>
+
+        <div class="my-2 text-center border-top py-2">
+            <button type="button" class="btn btn-danger" @onclick="@(()=>closeModel())">
+                <i class="fa-solid fa-xmark ml-10 fs-6"></i> إخفاء
+            </button>
+            <button type="button" class="btn btn-primary" @onclick="@(()=>HandleSetLawInfo())">
+                <i class="fa-solid fa-check ml-10 fs-6"></i>
+                حفظ
+            </button>
+        </div>
+    </div>
+
+</div>
+
+

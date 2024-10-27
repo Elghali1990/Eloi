@@ -1,0 +1,30 @@
+[
+  {
+    "Id": "487EB5EA-8A1E-4D2A-B276-08DB13F5E309",
+    "Label": "اللجنة  قراءة 1",
+    "ClassName": "",
+    "IsActive": "",
+    "Order": 2
+  },
+  {
+    "Id": "9E98A95D-7D69-4C4F-B277-08DB13F5E309",
+    "Label": "مجلس النواب الجلسة العامة 1",
+    "ClassName": "steps",
+    "IsActive": "",
+    "Order": 3
+  },
+  {
+    "Id": "CB4FD744-BCB7-4300-B27A-08DB13F5E309",
+    "Label": "  اللجنة قراءة 2",
+    "ClassName": "steps",
+    "IsActive": "",
+    "Order": 6
+  },
+  {
+    "Id": "0D17B11A-7F9A-4A36-B27B-08DB13F5E309",
+    "Label": "مجلس النواب الجلسة العامة 2",
+    "ClassName": "steps",
+    "IsActive": "",
+    "Order": 7
+  }
+]

@@ -1,0 +1,262 @@
+﻿@inherits BaseComponent
+@inject ILogger<Amendments> _logger
+@if (IsLoad)
+{
+    <div class="w-25 top-50 position-fixed" style="right:50%">
+        <Loading />
+    </div>
+}
+else
+{
+    @if (!isAmendableAdd && !isAmendableDelete && !isAmendableEdit)
+    {
+        <div class="border border-danger p-2">
+            <span class="text-danger p-0"> لا يمكن إضافة تعديل في هذه العقدة .</span>
+        </div>
+    }
+    else
+    {
+        <div class="overflow-y-auto" style="padding-left: 5px;height: 84.8vh !important;">
+            <div>
+                <MapsNodeParent ParentsNode="parentsNode" />
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-pen"></i>
+                    معلومات التعديل
+                </div>
+                <div class="card-body">
+                    <div class="row">
+
+
+                        <div class="col-md-6">
+                            <select class="form-select" aria-label="Default select example" @onchange="@((e)=>setTeamId(e))">
+                                @foreach (var team in stateContainerService.user!.TeamsDtos!.ToList())
+                                {
+                                    <option value="@team.Id">@team.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select" aria-label="Default select example" @onchange="@(_=>ToggleBoxSelectRefLaw(_))">
+                                <option selected>إختر طبيعة التعديل</option>
+                                @if (isAmendableEdit)
+                                {
+                                    <option value="MODIFICATION" selected="@SelectedIntent">تغيير أو تتميم - (تعديل)</option>
+                                }
+                                @if (isAmendableDelete)
+                                {
+                                    <option value="DELETION" selected="@SelectedIntent">نسخ - (حذف)</option>
+                                }
+                                @if (isAmendableAdd)
+                                {
+                                    <option value="ADDITION" selected="@SelectedIntent">تتميم - (إضافة مادة جديدة)</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-3">
+                           <select class="form-select"  @bind="orderParagraphe">
+                               <option value="0">إختر الفقرة</option>
+                               @for (int i = 1; i <= 30; i++)
+                                {
+                                    <option value="@i" selected="@(orderParagraphe==i)">@($"الفقرة {i}")</option>
+                                }
+                           </select>
+                        </div>
+                        <div class="col-md-10 mt-3">
+                            <input type="text" class="form-control" style="font-size:15px;" @bind-value="Title" placeholder="عنوان التعديل">
+                        </div>
+                    </div>
+                    <!--start display popup law ref-->
+                    @if (AmendmentIntentAddition)
+                    {
+                        <div class="row">
+                            <div class="col-md-12">
+                                <Divider></Divider>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">نوع المادة</label>
+                                <select class="form-select" @onchange="@((_)=>GetSelectedNodeType(_))">
+                                    <option>نوع العقدة</option>
+                                    @foreach (var type in nodeTypes)
+                                    {
+                                        <option value="@type.Value" selected="@(type.Value.ToString().ToLower()==nodeTypeId.ToString().ToLower())">@type.Key</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">عدد</label>
+                                <input type="number" class="form-control" placeholder="العدد" @bind-value="NodeNumber" />
+                            </div>
+                            @if (!hideBis)
+                            {
+                                <div class="col-md-4">
+                                    <label class="form-label">مكرر</label>
+                                    <input type="number" class="form-control" placeholder="مكرر" @bind-value="Bis" />
+                                </div>
+                            }
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4 mt-2">
+                                        <select class="form-select" @onchange="@(e=>handleSelectLawsRef(e))">
+                                            <option selected>إختيار الملف</option>
+                                            <option value="CGI">الضرائب</option>
+                                            <option value="Douane">الجمارك</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <select class="form-select" aria-label="Default select example" @bind="@RefLawId">
+                                            <option selected>إختيار القانون</option>
+                                            @foreach (var law in LawsVm)
+                                            {
+                                                <option value="@law.Id">@law.Label</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 mt-2 @displayNone @((LawsVm.Count>0)?string.Empty:"d-none")">
+                                        <button type="button" class="btn custom-btn-background"  @onclick="@(_=>getRefLawNodes())"><Icon Type="search" Theme="outline" /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!--end display popup law ref-->
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <i class="fa-regular fa-file-lines"></i>
+                    النص الأصلي
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                                    <RadzenHtmlEditor @bind-Value="nodeContent" style="height: 40vh;"  Disabled="true"/>
+                            <button type="button" class="btn custom-btn-background mt-2 btn-sm" @onclick="@(()=>printNodeContentEditor())">
+                                <i class="fa-solid fa-print"></i>
+                                طباعة
+                                @if (IsPrintNodeContent)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <i class="fa-solid fa-file-pen"></i>
+                    نص التعديل
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <RadzenHtmlEditor @bind-Value="AmendmentText" style="height: 40vh;"/>
+                            <button type="button" class="btn custom-btn-background mt-2 btn-sm" @onclick="@(()=>printAmendmentContentEditor())">
+                                <i class="fa-solid fa-print"></i>
+                                طباعة
+                                @if (IsPrintAmendmentContent)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2 ">
+                <div class="card-header">
+                    <i class="fa-solid fa-pen"></i>
+                    التعليل
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <RadzenHtmlEditor @bind-Value="Justification"  style="height: 40vh;" />
+                            <button type="button" class="btn custom-btn-background mt-2 btn-sm" @onclick="@(()=>printJustificationContentEditor())">
+                                <i class="fa-solid fa-print"></i>
+                                طباعة
+                                @if (IsPrintJustification)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (stateContainerService.user.Roles!.Count(r =>( r.Name == _roleOptions.Value.MEMBER_COMMISSION || r.Name == _roleOptions.Value.MEMBER_SEANCE)) > 0)
+            {
+                <div class="card mt-2">
+                    <div class="card-header">
+                        <i class="fa-solid fa-bars"></i>
+                        لائحة التعديلات
+                    </div>
+                    <div class="card-body">
+                        @if (IsLoadAmendment)
+                        {
+                            <Loading />
+                        }
+                        else
+                        {
+                            if (amendmentsListVms?.Length != 0)
+                            {
+                                <Table @ref="table"
+                                       TItem="DataAccess.Vm.Amendment.AmendmentsListVm"
+                                       DataSource="@(amendmentsListVms)"
+                                       Total="_total"
+                                       @bind-PageIndex="_pageIndex"
+                                       @bind-PageSize="_pageSize"
+                                       @bind-SelectedRows="selectedAmendments"
+                                       Size="TableSize.Small"
+                                       RowKey="x=>x.Id">
+                                    <Selection Key="@(context.Id.ToString())" />
+                                    <PropertyColumn Title="رقم النظام" Property="c=>c.NumberSystem" Sortable />
+                                    <PropertyColumn Title="رقم التعديل" Property="c=>c.Number" Sortable />
+                                    <PropertyColumn Title="رقم الترتيبي" Property="c=>c.Order" Sortable />
+                                    <PropertyColumn Title="عنوان المادة" Property="c=>c.NodeTitle" Sortable />
+                                    <PropertyColumn Title="موضوع التعديل" Property="c=>c.Title" />
+                                    <PropertyColumn Title="النوع" Property="c=>c.AmendmentIntent" Sortable />
+                                    <PropertyColumn Title="حالة التعديل" Property="c=>c.AmendmentsStatus" Sortable />
+                                    <PropertyColumn Title="صاحب التعديل" Property="c=>c.Team" Sortable />
+                                </Table>
+                            }
+                            else
+                            {
+                                <p class="p-0 m-0">
+                                    <i class="fa-solid fa-exclamation text-danger" style="font-size:20px;margin-left:10px"></i>
+                                    <span class="text-danger">لا توجد أيت تعديلات بخصوص هذه العقدة</span>
+                                </p>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+            <div class="row">
+                <div class="col-md-12">
+                    @if (RequiredFieldsErrors.Count > 0)
+                    {
+                        <div class="">
+                            <ul>
+                                @foreach (var error in RequiredFieldsErrors)
+                                {
+                                    <li class="text-danger">@error</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="text-center mb-5">
+                <button type="button" class="btn btn-primary mt-2 btn-sm " @onclick="@(_=>SaveAmendment())"><i class="fa-solid fa-check ml-10 fs-6"></i> تسجيل</button>
+                <button type="button" class="btn btn-danger mt-2 btn-sm" @onclick="@(_=>CancleAddAmendment())"><i class="fa-solid fa-xmark fs-6 ml-10"></i> إلغاء</button>
+            </div>
+           
+        </div>
+    }
+}
+<GetRefeence refLawId="RefLawId" EventPaseNodeContent="content=> SetTextOriginal(content)"/>

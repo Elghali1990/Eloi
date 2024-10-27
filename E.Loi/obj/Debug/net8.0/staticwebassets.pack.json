@@ -1,0 +1,1397 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E.Loi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\E.Loi.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Data\\Phase.json",
+      "PackagePath": "staticwebassets\\Data\\Phase.json"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Data\\PhaseConsultation.json",
+      "PackagePath": "staticwebassets\\Data\\PhaseConsultation.json"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\chevron-dwon.png",
+      "PackagePath": "staticwebassets\\Images\\chevron-dwon.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\chevron.png",
+      "PackagePath": "staticwebassets\\Images\\chevron.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\dot.png",
+      "PackagePath": "staticwebassets\\Images\\dot.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\elections.png",
+      "PackagePath": "staticwebassets\\Images\\elections.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\info-file.png",
+      "PackagePath": "staticwebassets\\Images\\info-file.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\info-sign.png",
+      "PackagePath": "staticwebassets\\Images\\info-sign.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\legal.png",
+      "PackagePath": "staticwebassets\\Images\\legal.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\loading.gif",
+      "PackagePath": "staticwebassets\\Images\\loading.gif"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\menu.png",
+      "PackagePath": "staticwebassets\\Images\\menu.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\pdf.png",
+      "PackagePath": "staticwebassets\\Images\\pdf.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\pdf_0_x.png",
+      "PackagePath": "staticwebassets\\Images\\pdf_0_x.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\pencil-edit.png",
+      "PackagePath": "staticwebassets\\Images\\pencil-edit.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\print.png",
+      "PackagePath": "staticwebassets\\Images\\print.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\printer.png",
+      "PackagePath": "staticwebassets\\Images\\printer.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\trash.png",
+      "PackagePath": "staticwebassets\\Images\\trash.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Images\\word.png",
+      "PackagePath": "staticwebassets\\Images\\word.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Template\\list-template.docx",
+      "PackagePath": "staticwebassets\\Template\\list-template.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\Template\\statistic.docx",
+      "PackagePath": "staticwebassets\\Template\\statistic.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\(mktbtypdf.com)-عادات-ذرية.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\(mktbtypdf.com)-عادات-ذرية.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\111.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\111.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\11111.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\11111.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\132073861.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\132073861.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\44444444.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\44444444.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\777777777.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\777777777.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23 (1) (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23 (1) (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23 (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23 (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\CCM مقترح قانون الجبل-صيغة منقحة-يونيو 23.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\Document fonctionnel - App Question V3.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\Document fonctionnel - App Question V3.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\Echange-cdr-mfe-view-models (1).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\Echange-cdr-mfe-view-models (1).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\Echange-cdr-mfe-view-models.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\Echange-cdr-mfe-view-models.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\ListeRemarques11062024.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\ListeRemarques11062024.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\PLF_Nodes.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\PLF_Nodes.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\PLF_TextLaw.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\PLF_TextLaw.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\PLF_TextLaw.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\PLF_TextLaw.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\Test1111.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\Test1111.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\TextLaw(1).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\TextLaw(1).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\TextLaw.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\TextLaw.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\_الوطني للضمان الاجتماعي برسم نظام التأمين الإجباري.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\_الوطني للضمان الاجتماعي برسم نظام التأمين الإجباري.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\demo.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\demo.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\demooooo.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\demooooo.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\dsf.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\dsf.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\editor-content.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\editor-content.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\eeeee.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\eeeee.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\en cas d.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\en cas d.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\fffff.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\fffff.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node (2).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node (2).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node (7).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node (7).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node-1.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node-1.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node-3.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node-3.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\node78787.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\node78787.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\prop_loi_187_2023_2.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\prop_loi_187_2023_2.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\react.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\react.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\s14s.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\s14s.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\sqdqdqs.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\sqdqdqs.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\sssss.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\sssss.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\test.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\test.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\test.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\test.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\test2222.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\test2222.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\test78787.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\test78787.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\أرض زيكولا_23757_Foulabook.com_.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\أرض زيكولا_23757_Foulabook.com_.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\الإشهار والدعاية للتبغ في بعض الأماكن.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\الإشهار والدعاية للتبغ في بعض الأماكن.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\الإشهار والدعاية للتبغ في بعض.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\الإشهار والدعاية للتبغ في بعض.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\التزام شهادة السكنى.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\التزام شهادة السكنى.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (12).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (12).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (16).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (16).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (2).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (2).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (5).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (5).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (6).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (6).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw (7).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw (7).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات textlaw.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات textlaw.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الجلسة العامة (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الجلسة العامة (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الجلسة العامة.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الجلسة العامة.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية (2).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية (2).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات الفريق الاشتراكي - المعارضة الاتحادية.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات تعديلات - مشروع قانون المالية لسنة 2024 (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات تعديلات - مشروع قانون المالية لسنة 2024 (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات تعديلات - مقترح قانون يتعلق بتحديد كيفيات وشروط توزيع الإشهار العمومي على المؤسسات الصحفية الوطنية.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات تعديلات - مقترح قانون يتعلق بتحديد كيفيات وشروط توزيع الإشهار العمومي على المؤسسات الصحفية الوطنية.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات فريق التجمع الوطني للأحرار.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات فريق التجمع الوطني للأحرار.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات لجنة المالية والتنمية الاقتصادية.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات لجنة المالية والتنمية الاقتصادية.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23 (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23 (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات مشروع قانون المالية لسنة 2024لسنة 2024 رقم 55.23.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\تعديلات نبيلة منيب (1).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\تعديلات نبيلة منيب (1).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\جواب على استفسار حول عدم احترام أوقات العمل.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\جواب على استفسار حول عدم احترام أوقات العمل.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\طبقا للفصل 70 من الدستور، يقوم مجلس النواب بتقييم.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\طبقا للفصل 70 من الدستور، يقوم مجلس النواب بتقييم.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\عنوان النص.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\عنوان النص.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\عنوان النص.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\عنوان النص.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\قانون رقم 00-65 بمثابة مدونة التغطية الصحية الأساسية.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\قانون رقم 00-65 بمثابة مدونة التغطية الصحية الأساسية.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\قانون رقم 00-65 بمثابة مدونة التغطية الصحية الأساسية.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\قانون رقم 00-65 بمثابة مدونة التغطية الصحية الأساسية.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\لائحة القوانين قيد الدرس.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\لائحة القوانين قيد الدرس.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\متعددة السنوات. تقدم اقتراحات الفرق والمجموعات (1).pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\متعددة السنوات. تقدم اقتراحات الفرق والمجموعات (1).pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\مذكرة حول احترام مواقيت العمل.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\مذكرة حول احترام مواقيت العمل.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\مشروع قانون المالية 2025.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\مشروع قانون المالية 2025.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\مشروع قانون المالية لسنة 2024.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\مشروع قانون المالية لسنة 2024.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\مقترح قانون يقضي بتتميم المادة 2 من القانون 79.14 المتعلق بهيئة المناصفة ومكافحة كل أشكال التمييز.docx",
+      "PackagePath": "staticwebassets\\TextLaws\\مقترح قانون يقضي بتتميم المادة 2 من القانون 79.14 المتعلق بهيئة المناصفة ومكافحة كل أشكال التمييز.docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\مكانة المرأة في مجالس هيئات المحامين.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\مكانة المرأة في مجالس هيئات المحامين.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\ملف التصويت (35).docx",
+      "PackagePath": "staticwebassets\\TextLaws\\ملف التصويت (35).docx"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\نص قانون المالية لسنة 2024.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\نص قانون المالية لسنة 2024.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\TextLaws\\هيكلة إدارة مجلس النواب.pdf",
+      "PackagePath": "staticwebassets\\TextLaws\\هيكلة إدارة مجلس النواب.pdf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\css\\datatable-bootstrap.css",
+      "PackagePath": "staticwebassets\\datatable\\css\\datatable-bootstrap.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\css\\datatable-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\datatable\\css\\datatable-bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\css\\datatable.css",
+      "PackagePath": "staticwebassets\\datatable\\css\\datatable.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\css\\datatable.min.css",
+      "PackagePath": "staticwebassets\\datatable\\css\\datatable.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\img\\sort_asc.png",
+      "PackagePath": "staticwebassets\\datatable\\img\\sort_asc.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\img\\sort_both.png",
+      "PackagePath": "staticwebassets\\datatable\\img\\sort_both.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\img\\sort_desc.png",
+      "PackagePath": "staticwebassets\\datatable\\img\\sort_desc.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\js\\datatable.jquery.js",
+      "PackagePath": "staticwebassets\\datatable\\js\\datatable.jquery.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\js\\datatable.jquery.min.js",
+      "PackagePath": "staticwebassets\\datatable\\js\\datatable.jquery.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\js\\datatable.js",
+      "PackagePath": "staticwebassets\\datatable\\js\\datatable.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\datatable\\js\\datatable.min.js",
+      "PackagePath": "staticwebassets\\datatable\\js\\datatable.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\regular.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\solid.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\all.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\brands.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\brands.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\regular.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\regular.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\solid.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\solid.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\brands.svg"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\regular.svg"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\solid.svg"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\popper.js\\umd\\popper.js",
+      "PackagePath": "staticwebassets\\popper.js\\umd\\popper.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\popper.js\\umd\\popper.min.js",
+      "PackagePath": "staticwebassets\\popper.js\\umd\\popper.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\font\\summernote.eot",
+      "PackagePath": "staticwebassets\\summernote\\font\\summernote.eot"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\font\\summernote.ttf",
+      "PackagePath": "staticwebassets\\summernote\\font\\summernote.ttf"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\font\\summernote.woff",
+      "PackagePath": "staticwebassets\\summernote\\font\\summernote.woff"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\font\\summernote.woff2",
+      "PackagePath": "staticwebassets\\summernote\\font\\summernote.woff2"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ar-AR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ar-AR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ar-AR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ar-AR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ar-AR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ar-AR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-az-AZ.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-az-AZ.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-az-AZ.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-az-AZ.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-az-AZ.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-az-AZ.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bg-BG.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bg-BG.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bg-BG.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bg-BG.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bg-BG.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bg-BG.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bn-BD.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bn-BD.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bn-BD.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bn-BD.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-bn-BD.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-bn-BD.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ca-ES.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ca-ES.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ca-ES.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ca-ES.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ca-ES.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ca-ES.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-cs-CZ.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-cs-CZ.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-cs-CZ.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-cs-CZ.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-cs-CZ.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-cs-CZ.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-da-DK.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-da-DK.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-da-DK.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-da-DK.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-da-DK.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-da-DK.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-CH.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-CH.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-CH.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-CH.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-CH.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-CH.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-DE.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-DE.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-DE.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-DE.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-de-DE.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-de-DE.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-el-GR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-el-GR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-el-GR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-el-GR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-el-GR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-el-GR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-en-US.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-en-US.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-en-US.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-en-US.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-en-US.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-en-US.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-ES.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-ES.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-ES.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-ES.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-ES.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-ES.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-EU.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-EU.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-EU.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-EU.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-es-EU.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-es-EU.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fa-IR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fa-IR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fa-IR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fa-IR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fa-IR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fa-IR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fi-FI.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fi-FI.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fi-FI.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fi-FI.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fi-FI.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fi-FI.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fr-FR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fr-FR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fr-FR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fr-FR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-fr-FR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-fr-FR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-gl-ES.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-gl-ES.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-gl-ES.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-gl-ES.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-gl-ES.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-gl-ES.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-he-IL.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-he-IL.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-he-IL.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-he-IL.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-he-IL.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-he-IL.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hr-HR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hr-HR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hr-HR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hr-HR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hr-HR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hr-HR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hu-HU.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hu-HU.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hu-HU.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hu-HU.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-hu-HU.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-hu-HU.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-id-ID.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-id-ID.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-id-ID.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-id-ID.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-id-ID.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-id-ID.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-it-IT.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-it-IT.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-it-IT.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-it-IT.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-it-IT.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-it-IT.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ja-JP.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ja-JP.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ja-JP.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ja-JP.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ja-JP.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ja-JP.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ko-KR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ko-KR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ko-KR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ko-KR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ko-KR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ko-KR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LT.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LT.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LT.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LT.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LT.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LT.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LV.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LV.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LV.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LV.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-lt-LV.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-lt-LV.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-mn-MN.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-mn-MN.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-mn-MN.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-mn-MN.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-mn-MN.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-mn-MN.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nb-NO.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nb-NO.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nb-NO.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nb-NO.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nb-NO.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nb-NO.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nl-NL.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nl-NL.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nl-NL.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nl-NL.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-nl-NL.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-nl-NL.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pl-PL.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pl-PL.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pl-PL.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pl-PL.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pl-PL.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pl-PL.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-BR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-BR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-BR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-BR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-BR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-BR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-PT.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-PT.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-PT.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-PT.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-pt-PT.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-pt-PT.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ro-RO.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ro-RO.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ro-RO.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ro-RO.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ro-RO.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ro-RO.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ru-RU.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ru-RU.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ru-RU.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ru-RU.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ru-RU.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ru-RU.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sk-SK.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sk-SK.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sk-SK.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sk-SK.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sk-SK.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sk-SK.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sl-SI.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sl-SI.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sl-SI.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sl-SI.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sl-SI.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sl-SI.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS-Latin.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS-Latin.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS-Latin.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS-Latin.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS-Latin.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS-Latin.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sr-RS.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sr-RS.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sv-SE.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sv-SE.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sv-SE.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sv-SE.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-sv-SE.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-sv-SE.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ta-IN.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ta-IN.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ta-IN.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ta-IN.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-ta-IN.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-ta-IN.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-th-TH.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-th-TH.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-th-TH.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-th-TH.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-th-TH.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-th-TH.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-tr-TR.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-tr-TR.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-tr-TR.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-tr-TR.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-tr-TR.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-tr-TR.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uk-UA.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uk-UA.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uk-UA.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uk-UA.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uk-UA.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uk-UA.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uz-UZ.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uz-UZ.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uz-UZ.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uz-UZ.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-uz-UZ.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-uz-UZ.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-vi-VN.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-vi-VN.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-vi-VN.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-vi-VN.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-vi-VN.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-vi-VN.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-CN.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-CN.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-CN.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-CN.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-CN.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-CN.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-TW.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-TW.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-TW.js.map",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-TW.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\lang\\summernote-zh-TW.min.js",
+      "PackagePath": "staticwebassets\\summernote\\lang\\summernote-zh-TW.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\databasic\\summernote-ext-databasic.css",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\databasic\\summernote-ext-databasic.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\databasic\\summernote-ext-databasic.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\databasic\\summernote-ext-databasic.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\databasic\\summernote-ext-databasic.min.css",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\databasic\\summernote-ext-databasic.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\databasic\\summernote-ext-databasic.min.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\databasic\\summernote-ext-databasic.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\hello\\summernote-ext-hello.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\hello\\summernote-ext-hello.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\hello\\summernote-ext-hello.min.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\hello\\summernote-ext-hello.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.min.js",
+      "PackagePath": "staticwebassets\\summernote\\plugin\\specialchars\\summernote-ext-specialchars.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.css.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.css.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.js.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.min.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs4.min.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs4.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.css.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.css.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.js.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.min.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-bs5.min.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-bs5.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.css.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.css.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.js.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.min.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote-lite.min.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote-lite.min.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.css.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote.css.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote.js"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.js.map",
+      "PackagePath": "staticwebassets\\summernote\\summernote.js.map"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.min.css",
+      "PackagePath": "staticwebassets\\summernote\\summernote.min.css"
+    },
+    {
+      "Id": "F:\\eloisnew-master\\E.Loi\\E.Loi\\wwwroot\\summernote\\summernote.min.js",
+      "PackagePath": "staticwebassets\\summernote\\summernote.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E.Loi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.E.Loi.props",
+      "PackagePath": "build\\E.Loi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.E.Loi.props",
+      "PackagePath": "buildMultiTargeting\\E.Loi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.E.Loi.props",
+      "PackagePath": "buildTransitive\\E.Loi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

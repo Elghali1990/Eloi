@@ -1,0 +1,224 @@
+﻿@inject ILogger<PublicAmendmentsList> _logger
+
+<HeadContent>
+    <style>
+        .modal-backdrop {
+            z-index: 1030 !important
+        }
+    </style>
+</HeadContent>
+
+@if (!isLoad)
+{
+    <div class="w-25 top-50 position-fixed" style="right:50%">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="overflow-y-auto" style="padding-left: 5px;height: 82vh !important;">
+        <div>
+            <MapsNodeParent ParentsNode="parentsNode" />
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-box-archive ml-10 fs-5"></i>
+                لائحة التعديلات
+            </div>
+            <div class="card-body">
+
+
+                @if (amendmentsListVms.Count>0)
+                {
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-light btn-sm" @onclick="@(()=>Print_PDF())"><i class="fa-regular fa-file-pdf"></i> تحميل التعديلات بصيغة PDF</button>
+                        <button type="button" class="btn btn-light btn-sm" @onclick="@(()=>Print_WORD())"><i class="fa-regular fa-file-word"></i> تحميل التعديلات بصيغة WORD</button>
+                    </div>
+                }
+                @if (!isDownload)
+                {
+                    <Loading />
+                }
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input class="form-check-input position-relative" style="width:20px;height:20px;top:10px" type="checkbox" checked="@checkboxCheckAll"  @onchange="CheckAllAmendments" />
+                            </th>
+                            <th >
+                                رقم النظام
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"NumberSystem"))" placeholder="رقم النظام" />
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div>
+                                    رقم الفريق
+                                </div>
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Number"))" placeholder="رقم الفريق" />
+                                </div>
+                            </th>
+                            <th >
+                                <div>
+                                    رقم الترتيبي
+                                </div>
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Order"))" placeholder="رقم الترتيبي" />
+                                </div>
+                            </th>
+                            <th >
+                                عنوان المادة
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"NodeTitle"))" placeholder="عنوان المادة" />
+                                </div>
+                            </th>
+                            <th >
+                                موضوع التعديل
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Title"))" placeholder="موضوع التعديل" />
+                                </div>
+                            </th>
+                            <th >
+                                النوع
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"AmendmentType"))">
+                                        <option value="" selected> إختر من القائمة</option>
+                                        <option value="تعديل">تعديل</option>
+                                        <option value="إضافة">إضافة</option>
+                                        <option value="حذف">حذف</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th >
+                                حالة التعديل
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"AmendmentsStatus"))">
+                                        <option value="" selected> إختر من القائمة</option>
+                                        <option value="مفتوح">مفتوح</option>
+                                        <option value="مغلق">مغلق</option>
+                                        <option value="محال">محال</option>
+                                        <option value="عام">عام</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th >
+                                صاحب التعديل
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Team"))">
+                                        <option value="" selected> إختر من القائمة</option>
+                                        @foreach (var team in teams)
+                                        {
+                                            <option value="@team.Label">@team.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th >
+                                نتيجة  التصويت
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"VoteResult"))">
+                                        <option value="" selected> إختر من القائمة</option>
+                                        <option value="مقبول">مقبول</option>
+                                        <option value="مقبول جزءيا">مقبول جزءيا</option>
+                                        <option value="غير مقبول">غير مقبول</option>
+                                        <option value="بالإجماع">بالإجماع</option>
+                                        <option value="توافقي">توافقي</option>
+                                        <option value="مسحوب">مسحوب</option>
+                                    </select>
+                                </div>
+                            </th>
+                            <th scope="col" style="width:115px">اجراءات</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var amendment in amendmentsListVms)
+                        {
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" style="width:20px;height:20px;" type="checkbox" onchange="@((ChangeEventArgs e)=>CheckAmendment(e,amendment.Id))" checked="@checkAll">
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @* <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-secondary">@amendment.NumberSystem</span> *@
+                                    @amendment.NumberSystem
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @* <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-secondary">@amendment.Number</span> *@
+                                    @amendment.Number
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @amendment.Order
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @amendment.NodeTitle
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @amendment.Title
+                                </td>
+                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                    @amendment.AmendmentIntent
+                                </td>
+                                <td style="vertical-align:middle ; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                   @amendment.AmendmentsStatus
+                                </td>
+                                <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                    @amendment.Team
+                                </td>
+                                <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                    @amendment.VoteResult
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-light" @onclick="@(()=>handleGetAmendmentDetails(amendment.Id))">
+                                        @* <i class="fa-solid fa-info ml-10 fs-6"></i> *@
+                                       @*  <img src="../images/info-file.png" class="ml-5" /> *@
+                                        تفاصيل
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @if (amendmentsListVms!.Count == 0)
+                {
+                    <div class="">
+                        <p class="p-0 m-0">
+                            <i class="fa-solid fa-exclamation text-danger" style="font-size:20px;margin-left:10px"></i>
+                            <span class="text-danger">لا توجد أيت تعديلات بخصوص هذه العقدة</span>
+                        </p>
+                    </div>
+                }
+                @if (amendmentsListVms!.Count > 0)
+                {
+                    <nav aria-label="Page navigation examplemb-5" style="margin-top:-10px">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+
+                            @foreach (int p in pages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                                </li>
+                            }
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                }
+
+            </div>
+        </div>
+    </div>
+}
+
+
+<AmendmentDetail AmdId="AmendmentId" />
+
+

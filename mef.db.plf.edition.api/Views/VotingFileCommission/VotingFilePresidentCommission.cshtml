@@ -1,0 +1,76 @@
+﻿@model IEnumerable<E.Loi.DataAccess.Dtos.LawPart>
+
+<style>
+    * {
+        font-family: 'Calibri';
+    }
+
+    th {
+        padding: 15px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    td {
+        vertical-align: middle;
+    }
+
+    p {
+        margin: 0 !important
+    }
+</style>
+<div style="direction:rtl;">
+    <p style="text-align: center;font-size: 35px; margin-top: 100px;">
+        لجنة المالية و التنمية الإقتصادية
+    </p>
+
+    <p style="text-align: center;font-size: 25px; margin-top:-20px;">
+        مشروع قانون المالية لسنة 2024
+    </p>
+    <p style="text-align: center;font-size: 25px; margin-top:-10px;">
+        ملف الرئيس
+    </p>
+
+
+
+    @foreach (var item in Model)
+
+    {
+        <p style="text-align:center;font-size:25px;">@item.Label</p>
+        <table border="1" style="width: 100%;border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="width: 50%;">المواد</th>
+                    <th style="width: 10%;">عدد التعديلات المقدمة</th>
+                    <th style="width: 40%;">صاحب التعديل</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var node in item.NodesPart.ToList())
+                {
+                    <tr>
+                        <td>
+                            <p style="text-align:center;">@node.Parent</p>
+                            <p style="text-align:center;">@node.SubPrent</p>
+                            <p style="text-align:center;">@node.Label</p>
+                        </td>
+                        <td>
+                            <p style="text-align:center">@node.AmendmentsCount</p>
+                        </td>
+                        <td>
+                            @foreach (var team in node.Teams)
+                            {
+                                <p>@team.TeamName</p>
+                            }
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+    }
+
+
+
+

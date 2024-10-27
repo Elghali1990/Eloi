@@ -1,0 +1,15 @@
+﻿table thead tr th {
+    font-size: 12px !important;
+    font-weight: 600;
+    border-top: 1px solid #dee2e6;
+}
+
+    table thead tr th input, table thead tr th select {
+        font-size: 11px !important;
+        color: #000 !important;
+        font-weight: 700 !important;
+    }
+
+.pagination li a {
+    padding: 5px 10px !important;
+}

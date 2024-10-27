@@ -1,0 +1,184 @@
+﻿@page "/print"
+@inject ILogger<Print> _logger
+<div class="container-fluid">
+    <div class="mt-3">
+        <UnderMenu pageName="طباعة النصوص القانونية" />
+    </div>
+    <hr />
+    <style>
+        .td-background {
+            background-color: #f1c40f !important;
+        }
+    </style>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label class="form-label">اللجنة  :</label>
+                    <select class="form-select" @onchange="@((e)=>setComId(e))">
+                        <option selected> إختر اللجنة </option>
+                        @foreach (var com in commissions)
+                        {
+                            <option value="@com.Id">@com.Label</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <button class="btn btn-primary btn-sm" @onclick="@(()=>getLaws())"><i class="fa-solid fa-search ml-10 "></i> بحث في النصوص القانونية</button>
+                    <button class="btn btn-danger btn-sm"><i class="fa-solid fa-close ml-10 "></i> إلغاء</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-8" style="border-right: 1px solid #dee2e6;height:84vh;overflow:auto">
+            @if (startProcesse)
+            {
+                <div class="position-relative" style="">
+                    <div class="w-50" style="margin: 30% auto 0;">
+                        <Loading />
+                    </div>
+                </div>
+            }
+            else
+            {
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align:middle;"></th>
+                            <th scope="col" style="vertical-align:middle">
+                                النصوص القانونية
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" placeholder="بحث في نصوص القوانين" @oninput="@((e)=>FilterLaws(e,"Label"))" />
+                                </div>
+                            </th>
+                            <th>
+                                الوضعية
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>FilterLaws(e,"Statu"))">
+                                        <option value="" selected>البحث بالوضعية</option>
+                                        @foreach (var statut in status)
+                                        {
+                                            <option value="@statut.Label">@statut.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var law in laws)
+                        {
+                            <tr>
+                                <td style="vertical-align:middle;">
+                                    <input type="radio" name="laws" @onchange="@(()=>setLawId(law.Id))" />
+                                </td>
+                                <td class="@(law.HasAction?"td-background":"")">
+                                    @law.Label
+                                </td>
+                                <td class="@(law.HasAction?"td-background":"")">
+                                    @law.StatuName
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+                @if (laws.Count == 0 && startSearch)
+                {
+                    <p class="text-danger fs-6">لا توجد أية نتائج لعرضها </p>
+                }
+                @if (laws.Count > 0)
+                {
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">المرحلة  :</label>
+                        <select class="form-select" @onchange="@((e)=>setPhaseId(e))">
+                            <option selected> إختر المرحلة </option>
+                            @foreach (var phase in phases)
+                            {
+                                <option value="@phase.Id">@phase.Title</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"> الصيغة  : </label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" @bind="IsWord" @oninput="setIsWord" />
+                                <label class="form-check-label" for="flexSwitchCheckDefault">WORD</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" @bind="IsPdf" @oninput="setIsPdf" />
+                                <label class="form-check-label" for="flexSwitchCheckChecked">PDF</label>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <button class="btn btn-sm btn-light" @onclick="@(()=>DownloadLaw())"><i class="fa-solid fa-download ml-10 fs-5"></i>تحميل الصيغة النص</button>
+                            </div>
+                        </div>
+
+                        @if (stateContainerService.user.Roles!.Any(role=>role.Name == _roleOptions.Value.MEMBER_SEANCE))
+                        {
+
+                            <div class="col-md-6 mb-3" style="border-right: 1px solid #dee2e6;height:23vh;overflow:auto">
+                                <div class="mb-3">
+                                    <label class="form-label"> ملف التصويت  : </label>
+                                    @if (nodeSection.ToList().Count > 0)
+                                    {
+                                        @foreach (var node in nodeSection.ToList())
+                                        {
+                                            <div class="form-check">
+                                                <input name="radio" class="form-check-input" type="radio" value="@node.Id" id="@node.Id" @onchange="@((e)=>ChoseSection(e))">
+                                                <label class="form-check-label" for="@node.Id">
+                                                    @node.Label
+                                                </label>
+                                            </div>
+                                        }
+                                        <hr />
+                                    }
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" @bind="IsWordVotingFile" @oninput="setIsWordVotingFile" />
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">WORD</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" @bind="IsPdfVotingFile" @oninput="setIsPdfVotingFile" />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">PDF</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 ">
+                                    <button class="btn btn-sm btn-light" @onclick="@(()=>PrintVotingFile())"><i class="fa-solid fa-download ml-10 fs-5"></i>تحميل ملف التصويت</button>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    @if (Errors.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var error in Errors)
+                            {
+                                <li class="text-danger">@error</li>
+                            }
+                        </ul>
+                    }
+                    @if (startDownloading)
+                    {
+                        <div class="position-relative" style="">
+                            <div class="w-50" style="margin: 0 auto 0;">
+                                <Loading />
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+
+    <button class="btn btn-danger btn-sm" @onclick="printPresident"><i class="fa-solid fa-close ml-10 "></i> print</button>
+
+</div>
+

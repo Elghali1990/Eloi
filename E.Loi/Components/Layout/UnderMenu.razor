@@ -1,0 +1,15 @@
+﻿@* <Breadcrumb Separator=">" class="">
+	<BreadcrumbItem>الرئيسية</BreadcrumbItem>
+	<BreadcrumbItem Href="">@pageName</BreadcrumbItem>
+</Breadcrumb> *@
+
+<div class="" style="border-bottom: 1px solid #cbf3f0;margin-bottom: -5px;margin-top:10px">
+    <p style="display: inline-block;margin-bottom: 0;padding: 10px 20px;font-size: 13px; font-weight: 500;background: #f8f9fa">
+        <span>الرئسية</span>
+        <i class="fa-solid fa-chevron-left mx-2 position-relative" style="top:1px ;font-size:10px"></i>
+        <span class="text-danger">@pageName</span></p>
+</div>
+@code {
+    [Parameter]
+    public string pageName { get; set; } = string.Empty;
+}

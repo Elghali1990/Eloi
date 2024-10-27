@@ -1,0 +1,6 @@
+@E.Loi.Echange.Passerelle_HostAddress = http://localhost:5147
+
+GET {{E.Loi.Echange.Passerelle_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

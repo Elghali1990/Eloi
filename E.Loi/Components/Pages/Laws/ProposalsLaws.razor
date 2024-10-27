@@ -1,0 +1,201 @@
+﻿@page "/proposals-laws"
+@inject ILogger<ProposalsLaws> _logger
+
+<PageTitle>
+    @(stateContainerService.user!.Roles!.Any(r => r.Name.Equals(_roleOptions.Value.MEMBER_GROUPE)) ? "إدخال مقترحات القوانين" : "إدخال مشاريع القوانين")
+</PageTitle>
+<div class="container-fluid">
+    @if (IsLoad)
+    {
+        <div class="w-25 m-auto" style="margin-top:20% !important;">
+            <Loading />
+        </div>
+    }
+    else
+    {
+        if (startSubmitedText)
+        {
+            <LoadingSpinner />
+        }
+        <div class="mt-3">
+            <UnderMenu pageName="@(stateContainerService.user!.Roles!.Any(r => r.Name.Equals(_roleOptions.Value.MEMBER_GROUPE)) ? "إدخال مقترحات القوانين" : "إدخال مشاريع القوانين")" />
+        </div>
+        <hr style="margin-bottom:0 !important" />
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="btn-group mt-2" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-primary btn-sm ml-10" data-bs-toggle="modal" data-bs-target="#AddNewlawModal"><i class="fa-solid fa-plus ml-10"></i>إضافة نص جديد</button>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="float-lg-end  mt-2">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card mt-2 mb-4">
+            <div class="card-body">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="vertical-align:middle;width:50%">
+                                النصوص القانونية
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" placeholder="بحث في مقترحات القوانين" @oninput="@((e)=>FilterBylabel(e))" />
+                                </div>
+                            </th>
+                            <th>
+                                الوضعية
+                            </th>
+                            <th tyle="vertical-align:middle;">تاريخ الإحالة</th>
+                            <th tyle="vertical-align:middle;">ملفات</th>
+                            <th scope="col" style="vertical-align:middle"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var law in laws)
+                        {
+                            <tr>
+                                <td tyle="vertical-align:middle;">
+                                    <label class="form-check-label" style="cursor:pointer" for="@law.Id">@law.Label</label>
+                                </td>
+                                <td>
+                                    @law.PhaseName
+                                </td>
+                                <td>
+                                    @if (law.SubmitedDate.ToString().Remove(11).Trim() == "01/01/0001")
+                                    {
+                                        <span> - </span>
+                                    }
+                                    else
+                                    {
+                                        <span> @law.SubmitedDate.ToString().Remove(11)</span>
+                                    }
+
+                                </td>
+                                <td tyle="vertical-align:middle;">
+                                    <button type="button" class="btn btn-light" @onclick="@(()=>ShowLawDocuments(law.Id))"><i class="fa-solid fa-folder-open fs-6 text-warning"></i></button>
+                                </td>
+                                <td tyle="vertical-align:middle;">
+                                    @if (stateContainerService.user.Roles.Any(role => role.Name == _roleOptions.Value.MEMBER_GROUPE))
+                                    {
+                                        @if (law.PhaseLawId.ToString()!.ToLower() == _phaseOptions.Value.PREPARATION_PHASE.ToLower())
+                                        {
+                                            <Popconfirm Title="هل فعلا تريد إحالة هذا النص على مكتب المجلس ." OkText="نعم" OnConfirm="()=>SetPhaseNodes(law.Id,law.PhaseLawId ??Guid.Empty)" CancelText="لا">
+                                                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-share ml-10"></i>الإحالة على مكتب المجلس</button>
+                                            </Popconfirm>
+                                            <button type="button" class="btn btn-outline-success btn-sm" @onclick="@(_=>_navigationManager.NavigateTo($"/edit-law/{law.Id}"))"><i class="fa-solid fa-pen ml-10"></i>تحديث المحتوى</button>
+                                            <Popconfirm Title="هل فعلاً تريد حذف هذا النص؟" OkText="نعم" OnConfirm="()=>deleteLaw(law.Id)" CancelText="لا">
+                                                <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can ml-10"></i>حذف </button>
+                                            </Popconfirm>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-outline-secondary btn-sm" type="button" @onclick="@(()=>BrowseLaw(law.Id))"><i class="fa-solid fa-arrows-to-eye ml-10"></i>تصفح محتوى النص</button>
+                                        }
+                                    }
+                                    else
+                                    {
+
+                                        @if (law.PhaseLawId.ToString()!.ToLower() == _phaseOptions.Value.PHASE_AFFECTATION_BUREUA_2.ToLower() || law.PhaseLawId.ToString()!.ToLower() == _phaseOptions.Value.PREPARATION_PHASE.ToLower())
+                                        {
+                                            @if (stateContainerService.user!.Roles!.Any(r => r.Name.Equals(_roleOptions.Value.MEMBER_LEGISLATION)))
+                                            {
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" @onclick="_=>ShowModalUploadLawText(law.Id)"><i class="fa-solid fa-download  ml-10"></i> تحميل النص</button>
+                                            }
+                                            <Popconfirm Title="هل فعلا تريد إحالة هذا النص على مكتب المجلس ." OkText="نعم" OnConfirm="()=>SetPhaseNodes(law.Id,law.PhaseLawId??Guid.Empty)" CancelText="لا">
+                                                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-share ml-10"></i>الإحالة على مكتب المجلس</button>
+                                            </Popconfirm>
+                                            <button type="button" class="btn btn-outline-success btn-sm" @onclick="@(_=>_navigationManager.NavigateTo($"/edit-law/{law.Id}"))"><i class="fa-solid fa-pen ml-10"></i>تحديث المحتوى</button>
+                                            <Popconfirm Title="هل تريد حذف هذا النص " OkText="نعم" OnConfirm="()=>deleteLaw(law.Id)" CancelText="لا">
+                                                <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can ml-10"></i>حذف </button>
+                                            </Popconfirm>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-light btn-sm" type="button" @onclick="@(_=>_navigationManager.NavigateTo($"/edit-law/{law.Id}"))"><i class="fa-solid fa-arrows-to-eye ml-10"></i>تصفح محتوى النص</button>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        @if (pages.Count > 0)
+        {
+            <nav aria-label="Page navigation examplemb-5" style="margin-top:-20px">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    @foreach (int p in pages)
+                    {
+                        <li class="page-item">
+                            <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                        </li>
+                    }
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        }
+        <br />
+        <br />
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="MoadlUploadTextLaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="fs-6 position-relative" style="top:10px">
+                    إختيار ملف مقترح القانون
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="mb-2">
+                        <label for="formFile" class="form-label"> إختيار الملف </label>
+                        <InputFile OnChange="ChoseLawTextFile" class="form-control" type="file" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-sm" @onclick=@(()=>CreateNodesFromlawTextFile())>
+                    <i class="fa-solid fa-check ml-10"></i> تحميل المقترح
+                    @if (isDownload)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span class="visually-hidden" role="status">Loading...</span>
+                    }
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    <i class="fa-solid fa-xmark ml-10"></i> إخفاء
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<BrowsLaw LawId="BrowsLawId" />
+<LawDocuments LawId="LawId" />
+<AddLaw OnAdd="success=>onAdd(success)" />

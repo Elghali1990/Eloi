@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\m.elghali\Desktop\Api</_PublishTargetUrl>
+    <History>True|2024-06-10T14:21:14.0641794Z;True|2024-06-06T10:50:26.3303625+01:00;True|2024-06-05T16:36:46.2610243+01:00;True|2024-06-05T14:32:19.0038074+01:00;True|2024-06-03T14:13:07.4210826+01:00;True|2024-06-03T11:30:53.3623127+01:00;True|2024-05-29T12:29:33.0704613+01:00;True|2024-05-28T15:08:23.0306255+01:00;True|2024-05-28T14:59:12.0449238+01:00;True|2024-05-28T14:52:08.6270288+01:00;True|2024-05-27T13:15:23.5989385+01:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Db">
+      <Value>Server=M-ELGHALI-PC%3bDatabase=EloisNew%3bintegrated security=true%3bMultipleActiveResultSets=true%3bTrustServerCertificate=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="E.Loi.Services.DB.LawDbContext">
+      <Value>Server=M-ELGHALI-PC%3bDatabase=EloisNew%3bintegrated security=true%3bMultipleActiveResultSets=true%3bTrustServerCertificate=True%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

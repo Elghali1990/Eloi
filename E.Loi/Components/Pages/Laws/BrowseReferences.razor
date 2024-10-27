@@ -1,0 +1,113 @@
+﻿@page "/browse-references"
+<HeadContent>
+
+    <style>
+        .li {
+            margin: 10px 20px;
+            font-size: 15px;
+            cursor: pointer
+        }
+
+            .li:hover {
+                text-decoration: underline
+            }
+
+            .activeli {
+                color: #b32f31;
+            }
+    </style>
+</HeadContent>
+
+<PageTitle>
+    المدونات
+</PageTitle>
+
+<div class="container-fluid">
+
+    <div class="" style="border-bottom: 1px solid #cbf3f0;margin-bottom: -5px;margin-top:10px">
+        <p style="display: inline-block;margin-bottom: 0;padding: 10px 20px;font-size: 13px; font-weight: 500;background: #f8f9fa">
+            <span>تصفح محتوى المدونات</span>
+        </p>
+    </div>
+    <div class="row">
+
+        <div class="mt-1">
+
+            <hr />
+            <ul class="m-0 d-flex p-0">
+                @foreach (var law in laws)
+                {
+                    <li class="li @(law.Id.ToString().ToUpper()==activeClass ?"activeli":string.Empty)" style="" @onclick="@(()=>GetNodes(law.Id))">@($"{law.Label}")</li>
+                }
+            </ul>
+            <hr />
+        </div>
+    </div>
+    @if (isLoad)
+    {
+        <div>
+            <div style="width: 2%;margin: 200px auto 0;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <p style="text-align:center !important;margin-top:10">
+                جاري التحميل المرجو الإنتظار ...
+            </p>
+        </div>
+    }
+
+    @if (nodes?.Count > 0)
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        @lawlabel
+                    </div>
+                    <div class="card-body" style="height:72.8vh;overflow:auto">
+                        <ul class="tree-view list-unstyled">
+                            <LawTreview nodes="nodes"
+                                        OnSelect="node => getNodeContent(node)"></LawTreview>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <RadzenHtmlEditor style="height: 75vh;" @bind-Value="@NodeContent" />
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    string activeClass = "";
+    private bool isLoad = false;
+    List<LawVm> laws = new();
+    public List<NodeVm>? nodes { get; set; }
+    string NodeContent = string.Empty;
+    string lawlabel = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        laws = await _lawRepository.getAllReferences();
+    }
+
+    private async Task GetNodes(Guid lawId)
+    {
+        nodes?.Clear();
+        activeClass = lawId.ToString().ToUpper();
+        NodeContent = string.Empty;
+        isLoad = true;
+        var law = await _lawRepository.GetByIdAsync(lawId);
+        lawlabel = law.Label;
+        Guid phaseId = law.PhaseLawIds.First().PhaseId ?? Guid.Empty;
+        nodes = await _nodeRepository.GetRecursiveChildren(lawId, phaseId, false);
+        isLoad = false;
+    }
+
+    async Task getNodeContent(NodeVm node_)
+    {
+        var node = await _nodeRepository.GetNodeContent(node_.Id);
+        NodeContent = node.NodeContent;
+    }
+}

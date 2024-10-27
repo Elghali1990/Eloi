@@ -1,0 +1,11 @@
+﻿global using E.Loi.DataAccess.Dtos;
+global using E.Loi.DataAccess.Vm.Amendment;
+global using E.Loi.DataAccess.Vm.Document;
+global using E.Loi.DataAccess.Vm.Law;
+global using E.Loi.DataAccess.Vm.Laws;
+global using E.Loi.DataAccess.Vm.Node;
+global using E.Loi.DataAccess.Vm.Team;
+global using E.Loi.DataAccess.Vm.User;
+global using E.Loi.DataAccess.Vm.Vote;
+global using E.Loi.Services.Repositories.Interfaces;
+global using Microsoft.AspNetCore.Mvc;

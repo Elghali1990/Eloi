@@ -1,0 +1,96 @@
+﻿@inject IWebHostEnvironment Environment
+@inject ILogger<LawDocuments> _logger
+@inject IToastService toastService
+<style>
+    .accordion-button:not(.collapsed) {
+        background-color: #fff !important;
+    }
+</style>
+
+<div class="offcanvas offcanvas-start w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasDocuments" aria-labelledby="canvasDocumentsLabel">
+    <div class="offcanvas-header" style="border-bottom: 1px solid #ccc;">
+        <h6 class="offcanvas-title" id="canvasDocumentsLabel">الملفات</h6>
+        <button type="button" class="btn-close" onclick="@(()=>HideCanvas())"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row">
+
+            <div class="col-md-4">
+                @if (showBoxUploadFile)
+                {
+                    <div class="my-2">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa-solid fa-file-circle-plus ml-10"></i>
+                                        <span>إضافة ملف</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="mb-2">
+                                            <label class="form-label">إختيار الملف</label>
+                                            <InputFile class="form-control form-control-sm" OnChange="@SelectFile" />
+                                        </div>
+                                        <div class="">
+                                            <button type="button" class="btn btn-primary btn-sm" @onclick="@(_=>InsertDocument())">
+                                                <i class="fa-solid fa-check ml-10"></i> حفظ
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10"></i> إخفاء</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <ol class="list-group">
+                    @foreach (var document in documents)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">
+                                    @if (document.Type == "PDF")
+                                    {
+                                        <i class="fa-regular fa-file-pdf fs-5 text-danger"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa-solid fa-file-word fs-5 text-primary"></i>
+                                    }
+                                </div>
+                                @document.DocumentName
+                            </div>
+                            @if (showBoxUploadFile)
+                            {
+                                <button type="button" class="btn btn-light btn-sm ml-5" @onclick="@(()=>DeleteDocument(document.Id))"><i class="fa-solid fa-trash-can text-danger fs-5"></i></button>
+                            }
+                            <button type="button" class="btn btn-light btn-sm ml-5" @onclick="@(()=>DownloadeFile(document.Id))"><i class="fa-solid fa-file-arrow-down text-danger fs-5"></i></button>
+                            @if (document.Type == "PDF")
+                            {
+                                <button type="button" class="btn btn-light btn-sm" @onclick="@(()=>BrowsDocument(document.Id))"><i class="fa-solid fa-book-open text-primary fs-5"></i></button>
+                            }
+                        </li>
+                    }
+                </ol>
+            </div>
+            <div class="col-md-8">
+                @if (!IsFileExist)
+                {
+                    <p class="text-danger border border-danger p-2">لا يوجد هذا لعرضه .</p>
+                }
+                @if (PdfBase64 != null)
+                {
+                    <iframe src="@PdfBase64" width="100%" height="800" frameborder="0"></iframe>
+                }
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+

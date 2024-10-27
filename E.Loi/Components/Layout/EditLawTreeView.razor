@@ -1,0 +1,53 @@
+﻿@if (nodes != null)
+{
+    foreach (var node in nodes)
+    {
+        <li class="position-relative "
+            style="padding-right: @(Level * 16)px;padding-bottom:15px"
+            @onclick="() => ItemSelected(node)">
+            @if (node.HasChildren)
+            {
+                <span class="arrow"
+                      @onclick="() => node.IsCollapsed = !node.IsCollapsed"
+                @onclick:stopPropagation>
+                    <img style="width: 17px;height: 20px;margin-left: 10px; position: relative;top: -3px;" src="../images/@(node.IsCollapsed ? "chevron.png" : "chevron-dwon.png")" />
+                </span>
+            }
+            else
+            {
+                <span class="arrow-placeholder">
+                    <img style="width: 17px;height: 20px;margin-left: 10px; position: relative;top: 0;" src="../images/menu.png" />
+                </span>
+            }
+            <span class="text item@(node.IsSelected ? " selected" : "")">
+                @node.Label
+            </span>
+
+            @if (!node.IsPlf)
+            {
+                <div class="dropdown position-absolute treview-btn" style="display:inline;top:0;left:0">
+                    <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" @onclick="@(()=>AddNewNode(node.Id))"><i class="fa-solid fa-plus ml-10"></i>إضافة عقدة</a></li>
+                    <li><a class="dropdown-item" @onclick="@(()=>EditNode(node))"><i class="fa-solid fa-pen ml-10"></i>تعديل عقدة</a></li>
+                    <li>
+                        <a class="dropdown-item" @onclick="@(()=>DeleteNode(node))"><i class="fa-solid fa-trash-can ml-10"></i>حذف عقدة</a>
+                    </li>
+                </ul>
+            </div>
+            }
+        </li>
+        @if (node.HasChildren && !node.IsCollapsed)
+        {
+            <EditLawTreeView nodes="@node.childrens"
+                             Level="@(Level + 1)"
+                             OnAddNewNode="AddNewNode"
+                             OnDeleteNode="DeleteNode"
+                             OnEditNode="EditNode"
+                             OnSelect="ItemSelected">
+            </EditLawTreeView>
+        }
+    }
+}

@@ -1,0 +1,47 @@
+﻿<div class="modal fade" id="ModelReassignment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    إعادة تعين العقدة
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height:50vh">
+
+                @if (loadNodes)
+                {
+                    <div class="w-25 position-absolute top-50" style="left:35%">
+                        <Loading />
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="tree-view list-unstyled">
+                                <LawTreview nodes="nodes"
+                                            OnSelect="node =>SelectedNode(node.Id)"></LawTreview>
+                            </ul>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><Icon Type="close" Theme="outline" /> إخفاء</button>
+                <button type="button" class="btn btn-primary btn-sm" @onclick="ChangeAmendmentNodeId">
+                    <Icon Type="check" Theme="outline" /> حفظ
+                    @if (StartProcessing)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span class="visually-hidden" role="status">Loading...</span>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

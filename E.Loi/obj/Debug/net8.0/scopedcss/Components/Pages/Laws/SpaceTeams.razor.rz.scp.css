@@ -1,0 +1,29 @@
+.btn-check:checked + .btn[b-6fx93ymlx5], .btn.active[b-6fx93ymlx5], .btn.show[b-6fx93ymlx5], .btn:first-child:active[b-6fx93ymlx5], :not(.btn-check) + .btn:active[b-6fx93ymlx5] {
+    background-color: #f8f9fa !important;
+    border-color: #fff !important;
+    color: #000 !important;
+}
+
+.pagination li a.page-link[b-6fx93ymlx5], .pagination li a[b-6fx93ymlx5] {
+    font-size: 14px;
+    padding: 7px 12px !important;
+}
+
+element.style[b-6fx93ymlx5] {
+}
+
+.list-group-item[b-6fx93ymlx5] {
+    margin-bottom: 5px;
+}
+
+    .list-group-item + .list-group-item[b-6fx93ymlx5] {
+        border-top-width: 1px;
+        margin-bottom: 5px;
+    }
+
+    .list-group-item:first-child[b-6fx93ymlx5], .list-group-item + .list-group-item[b-6fx93ymlx5] {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }

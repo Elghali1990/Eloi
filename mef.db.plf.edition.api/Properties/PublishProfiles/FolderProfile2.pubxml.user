@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\m.elghali\Desktop\Edition</_PublishTargetUrl>
+    <History>True|2024-06-06T10:22:32.5593524Z;True|2024-06-06T10:50:48.8481165+01:00;True|2024-06-06T10:23:55.4067091+01:00;True|2024-06-06T10:23:47.8765984+01:00;True|2024-06-06T10:18:43.0827069+01:00;True|2024-06-06T09:44:40.6095662+01:00;True|2024-06-05T15:31:33.8429700+01:00;True|2024-06-05T15:31:05.6979019+01:00;True|2024-06-03T15:53:51.4168042+01:00;True|2024-05-27T13:15:48.4762654+01:00;True|2024-05-03T16:29:43.2331112+01:00;True|2024-04-29T12:02:53.6170866+01:00;True|2024-04-18T10:53:01.2640857+01:00;True|2024-02-27T11:02:31.1552256+01:00;True|2024-01-29T15:49:46.0845028+01:00;True|2024-01-29T15:47:02.5697010+01:00;True|2024-01-29T10:18:38.0771625+01:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Default">
+      <Value>Data Source=192.168.1.29%3bDatabase=PLFDeploy%3bUser Id=sa%3bpassword=Pa%24%24w0rd%3bTrusted_Connection=False%3bMultipleActiveResultSets=true%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

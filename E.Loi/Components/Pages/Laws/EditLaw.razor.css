@@ -1,0 +1,19 @@
+﻿.modal-footer {
+    justify-content: center;
+}
+
+.dropdown-item {
+    font-size: 12px;
+    font-weight: 700
+}
+
+    .dropdown-item i {
+        font-size: 12px;
+    }
+
+.img-print {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}

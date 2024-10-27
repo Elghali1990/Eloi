@@ -1,0 +1,2391 @@
+[
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "ChangeAmendmentTeam",
+    "RelativePath": "api/Amendment/changeAmendmentTeam/{TeamId}/{LastModifiedBy}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AmendmentIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "TeamId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CheckAmendmentExisteByNumberAsync",
+    "RelativePath": "api/Amendment/checkAmendmentExisteByNumberAsync/{LawId}/{phaseId}/{Number}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Number",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CheckAmendmentsHasNewContent",
+    "RelativePath": "api/Amendment/CheckAmendmentsHasNewContent/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CheckAmendmentsSectionHasNewContent",
+    "RelativePath": "api/Amendment/checkAmendmentsSectionHasNewContent/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CheckBeforChangeAmendmentNode",
+    "RelativePath": "api/Amendment/checkBeforChangeAmendmentNode/{NodeId}/{AmendmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "AmendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CloneAmendmentsAsync",
+    "RelativePath": "api/Amendment/CloneAmendmentsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendments",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.CloneAmendmentsVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CountAmendmentsByTeamAndLaw",
+    "RelativePath": "api/Amendment/countAmendmentsByTeamAndLaw/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "CreateAmendmentAsync",
+    "RelativePath": "api/Amendment/createAmendment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendment",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.AmendmentVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "DeleteAmendmantAsync",
+    "RelativePath": "api/Amendment/DeleteAmendmantAsync/{amendmentId}/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAllSubmitedAmendments",
+    "RelativePath": "api/Amendment/GetAllSubmitedAmendments/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAllSubmitedAmendments",
+    "RelativePath": "api/Amendment/GetAllSubmitedAmendments/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentByIdAsync",
+    "RelativePath": "api/Amendment/GetAmendmentByIdAsync/{amendmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentDetailsAsync",
+    "RelativePath": "api/Amendment/GetAmendmentDetailsAsync/{AmendmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AmendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsAsync",
+    "RelativePath": "api/Amendment/getAmendmentsAsync/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsForCluster",
+    "RelativePath": "api/Amendment/GetAmendmentsForCluster/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsForCluster",
+    "RelativePath": "api/Amendment/GetAmendmentsForCluster/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsListAsync",
+    "RelativePath": "api/Amendment/GetAmendmentsListAsync/{nodeId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsListForVotingAsync",
+    "RelativePath": "api/Amendment/GetAmendmentsListForVotingAsync/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetAmendmentsPublicAsync",
+    "RelativePath": "api/Amendment/GetAmendmentsPublicAsync/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetClusterAmendments",
+    "RelativePath": "api/Amendment/GetClusterAmendments/{AmendmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AmendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetLiftAmendments",
+    "RelativePath": "api/Amendment/GetLiftAmendments/{LawId}/{PhaseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetNodeAmendmentsAsync",
+    "RelativePath": "api/Amendment/GetNodeAmendmentsAsync/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetPublicAmendmentsListAsync",
+    "RelativePath": "api/Amendment/GetPublicAmendmentsListAsync/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetSubmitedAmendmentsListAsync",
+    "RelativePath": "api/Amendment/GetSubmitedAmendmentsListAsync/{nodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "GetVoteAmendmentsAsync",
+    "RelativePath": "api/Amendment/getVoteAmendmentsAsync/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "getVoteResult",
+    "RelativePath": "api/Amendment/getVoteResult/{lawId}/{phasLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phasLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "insertGovernmentAmendmentsAsync",
+    "RelativePath": "api/Amendment/insertGovernmentAmendmentsAsync/{lawId}/{phasLawId}/{TeamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phasLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "TeamId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "ReassignmentAmendment",
+    "RelativePath": "api/Amendment/ReassignmentAmendment/{AmendmentId}/{NodeId}/{LastModifiedBy}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AmendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "SetAmendmentsAsync",
+    "RelativePath": "api/Amendment/SetAmendmentsAsync",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendmentStatuVm",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.SetAmendmentStatuVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "SetAmendmentsNumbers",
+    "RelativePath": "api/Amendment/SetAmendmentsNumbers/{LawId}/{PhaseLawId}/{LastModifiedBy}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamsId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "SetAmendmentsOrders",
+    "RelativePath": "api/Amendment/SetAmendmentsOrders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.SetAmendmentOrder",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "SetNewContent",
+    "RelativePath": "api/Amendment/SetNewContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.SetContent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "Statistic",
+    "RelativePath": "api/Amendment/statistic/{lawId}/{phasLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phasLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.AmendmentController",
+    "Method": "UpdateAmendmantAsync",
+    "RelativePath": "api/Amendment/UpdateAmendmantAsync/{amendmentId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "amendment",
+        "Type": "E.Loi.DataAccess.Vm.Amendment.AmendmentVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.DocumentsController",
+    "Method": "DeleteDocumentAsync",
+    "RelativePath": "api/Documents/DeleteDocumentAsync/{DocId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DocId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.DocumentsController",
+    "Method": "GetDocumentByIdAsync",
+    "RelativePath": "api/Documents/GetDocumentByIdAsync/{docId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.DocumentsController",
+    "Method": "GetLawDocumentsAsync",
+    "RelativePath": "api/Documents/GetLawDocumentsAsync/{LawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.DocumentsController",
+    "Method": "InsertDocument",
+    "RelativePath": "api/Documents/insertDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documents",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Vm.Document.DocumentVm, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "checkLawExiste",
+    "RelativePath": "api/Law/checkLawExiste/{Number}/{Year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Number",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "createLawAsync",
+    "RelativePath": "api/Law/createLawAsync/{lawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "DeleteLawAsync",
+    "RelativePath": "api/Law/deleteLawAsync/{LawId}/{LastModifiedBy}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetAllLawsAsync",
+    "RelativePath": "api/Law/GetAllLawsAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getAllLawsForAll",
+    "RelativePath": "api/Law/getAllLawsForAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetAllLawsTeamAsync",
+    "RelativePath": "api/Law/GetAllLawsTeamAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetAllLawsWithPhases",
+    "RelativePath": "api/Law/getAllLawsWithPhases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetAllPreparationLawsAsync",
+    "RelativePath": "api/Law/GetAllPreparationLawsAsync/{phaseId}/{TeamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "TeamId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetAllReferences",
+    "RelativePath": "api/Law/getAllReferences",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetCGILawAsync",
+    "RelativePath": "api/Law/GetCGILawAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawById",
+    "RelativePath": "api/Law/getLawById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawByIdCommission",
+    "RelativePath": "api/Law/GetLawByIdCommission/{comId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawByIds",
+    "RelativePath": "api/Law/getLawByIds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawByYear",
+    "RelativePath": "api/Law/getLawByYear/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawInfo",
+    "RelativePath": "api/Law/getLawInfo/{LawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsByCategoryAsync",
+    "RelativePath": "api/Law/GetLawsByCategoryAsync/{Category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsByTeamId",
+    "RelativePath": "api/Law/GetLawsByTeamId/{teamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsForCommission",
+    "RelativePath": "api/Law/GetLawsForCommission/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsForDirector",
+    "RelativePath": "api/Law/GetLawsForDirector/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsForlegislation",
+    "RelativePath": "api/Law/GetLawsForlegislation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawsForReadTwo",
+    "RelativePath": "api/Law/getLawsForReadTwo/{StatuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StatuId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawsForSession",
+    "RelativePath": "api/Law/GetLawsForSession/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetLawStatuAsync",
+    "RelativePath": "api/Law/GetLawStatuAsync/{LawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getLawsToPrint",
+    "RelativePath": "api/Law/getLawsToPrint/{ComId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ComId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "getPlfLaws",
+    "RelativePath": "api/Law/getPlfLaws",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "GetPreparationMLawsAsync",
+    "RelativePath": "api/Law/GetPreparationMLawsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamsId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "InsertLaw",
+    "RelativePath": "api/Law/InsertLaw",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "E.Loi.DataAccess.Vm.Law.EditLawVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "setDateIhalaLaw",
+    "RelativePath": "api/Law/setDateIhalaLaw",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawDate",
+        "Type": "E.Loi.DataAccess.Vm.Law.LawDate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "setLawInfo",
+    "RelativePath": "api/Law/setLawInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawInfo",
+        "Type": "E.Loi.DataAccess.Vm.Law.LawInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "SetLawStatuAsync",
+    "RelativePath": "api/Law/SetLawStatuAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawStatu",
+        "Type": "E.Loi.DataAccess.Vm.Law.LawStatuVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LawController",
+    "Method": "SetPhaseLawAsync",
+    "RelativePath": "api/Law/SetPhaseLawAsync/{LawId}/{PhaseLawId}/{LastModifiedBy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LegislativesController",
+    "Method": "GetAllLegislativesAsync",
+    "RelativePath": "api/Legislatives/GetAllLegislatives",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LegislativeSessionsController",
+    "Method": "GetAllLegislativeSessions",
+    "RelativePath": "api/LegislativeSessions/GetAllLegislativeSessions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LegislativeSessionsController",
+    "Method": "GetAllLegislativeSessionsByIdYear",
+    "RelativePath": "api/LegislativeSessions/GetAllLegislativeSessionsByIdYear/{Idyear}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Idyear",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LegislativeYearsController",
+    "Method": "GetAllLegislativeYears",
+    "RelativePath": "api/LegislativeYears/GetAllLegislativeYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.LegislativeYearsController",
+    "Method": "GetAllLegislativeYearsByIdLegislative",
+    "RelativePath": "api/LegislativeYears/GetAllLegislativeYearsByIdLegislative/{LegislativeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LegislativeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "CloneNodes",
+    "RelativePath": "api/Nodes/CloneNodes/{LawId}/{CurentPhase}/{DestinationPhase}/{Statu}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "CurentPhase",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "DestinationPhase",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Statu",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "cloneSectionWithChildrens",
+    "RelativePath": "api/Nodes/cloneSectionWithChildrens/{SectionId}/{DestinationPhase}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "DestinationPhase",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "CreatelawNodes",
+    "RelativePath": "api/Nodes/CreateLawNodes/{LawId}/{CreatedBy}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "texts",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Vm.Law.TextLaw, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "CreateNode",
+    "RelativePath": "api/Nodes/CreateNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "E.Loi.DataAccess.Vm.Node.CreateNodeVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "createNodes",
+    "RelativePath": "api/Nodes/createNodes/{lawId}/{phasLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phasLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "CreateVirtualNode",
+    "RelativePath": "api/Nodes/CreateVirtualNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "E.Loi.DataAccess.Vm.Node.CreateNodeVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "DeleteNode",
+    "RelativePath": "api/Nodes/DeleteNode/{nodeId}/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetDirecteChildsAsync",
+    "RelativePath": "api/Nodes/GetDirecteChilds/{ParentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetFlatNodes",
+    "RelativePath": "api/Nodes/GetFlatNodes/{lawId}/{phaseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetFlatParents",
+    "RelativePath": "api/Nodes/GetFlatParents/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetFlatPrint",
+    "RelativePath": "api/Nodes/GetFlatPrint",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhasLawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "getLawSections",
+    "RelativePath": "api/Nodes/getLawSections/{lawId}/{phaseId}/{IsPrinVotingFile}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "IsPrinVotingFile",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetNodeByID",
+    "RelativePath": "api/Nodes/getNodeByID/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetNodeByIdAsync",
+    "RelativePath": "api/Nodes/GetNodeByIdAsync/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetNodeByTypeByNumberByBis",
+    "RelativePath": "api/Nodes/getNodeByTypeByNumberByBis/{ParentNodeId}/{TypeId}/{Number}/{Bis}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParentNodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "TypeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Number",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Bis",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "getNodeChildrens",
+    "RelativePath": "api/Nodes/getNodeChildrens",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phaseId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "includeVirtuelNode",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "getNodeContent",
+    "RelativePath": "api/Nodes/getNodeContent/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "getNodeWithAmendmentForPresident",
+    "RelativePath": "api/Nodes/getNodeWithAmendmentForPresident",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhasLawId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetParentNode",
+    "RelativePath": "api/Nodes/GetParentNode/{LawId}/{PhaseLawId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetSectionForVoting",
+    "RelativePath": "api/Nodes/GetSectionForVoting",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "GetSectionRubric",
+    "RelativePath": "api/Nodes/getSectionRubric/{SectionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "SetNewContent",
+    "RelativePath": "api/Nodes/setNewContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateNodeContent",
+        "Type": "E.Loi.DataAccess.Vm.Node.UpdateNodeContent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "SetPhaseNodes",
+    "RelativePath": "api/Nodes/SetPhaseNodes/{LawId}/{DestinationPhase}/{LastModifyBy}/{Order}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "DestinationPhase",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifyBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Order",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodesController",
+    "Method": "UpdateNodeContent",
+    "RelativePath": "api/Nodes/UpdateNodeContent/{UserId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeContent",
+        "Type": "E.Loi.DataAccess.Vm.Node.NodeContentVm",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodeTypesController",
+    "Method": "GetAllNodeTypesAsync",
+    "RelativePath": "api/NodeTypes/GetAllNodeTypesAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodeTypesController",
+    "Method": "GetNodeTypeByIdAsync",
+    "RelativePath": "api/NodeTypes/GetNodeTypeByIdAsync/{nodeTypeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeTypeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodeTypesController",
+    "Method": "GetNodeTypeByNameAsync",
+    "RelativePath": "api/NodeTypes/GetNodeTypeByNameAsync/{label}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "label",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodeTypesController",
+    "Method": "GetNodeTypesWithNodeHierarchies",
+    "RelativePath": "api/NodeTypes/getNodeTypesWithNodeHierarchies/{nodeTypeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nodeTypeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.NodeTypesController",
+    "Method": "GetPlfNodeTypesWithNodeHierarchies",
+    "RelativePath": "api/NodeTypes/getPlfNodeTypesWithNodeHierarchies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.PhasesController",
+    "Method": "getAll",
+    "RelativePath": "api/Phases/getAllPhase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.PhasesController",
+    "Method": "getPhaseById",
+    "RelativePath": "api/Phases/getPhaseById/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.PhasesController",
+    "Method": "getPhaseByOrder",
+    "RelativePath": "api/Phases/getPhaseByOrder/{Order}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Order",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.RolesController",
+    "Method": "getAllAsync",
+    "RelativePath": "api/Roles/getAllAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "filterStatisticReadOne",
+    "RelativePath": "api/Statistics/filterStatisticReadOne",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "E.Loi.DataAccess.Vm.Laws.SearchDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "filterStatisticReadTwo",
+    "RelativePath": "api/Statistics/filterStatisticReadTwo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "E.Loi.DataAccess.Vm.Laws.SearchDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "getStatisticReadOne",
+    "RelativePath": "api/Statistics/getStatisticReadOne",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "getStatisticReadTwo",
+    "RelativePath": "api/Statistics/getStatisticReadTwo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "statisticsByCommittees",
+    "RelativePath": "api/Statistics/statisticsByCommittees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatisticsController",
+    "Method": "statisticsByParliamentaryTeams",
+    "RelativePath": "api/Statistics/statisticsByParliamentaryTeams",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatusController",
+    "Method": "getStatuByPhaseId",
+    "RelativePath": "api/Status/getStatuByPhaseId/{phaseId}/{Order}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Order",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatusController",
+    "Method": "getStatus",
+    "RelativePath": "api/Status/getStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatusController",
+    "Method": "getStatusById",
+    "RelativePath": "api/Status/getStatusById/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.StatusController",
+    "Method": "getStatusByOrder",
+    "RelativePath": "api/Status/getStatusByOrder/{order}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "CreateTeamAsync",
+    "RelativePath": "api/Team/CreateTeamAsync/{CreatedBy}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vm",
+        "Type": "E.Loi.DataAccess.Vm.Team.TeamVm",
+        "IsRequired": true
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "DelteTeamAsync",
+    "RelativePath": "api/Team/DelteTeamAsync/{Id}/{LastModifiedBy}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "GetAll",
+    "RelativePath": "api/Team/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "getAllTeams",
+    "RelativePath": "api/Team/getAllTeams",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "getAllTeamsForEchange",
+    "RelativePath": "api/Team/getAllTeamsForEchange",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "GetCommissionsAsync",
+    "RelativePath": "api/Team/getCommissionsAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TeamController",
+    "Method": "UpdateTeamAsync",
+    "RelativePath": "api/Team/UpdateTeamAsync/{LastModifiedBy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vm",
+        "Type": "E.Loi.DataAccess.Vm.Team.TeamVm",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.TraceController",
+    "Method": "insertTrace",
+    "RelativePath": "api/Trace/insertTrace",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trace",
+        "Type": "E.Loi.DataAccess.Models.Trace",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "createuserAsync",
+    "RelativePath": "api/Users/createuserAsync/{CreatedBy}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userVm",
+        "Type": "E.Loi.DataAccess.Vm.User.UserVm",
+        "IsRequired": true
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "DecryptToken",
+    "RelativePath": "api/Users/DecryptToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "deleteUserAsync",
+    "RelativePath": "api/Users/deleteUserAsync/{UserId}/{LastModifiedBy}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "GetAllUserAsync",
+    "RelativePath": "api/Users/GetAllUserAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "getUserByAsync",
+    "RelativePath": "api/Users/getUserByAsync/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/Users/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginVm",
+        "Type": "E.Loi.DataAccess.Vm.User.LoginVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "LoginGenerateTockenAsync",
+    "RelativePath": "api/Users/LoginGenerateTockenAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginVm",
+        "Type": "E.Loi.DataAccess.Vm.User.LoginVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.UsersController",
+    "Method": "updateuserAsync",
+    "RelativePath": "api/Users/updateuserAsync/{LastModifiedBy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userVm",
+        "Type": "E.Loi.DataAccess.Vm.User.UserVm",
+        "IsRequired": true
+      },
+      {
+        "Name": "LastModifiedBy",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteAmendmentController",
+    "Method": "DeleteVote",
+    "RelativePath": "api/VoteAmendment/DeleteVote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.DeleteVoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteAmendmentController",
+    "Method": "InsertVote",
+    "RelativePath": "api/VoteAmendment/InsertVote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.VoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteAmendmentController",
+    "Method": "UpdateVote",
+    "RelativePath": "api/VoteAmendment/UpdateVote",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.VoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteNodesController",
+    "Method": "DeleteVote",
+    "RelativePath": "api/VoteNodes/DeleteVote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.DeleteVoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteNodesController",
+    "Method": "InsertVote",
+    "RelativePath": "api/VoteNodes/InsertVote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.VoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Api.Controllers.VoteNodesController",
+    "Method": "UpdateVote",
+    "RelativePath": "api/VoteNodes/UpdateVote",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vote",
+        "Type": "E.Loi.DataAccess.Vm.Vote.VoteVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

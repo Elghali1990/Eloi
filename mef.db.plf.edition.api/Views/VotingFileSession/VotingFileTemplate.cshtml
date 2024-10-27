@@ -1,0 +1,362 @@
+﻿@model E.Loi.DataAccess.Dtos.SectionDto
+
+@{
+    string CountAmendment(int Number) => Number switch
+    {
+        1 => "تعديل واحد",
+        2 => "تعديلان",
+        3 => "ثلاث تعديلات",
+        4 => "اربع تعديلات ",
+        5 => "خمس تعديلات ",
+        6 => "ست تعديلات",
+        7 => "سبع تعديلات",
+        8 => "ثماني تعديلات",
+        9 => "تسع تعديلات",
+        10 => "عشر تعديلات",
+        _ => $"{Number} تعديل"
+    };
+
+    string getAmendmentIntent(string intent) => intent switch
+    {
+        "MODIFICATION" => "تعديل",
+        "ADDITION" => "حذف",
+        "DELETION" => "اضافة",
+        _ => string.Empty
+    };
+
+}
+<style>
+    * {
+        font-family: "Calibri" !important
+    }
+
+    .p{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Calibri';
+        margin-bottom: -15px;
+        position: relative;
+    }
+    
+    .p::after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: #c0392b;
+        position: absolute;
+        top: 6px;
+        right: -20px;
+    }
+</style>
+<div style="margin: 20px; direction:rtl !important">
+
+    <h2 style="text-align: center;margin-top: 50px;">
+        @Model.SectionNumber
+    </h2>
+    <h2 style="text-align: center;margin-top: -15px;">
+        @Model.SectionName
+    </h2>
+
+    @foreach (var Rubric in Model.RubricList)
+    {
+        <div>
+            <div dir="rtl" style="margin: 20px;">
+                <h2 style="text-align: center;margin-top: 50px;">
+                    @Rubric.Title
+                </h2>
+                <h2 style="text-align: center;margin-top: -15px;">
+                    @Rubric.SubTitle
+                </h2>
+                <h3 style="text-align: center;margin-top: -15px;">
+                    @{
+                        string sectionArticles = " من المــادة " + " " + Rubric.StartArticle + " " + " الى المادة" + Rubric.EndArticle;
+                    }
+                    @sectionArticles
+                </h3>
+            </div>
+        </div>
+    }
+    <div style="margin-top: 100px;">
+        <h2 style="text-align: center">
+            حضرات السيدات والسادة،
+            نشرع الآن في التصويت على مواد
+        </h2>
+        <h2 style="text-align: center;">
+            @Model.SectionNumber
+        </h2>
+        <h2 style="text-align:center;margin-top: -15px">
+            @Model.SectionName
+        </h2>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    @foreach (var article in Model.ArticleList)
+    {
+        <div>
+            <div dir="rtl" style="margin: 20px;">
+                <h2 style="text-align: center;margin-top: 50px;font-weight:bold;font-size:35px">
+                    @article.Title
+                </h2>
+                <h2 style="text-align: center;margin-top: -20px !important;font-weight:bold;font-size:35px">
+                    @article.SubTitle
+                </h2>
+                <h3 style="text-align: center;margin-top: -20px !important;font-weight:bold;font-size:35px">
+                    @{
+                        string sectionArticles = " من المــادة " + article.StartArticle + " الى المادة" + article.EndArticle;
+                    }
+                    @sectionArticles
+                </h3>
+            </div>
+        </div>
+        <br />
+
+        @foreach (var chapter in article.chapters)
+        {
+            <h3 style="font-weight:bold;font-size:20px;text-decoration:underline;color:#f00">@chapter.Label</h3>
+
+            @foreach (var child in chapter.Childrens)
+            {
+                <h3 style="font-weight:bold;font-size:20px;text-decoration:underline;color:#f00">@child.Label.Replace("مادة وظيفية", "الفصل")</h3>
+                @if (child.Amendments?.Count > 0)
+                {
+                    <div style="margin-right: 5%">
+                    <p class="p">
+                        <span> @($"ورد بشأنها {CountAmendment(child.Amendments.Count)} من طرف ")</span>
+                        @{
+                            string teams = string.Empty;
+                        }
+                        @foreach (var team in child.Amendments.Select(x => x.TeamName).Distinct().ToList())
+                        {
+                            teams += " " + team + " -";
+                        }
+                        <span>@teams.Remove(teams.Length - 1) </span>
+
+                        @{
+                            string strNumber = string.Empty;
+                            List<int> Numbers = child.Amendments.Select(amd => amd.Number).ToList();
+                            foreach (var number in Numbers)
+                            {
+                                strNumber += $"{number}و";
+                            }
+                        }
+                        <span style="font-size:20px ;font-weight:bold;color:#3498db">
+                            @($"(تعديل رقم :{strNumber.Remove(strNumber.Length - 1)})")
+                        </span>
+                    </p>
+                 
+                    @foreach (var amendment in child.Amendments)
+                    {
+                        <p class="p">
+                            @($"الكلمة لأحد مقدمي التعديل رقم {amendment.Number} فليتفضل")
+                        </p>
+                        <p class="p">
+                            الكلمة للحكومة.
+                        </p>
+                        <p class="p">
+                            الكلمة لـحد المؤيدين لهذا التعديل
+                        </p>
+                        <p class="p">
+                           @($"أعرض التعديل رقم  {amendment.Number} للتصويت")
+                        </p>
+                    }
+                    </div>
+                }
+                <p class="p">
+                    @($"أعرض {child.Label.Replace("مادة وظيفية", "الفصل")} للتصويت كما صادقت عليها اللجنة")
+                </p>
+
+                <table border="2" style="border-collapse: collapse;width: 60%;">
+                    <tr>
+                        <td style="width: 40%;"></td>
+                        <th scope="col"
+                            style="width:20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                            الموافقون
+                        </th>
+                        <th scope="col"
+                            style="width:20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                            المعارضون
+                        </th>
+                        <th scope="col"
+                            style="width:20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                            الممتنعون
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row"
+                            style=" width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                            تصويت اللجنة
+                        </th>
+                        <td style=" width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px;">
+                            @(chapter.vote.Result == "UNANIMOUS" ? "الإجماع" : chapter.vote.InFavor)
+                        </td>
+                        <td style="width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                            @(chapter.vote.Result == "UNANIMOUS" ? string.Empty : chapter.vote.Against)
+                        </td>
+                        <td style="width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                            @(chapter.vote.Result == "UNANIMOUS" ? string.Empty : chapter.vote.Neutral)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"
+                            style=" width: 40%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                            تصويت الجلسة العامة
+                        </th>
+                        <td style="width: 20%;vertical-align: middle; text-align: center;font-size: 2px;font-weight: bold;padding: 20px;border-width: 2px">
+                        </td>
+                        <td style="width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                        </td>
+                        <td style="width: 20%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                        </td>
+                    </tr>
+                </table>
+            }
+            <p style="font-size:20px ;font-weight:bold">
+                @($"أعرض {@chapter.Label} للتصويت كما صادقت عليها اللجنة")
+            </p>
+
+            <table border="2" style="border-collapse: collapse;width: 60%;">
+                <tr>
+                    <td style="width: 25%;"></td>
+                    <th scope="col"
+                        style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                        الموافقون
+                    </th>
+                    <th scope="col"
+                        style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                        المعارضون
+                    </th>
+                    <th scope="col"
+                        style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                        الممتنعون
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row"
+                        style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                        تصويت اللجنة
+                    </th>
+                    <td style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px;">
+                        @(chapter.vote.Result == "UNANIMOUS" ? "الإجماع" : chapter.vote.InFavor)
+                    </td>
+                    <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                        @(chapter.vote.Result == "UNANIMOUS" ? string.Empty : chapter.vote.Against)
+                    </td>
+                    <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                        @(chapter.vote.Result == "UNANIMOUS" ? string.Empty : chapter.vote.Neutral)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"
+                        style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                        تصويت الجلسة العامة
+                    </th>
+                    <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                    </td>
+                    <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                    </td>
+                    <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                    </td>
+                </tr>
+            </table>
+        }
+
+     
+
+        <p style="font-size:20px ;font-weight:bold">
+            @($"أعرض {article.Title} للتصويت برمته كما صادقت عليها اللجنة")
+        </p>
+        <table border="2" style="border-collapse: collapse;width: 60%;">
+            <tr>
+                <td style="width: 25%;"></td>
+                <th scope="col"
+                    style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                    الموافقون
+                </th>
+                <th scope="col"
+                    style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                    المعارضون
+                </th>
+                <th scope="col"
+                    style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                    الممتنعون
+                </th>
+            </tr>
+            <tr>
+                <th scope="row"
+                    style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                    تصويت اللجنة
+                </th>
+                <td style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px;">
+                  
+                </td>
+                <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                 
+                </td>
+                <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                   
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                    تصويت الجلسة العامة
+                </th>
+                <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                </td>
+                <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                </td>
+                <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+                </td>
+            </tr>
+        </table>
+    }
+    <p style="font-size:20px ;font-weight:bold">
+        @($"أعرض {Model.SectionNumber} للتصويت برمته كما صادقت عليها اللجنة")
+    </p>
+    <table border="2" style="border-collapse: collapse;width: 60%;">
+        <tr>
+            <td style="width: 25%;"></td>
+            <th scope="col"
+                style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                الموافقون
+            </th>
+            <th scope="col"
+                style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                المعارضون
+            </th>
+            <th scope="col"
+                style="width:25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 5px;background-color: #ccc;border-width: 2px">
+                الممتنعون
+            </th>
+        </tr>
+        <tr>
+            <th scope="row"
+                style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                تصويت اللجنة
+            </th>
+            <td style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px;">
+               
+            </td>
+            <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+               
+            </td>
+            <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+               
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"
+                style=" width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;border-width: 2px">
+                تصويت الجلسة العامة
+            </th>
+            <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+            </td>
+            <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+            </td>
+            <td style="width: 25%;vertical-align: middle; text-align: center;font-size: 20px;font-weight: bold;padding: 20px;border-width: 2px">
+            </td>
+        </tr>
+    </table>

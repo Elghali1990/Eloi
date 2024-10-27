@@ -1,0 +1,117 @@
+﻿@using E.Loi.Edition.Generation.VMs
+@model DouaneTarification;
+<style>
+    .nl1, .nl2, .nl3, .nl4, .nl5, .dtu, .dtuc, .dtt, .dtut {
+        height: 100%;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-collapse: collapse;
+    }
+
+    .dtd {
+        height: 100%;
+    }
+
+    .mfdb-flex-row {
+        gap: 0px;
+        align-items: stretch;
+    }
+
+    .mfdb-flex-column {
+        gap: 0px;
+    }
+
+
+    table {
+        width: 100%;
+        font-size: 0.85rem;
+        writing-mode:vertical-lr;
+    }
+
+    table, th, td {
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        border-collapse: collapse;
+        text-align: start;
+    }
+
+    table, th {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        background-color: #EEEEEE;
+        border-collapse: collapse;
+    }
+
+    td {
+        background-color: #FFFFFF !important;
+    }
+
+    .empty-row td {
+        border-bottom: 1px solid black;
+    }
+
+    .tarif-header {
+        text-align: center;
+    }
+    .classification-header{
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .unit-header {
+        text-align: center;
+    }
+    .designation-header{
+        padding: 3px;
+    }
+
+    .unit-complementary-header {
+        text-align: center;
+    }
+
+</style>
+<table dir="rtl">
+    <tr>
+        <th class="classification-header" style="width:29.64% !important" colspan="5">ترميز حسب النظام المنسق</th>
+        <th class="designation-header" style="width:52% !important">نوع البضائع</th>
+        <th class="tarif-header" style="width:6.21% !important">رسم الاستيراد</th>
+        <th class="unit-header" style="width:6.21% !important">وحدة الكمية حسب المواصفة</th>
+        <th class="unit-complementary-header" style="width:6.21% !important">الوحدات التكميلية</th>
+    </tr>
+    @foreach (var row in Model.rows)
+    {
+        if (row.isEmpty)
+        {
+            <tr class="empty-row">
+
+                <td class="classification-header" style="width:4.74% !important"></td>
+                <td class="classification-header" style="width:7.25% !important"></td>
+                <td class="classification-header" style="width:7.25% !important"></td>
+                <td class="classification-header" style="width:5.2% !important"></td>
+                <td class="classification-header" style="width:5.2% !important"></td>
+                <td class="designation-header" style="width:52% !important"></td>
+                <td class="tarif-header" style="width:6.21% !important"></td>
+                <td class="unit-header" style="width:6.21% !important"></td>
+                <td class="unit-complementary-header" style="width:6.21% !important"></td>
+            </tr>
+        }
+        else
+        {
+
+            <tr>
+
+                <td class="classification-header" style="width:4.74% !important">@row.nomenclature_level_1</td>
+                <td class="classification-header" style="width:7.25% !important">@row.nomenclature_level_2</td>
+                <td class="classification-header" style="width:7.25% !important">@row.nomenclature_level_3</td>
+                <td class="classification-header" style="width:5.2% !important">@row.nomenclature_level_4</td>
+                <td class="classification-header" style="width:5.2% !important">@row.nomenclature_level_5</td>
+                <td class="designation-header" style="width:52% !important">@row.designation</td>
+                <td class="tarif-header" style="width:6.21% !important">@row.tarif</td>
+                <td class="unit-header" style="width:6.21% !important">@row.unit</td>
+                <td class="unit-complementary-header" style="width:6.21% !important">@row.unit_complementary</td>
+            </tr>
+        }
+    }
+
+</table>
+

@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.7.1",
+      "destination": "wwwroot/jquery/",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "bootstrap@5.3.2",
+      "destination": "wwwroot/bootstrap/",
+      "files": [
+        "js/bootstrap.min.js"
+      ]
+    },
+    {
+      "library": "font-awesome@6.5.1",
+      "destination": "wwwroot/font-awesome/"
+    },
+    {
+      "library": "summernote@0.8.20",
+      "destination": "wwwroot/summernote/"
+    },
+    {
+      "library": "datatable@2.0.2",
+      "destination": "wwwroot/datatable/"
+    },
+    {
+      "library": "popper.js@2.11.8",
+      "destination": "wwwroot/TextLaws/popper.js/",
+      "files": [
+        "umd/popper.min.js"
+      ]
+    }
+  ]
+}

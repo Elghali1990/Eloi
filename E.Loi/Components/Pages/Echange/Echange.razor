@@ -1,0 +1,179 @@
+﻿@page "/echange-cdr-mf"
+@inject ILogger<Echange> _logger
+
+<HeadContent>
+    <style>
+        .rz-tabview-nav li a {
+            letter-spacing: 0;
+            font-size: 16px;
+            color: #000 !important;
+        }
+    </style>
+</HeadContent>
+<div class="container-fluid">
+    <div class="mt-3">
+        <RadzenTabs @bind-SelectedIndex=@selectedIndex>
+            <Tabs>
+                <RadzenTabsItem Text="الفرق و المجموعات النيابية">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>الفرق واللجان و مجموعات النيابية</h6>
+                           <hr />
+                            @foreach (var team in allTeams)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="@team.Id" id="@team.Id" style="height: 20px;width: 20px; margin-left: 15px;" onchange="@((ChangeEventArgs e)=>HandleSelectedTeams(e,team.Id))">
+                                    <label class="form-check-label" for="@team.Id" style="margin-top:5px">
+                                        @team.Label
+                                    </label>
+                                </div>
+                            }
+                            <hr />
+                            <button class="btn btn-light" @onclick="@(()=>SendTeams())">
+                                <i class="fa-solid fa-share ml-10"></i>
+                                إرسال
+                                @if (startSendTeams)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </RadzenTabsItem>
+                <RadzenTabsItem Text="تعديلات الفرق">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 mb-2">
+                                    <input class="form-control w-50" value="@law?.Label"  disabled/>
+                                </div>
+                                <div class="col-md-12 my-2">
+                                    <select class="form-select w-50" aria-label="Default select example" onchange="@((ChangeEventArgs e)=>setPhaseId(e))">
+                                        <option selected value="">إختيار المرحلة</option>
+                                        @foreach (var phase in phases)
+                                        {
+                                            <option value="@phase.Id">@phase.Title</option>
+                                        }
+                                    </select>
+
+                                </div>
+                                <div class="col-md-12 mb-3 mt-2">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" @bind="IsAmendmentsTeams" @oninput="setIsAmendmentsTeams" />
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">تعديلات الفرق</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" @bind="IsAmendmentsCommissions" @oninput="setIsAmendmentsCommissions" />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">تعديلات اللجنة</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" @bind="IsAmendmentsSession" @oninput="setIsAmendmentsSession" />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">تعديلات الجلسة العامة</label>
+                                    </div>
+                                </div>
+
+                                @if (IsAmendmentsTeams)
+                                {
+                                    <div class="col-md-12 mt-2">
+                                        <p>الفرق و المجموعات النيابية :</p>
+                                        <hr />
+                                        @foreach (var team in teams)
+                                        {
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="@team.Id" id="@team.Id" style="height: 20px;width: 20px; margin-left: 15px;" onchange="@((ChangeEventArgs e)=>HandleSelectedTeams(e,team.Id))">
+                                                <label class="form-check-label" for="@team.Id" style="margin-top:5px">
+                                                    @team.Label
+                                                </label>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                                @if (IsAmendmentsCommissions || IsAmendmentsSession)
+                                {
+                                    <div class="col-md-12 mt-2">
+                                        <p> صاحب التعديلات :</p>
+                                        <hr />
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="@stateContainerService.user.TeamId" id="IsAmendmentsCommissions" style="height: 20px;width: 20px; margin-left: 15px;" onchange="@((ChangeEventArgs e)=>HandleSelectedTeams(e,stateContainerService.user.TeamId))">
+                                            <label class="form-check-label" for="IsAmendmentsCommissions" style="margin-top:5px">
+                                                @stateContainerService.user.TeamName
+                                            </label>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <hr />
+                            <button class="btn btn-light" @onclick="@(()=>SendAmendments())">
+                                <i class="fa-solid fa-share ml-10"></i>
+                                إرسال
+                                @if (startSendAmendments)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </RadzenTabsItem>
+
+                <RadzenTabsItem Text="نتائج التصويت">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 mb-2">
+                                    <input class="form-control w-50" value="@law?.Label" disabled />
+                                </div>
+                                @foreach (var nodeSection in nodeSections)
+                                {
+                                    <div class="col-md-12 my-2">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="@nodeSection.Id" id="@nodeSection.Id" style="height: 20px;width: 20px; margin-left: 15px;" onchange="@((ChangeEventArgs e)=>setSectionId(e))">
+                                            <label class="form-check-label" for="@nodeSection.Id">
+                                                @nodeSection.Label
+                                            </label>
+                                        </div>
+                                    </div>
+                                }
+                               <div class="col-md-12">
+                                    <hr />
+                               </div>
+                                <div class="col-md-12 mb-3 mt-2">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" @bind="voteAmendments" @oninput="setIsVoteAmendments" />
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">نتائج التصويت على التعديلات</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" @bind="voteNodes" @oninput="setIsVoteNodes" />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">نتائج التصويت على المواد</label>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <hr />
+                            <button class="btn btn-light" @onclick="@(()=>sendVote())"><i class="fa-solid fa-share ml-10"></i> إرسال
+                                @if (startSendVote)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </RadzenTabsItem>
+
+            </Tabs>
+        </RadzenTabs>
+    </div>
+
+
+</div>
+@code {
+    int selectedIndex = 0;
+    //TeamVm
+}

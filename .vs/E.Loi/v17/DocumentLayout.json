@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\eloisnew-master\\E.Loi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13AF6A46-6B54-4BEF-B732-4E570F57B29B}|mef.db.plf.edition.data\\E.Loi.Edition.Generation.csproj|f:\\eloisnew-master\\e.loi\\mef.db.plf.edition.data\\generation\\votingfile\\generatevotingfileforpresident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13AF6A46-6B54-4BEF-B732-4E570F57B29B}|mef.db.plf.edition.data\\E.Loi.Edition.Generation.csproj|solutionrelative:mef.db.plf.edition.data\\generation\\votingfile\\generatevotingfileforpresident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC7A5D-AB4D-47EA-BF74-7AD36FC85C6D}|E.Loi\\E.Loi.csproj|f:\\eloisnew-master\\e.loi\\e.loi\\components\\pages\\edition\\print.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC7A5D-AB4D-47EA-BF74-7AD36FC85C6D}|E.Loi\\E.Loi.csproj|solutionrelative:e.loi\\components\\pages\\edition\\print.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5882B8C1-3104-4707-BEF1-2CF89184842E}|mef.db.plf.edition.api\\E.Loi.Edition.Api.csproj|f:\\eloisnew-master\\e.loi\\mef.db.plf.edition.api\\views\\votingfilecommission\\votingfilepresidentcommission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5882B8C1-3104-4707-BEF1-2CF89184842E}|mef.db.plf.edition.api\\E.Loi.Edition.Api.csproj|solutionrelative:mef.db.plf.edition.api\\views\\votingfilecommission\\votingfilepresidentcommission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD7F2B1-42AD-4D26-98FE-07264C07DDFB}|E.Loi.Services\\E.Loi.Services.csproj|f:\\eloisnew-master\\e.loi\\e.loi.services\\repositories\\noderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AD7F2B1-42AD-4D26-98FE-07264C07DDFB}|E.Loi.Services\\E.Loi.Services.csproj|solutionrelative:e.loi.services\\repositories\\noderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Print.razor.cs",
+              "DocumentMoniker": "F:\\eloisnew-master\\E.Loi\\E.Loi\\Components\\Pages\\Edition\\Print.razor.cs",
+              "RelativeDocumentMoniker": "E.Loi\\Components\\Pages\\Edition\\Print.razor.cs",
+              "ToolTip": "F:\\eloisnew-master\\E.Loi\\E.Loi\\Components\\Pages\\Edition\\Print.razor.cs",
+              "RelativeToolTip": "E.Loi\\Components\\Pages\\Edition\\Print.razor.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAuwIkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T09:50:37.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerateVotingFileForPresident.cs",
+              "DocumentMoniker": "F:\\eloisnew-master\\E.Loi\\mef.db.plf.edition.data\\Generation\\VotingFile\\GenerateVotingFileForPresident.cs",
+              "RelativeDocumentMoniker": "mef.db.plf.edition.data\\Generation\\VotingFile\\GenerateVotingFileForPresident.cs",
+              "ToolTip": "F:\\eloisnew-master\\E.Loi\\mef.db.plf.edition.data\\Generation\\VotingFile\\GenerateVotingFileForPresident.cs",
+              "RelativeToolTip": "mef.db.plf.edition.data\\Generation\\VotingFile\\GenerateVotingFileForPresident.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T09:35:30.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NodeRepository.cs",
+              "DocumentMoniker": "F:\\eloisnew-master\\E.Loi\\E.Loi.Services\\Repositories\\NodeRepository.cs",
+              "RelativeDocumentMoniker": "E.Loi.Services\\Repositories\\NodeRepository.cs",
+              "ToolTip": "F:\\eloisnew-master\\E.Loi\\E.Loi.Services\\Repositories\\NodeRepository.cs",
+              "RelativeToolTip": "E.Loi.Services\\Repositories\\NodeRepository.cs",
+              "ViewState": "AgIAAHcEAAAAAAAAAAAwwC0FAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T09:31:46.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VotingFilePresidentCommission.cshtml",
+              "DocumentMoniker": "F:\\eloisnew-master\\E.Loi\\mef.db.plf.edition.api\\Views\\VotingFileCommission\\VotingFilePresidentCommission.cshtml",
+              "RelativeDocumentMoniker": "mef.db.plf.edition.api\\Views\\VotingFileCommission\\VotingFilePresidentCommission.cshtml",
+              "ToolTip": "F:\\eloisnew-master\\E.Loi\\mef.db.plf.edition.api\\Views\\VotingFileCommission\\VotingFilePresidentCommission.cshtml",
+              "RelativeToolTip": "mef.db.plf.edition.api\\Views\\VotingFileCommission\\VotingFilePresidentCommission.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwCsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T09:17:39.612Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

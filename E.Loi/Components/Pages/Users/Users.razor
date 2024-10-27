@@ -1,0 +1,202 @@
+﻿@page "/manage-users"
+@inject ILogger<Users> _logger
+
+<div class="container-fluid">
+    <UnderMenu pageName="تدبير المستعملي النظام" />
+
+@if (IsLoad)
+{
+    <div class="w-25 m-auto" style="margin-top:20% !important;">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="mt-3">
+                <button type="button" class="btn btn-primary btn-sm" @onclick="@(()=>ShowModal())">
+                    <i class="fa-solid fa-plus ml-10"></i>
+                    إضافة مستخدم جديد
+                </button>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <i class="fa-solid fa-bars-progress ml-10 fs-5"></i>
+                    <span class="fs-6">لائحة المستعملي النظام</span>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <span>الإسم الكامل</span>
+                                    <div class="mt-1">
+                                            <input type="text" class="form-control form-control-sm" placeholder="بحث بالإسم" @oninput="@((e)=>FilterListUsers(e,"FullName"))" />
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    <span>إسم المستخدم</span>
+                                    <div class="mt-1 w-50">
+                                            <input type="text" class="form-control form-control-sm" placeholder="بحث بإسم المستخدم" @oninput="@((e)=>FilterListUsers(e,"UserName"))" />
+                                    </div>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in users)
+                            {
+                                <tr>
+                                    <td>@user.FullName</td>
+                                    <td>@user.UserName</td>
+                                    <td>
+                                        <button type="button" @onclick="@(()=>HandleGetUserDetail(user.Id))" class="btn btn-outline-success btn-sm"><i class="fa-solid fa-pen ml-10"></i>تعديل </button>
+                                        <Popconfirm Title="هل تريد حذف هذا المستخدم " OkText="نعم" OnConfirm="()=>HandleDeleteUser(user.Id)" CancelText="لا">
+                                            <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can ml-10"></i>حذف </button>
+                                        </Popconfirm>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <nav aria-label="Page navigation examplemb-5 mt-5" style="margin-top:10px">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @foreach (var p in pages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;" @onclick="@(()=>paginate(p))">@p</a>
+                    </li>
+                }
+                <li class="page-item">
+                    <a class="page-link" href="javascript:;" @onclick="@(()=>lastPage())" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+}
+</div>
+<br />
+<br />
+<br />
+<br />
+
+<!-- Modal -->
+<div class="modal fade ModalAddUser" id="ModalAddUser" tabindex="-1" aria-labelledby="ModalAddUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalTeamsLabel">
+                    <span>إضافة جديدة</span>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <EditForm FormName="add-user" Model="user" OnValidSubmit="HandleAddOrUpdateUser">
+                <div class="modal-body">
+                    <ul>
+                        @foreach (var error in errorsList)
+                        {
+                            <li class="text-danger">@error</li>
+                        }
+                    </ul>
+
+                    <div class="row">
+
+                        <div class="col-md-12 mb-2">
+                            <label for="exampleFormControlInput1" class="form-label">الإسم العائلي</label>
+                            <input type="text" class="form-control" @bind="user.FirstName" />
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label for="exampleFormControlInput1" class="form-label">الإسم الشخصي</label>
+                            <input type="text" class="form-control" @bind="user.LastName" />
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label for="exampleFormControlInput1" class="form-label">الإسم المستخدم</label>
+                            <input type="text" class="form-control" @bind="user.UserName" />
+                        </div>
+                        <div class="col-md-5 mt-2">
+                            <label for="exampleFormControlInput1" class="form-label">الهيئات</label>
+                            <select class="form-select form-select-sm" multiple style="height:200px">
+                                @if (teams.Count > 0)
+                                {
+                                    @foreach (var team in teams)
+                                    {
+                                        <option value="@team.Id" onclick="@(()=>selectTeam(team.Id))">@team.Label</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2" style="margin-top:100px">
+                            <div class="text-center mb-1"><button type="button" class="btn btn-light" @onclick="@(()=>MoveLeftTeam())"><i class="fa-solid fa-chevron-left"></i></button></div>
+                            <div class="text-center"><button type="button" class="btn btn-light" @onclick="@(()=>MoveRightTeam())"><i class="fa-solid fa-chevron-right"></i></button></div>
+                        </div>
+                        <div class="col-md-5 mt-2">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <select class="form-select form-select-sm" multiple style="height:200px">
+                                @if (selectedTeams.Count > 0)
+                                {
+                                    @foreach (var team in selectedTeams)
+                                    {
+                                        <option value="@team.Id" onclick="@(()=>selectTeam(team.Id))">@team.Label</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-5 mt-2">
+                            <label for="exampleFormControlInput1" class="form-label">صلاحيات</label>
+                            <select class="form-select form-select-sm" multiple style="height:200px">
+                                @if (roles.Count > 0)
+                                {
+                                    @foreach (var role in roles)
+                                    {
+                                        <option value="@role.Id" @onclick="@(()=>selectRole(role.Id))">@role.Label</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2" style="margin-top:100px">
+                            <div class="text-center mb-1"><button type="button" class="btn btn-light" @onclick="@(()=>MoveLeftRole())"><i class="fa-solid fa-chevron-left"></i></button></div>
+                            <div class="text-center"><button type="button" class="btn btn-light" @onclick="@(()=>MoveRightRole())"><i class="fa-solid fa-chevron-right"></i></button></div>
+                        </div>
+                        <div class="col-md-5 mt-2">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <select class="form-select form-select-sm" multiple style="height:200px">
+                                @if (selectedRoles.Count > 0)
+                                {
+                                    @foreach (var role in selectedRoles)
+                                    {
+                                        <option value="@role.Id" @onclick="@(()=>selectRole(role.Id))">@role.Label</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" @onclick="@(()=>CloseModal())"><i class="fa-solid fa-xmark ml-5"> إخفاء</i></button>
+                    <button class="btn btn-primary btn-sm" type="submit"><i class="fa-solid fa-check ml-5"></i>تسجيل</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+

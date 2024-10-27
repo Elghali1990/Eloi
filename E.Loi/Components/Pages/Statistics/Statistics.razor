@@ -1,0 +1,257 @@
+﻿@page "/statistics"
+@inject ILogger<Statistics> _logger
+
+<div class="container-fluid">
+<div class="mt-3">
+    <RadzenTabs @bind-SelectedIndex=@selectedIndex>
+        <Tabs>
+            <RadzenTabsItem Text="إحصائيات حسب اللجان">
+
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="vertical-align:middle;width:55%">
+                                        اللجنة
+                                    @*     <div>
+                                            <input class="form-control" placeholder="بحث ..." />
+                                        </div> *@
+                                    </th>
+                                    <th style="vertical-align:middle">مشاريع القوانين</th>
+                                    <th style="vertical-align:middle">مقترحات القوانين</th>
+                                  @*   <th></th> *@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var commission in statisticsCom)
+                                {
+                                    <tr>
+                                        <td>@commission.Label</td>
+                                        <td>
+                                            <RadzenBadge BadgeStyle="BadgeStyle.Primary" Text="@commission.LawProjects_Number.ToString()" />
+                                        </td>
+                                        <td>
+                                            <RadzenBadge BadgeStyle="BadgeStyle.Success" Text="@commission.TextLaws_Number.ToString()" />
+                                        </td>
+                                      @*   <td>
+                                            <button class="btn btn-warning btn-sm" type="button" @onclick="@(()=>BrowseCommissionLaws(commission.Id))"><i class="fa-solid fa-arrows-to-eye ml-10"></i>لائحة القوانين </button>
+                                        </td> *@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </RadzenTabsItem>
+            <RadzenTabsItem Text="إحصائيات حسب الفرق و المجموعات النيابية">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="vertical-align:middle;width:55%">
+                                        الفرق و المجموعات النيابية
+                                       @*  <div>
+                                            <input class="form-control" placeholder="بحث ..." />
+                                        </div> *@
+                                    </th>
+                                    <th scope="col" style="vertical-align:middle">مقترحات القوانين</th>
+                                   @*  <th></th> *@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var team in statisticsTeams)
+                                {
+                                    <tr>
+                                        <td>@team.Label</td>
+                                        <td>
+                                            <RadzenBadge BadgeStyle="BadgeStyle.Success" Text="@team.TextLaws_Number.ToString()" />
+                                        </td>
+                                       @*  <td>
+                                            <button class="btn btn-warning btn-sm" type="button" @onclick="@(()=>BrowseTeamLaws(team.Id))"><i class="fa-solid fa-arrows-to-eye ml-10"></i>لائحة القوانين </button>
+                                        </td> *@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </RadzenTabsItem>
+
+            <RadzenTabsItem Text="الحصيلة" class="overflow-hidden" style="overflow:hidden !important">
+                <div class="mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <EditForm FormName="form-filter" Model="searchDtos" OnValidSubmit="filterStatistics">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label class="form-label">من</label>
+                                        <input type="date" class="form-control form-control-sm" @bind="searchDtos.StartDate" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">إلى</label>
+                                        <input type="date" class="form-control form-control-sm" @bind="searchDtos.EndDate" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">اللجنة</label>
+                                        <select class="form-select form-select-sm" @bind="searchDtos.IdCommission">
+                                            <option selected>إختر من القائمة</option>
+                                            @foreach (var commission in commissions)
+                                            {
+                                                <option value="@commission.Id">@commission.Label</option>
+                                            }
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-3" style="padding-top:30px !important">
+                                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa-solid fa-check ml-10"></i> بحث</button>
+                                        <button class="btn btn-sm btn-warning" @onclick="@(()=>Refresh())"><i class="fa-solid fa-retweet ml-10"></i> </button>
+                                    </div>
+                                </div>
+                            </EditForm>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="" style="border-bottom: 1px solid #cbf3f0;margin-bottom: 10px;">
+                    <p style="display: inline-block;margin-bottom: 0;padding: 10px 20px;font-size: 15px; font-weight: 500;background: #cbf3f0">قراءة أولى</p>
+                </div>
+                <div class="row mb-3">
+                    @foreach (var statistic in statisticsReadOne)
+                    {
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p style="font-size:11px;font-weight:700;text-align: center !important;">@statistic.StatuLabel</p>
+                                    <hr />
+                                    <p class="text-center p-0 m-0">
+                                        <span style="font-size: 25px;background: #f8f9fa;padding: 5px 10px;border-radius: 5px;cursor:pointer">@statistic.Counter</span>
+                                      @*   <span style="font-size: 25px;background: #f8f9fa;padding: 5px 10px;border-radius: 5px;cursor:pointer" @onclick="@(()=>ShowList(statistic.Ids))">@statistic.Counter</span> *@
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="" style="border-bottom: 1px solid #cbf3f0;margin-bottom: 10px;">
+                    <p style="display: inline-block;margin-bottom: 0;padding: 10px 20px;font-size: 15px; font-weight: 500;background: #cbf3f0">قراءة ثانية</p>
+                </div>
+
+                <div class="row mb-3">
+                    @foreach (var statistic in statisticsReadTwo)
+                    {
+                        <div class="col-md-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p style="font-size:11px;font-weight:700;text-align: center !important;">@statistic.StatuLabel</p>
+                                    <hr />
+                                    <p class="text-center p-0 m-0">
+                                        <span style="font-size: 25px;background: #f8f9fa;padding: 5px 10px;border-radius: 5px;cursor:pointer" @onclick="@(()=>ShowList(statistic.Ids))">@statistic.Counter</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+
+            </RadzenTabsItem>
+        </Tabs>
+    </RadzenTabs>
+</div>
+
+<div class="offcanvas offcanvas-start w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasBrowsLawsList" aria-labelledby="canvasBrowsLawLabel">
+    <div class="offcanvas-header" style="border-bottom:1px solid #eee">
+        <h6 class="offcanvas-title" id="canvasBrowsLawLabel">لائحة القوانين</h6>
+        <button type="button" class="btn-close" @onclick="@(()=>CloseCanvase())"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div style="overflow: auto;height: 90vh;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="th-background">ملفات</th>
+                        <th class="th-background"> النصوص القانونية</th>
+                        <th class="th-background">السنة </th>
+                        <th class="th-background">الرقم</th>
+                        <th class="th-background">المرحلة</th>
+                        <th class="th-background"> صاحب النص</th>
+                        <th class="th-background">اللجنة</th>
+                        <th class="th-background">تاريخ إحالة على م.م.ق 1</th>
+                        <th class="th-background">تاريخ إحالة على ل.ق 1</th>
+                        <th class="th-background">تاريخ برمجة ب ل.ق 1</th>
+                        <th class="th-background">تاريخ تصويت ب ل.ق 1</th>
+                        <th class="th-background">تاريخ تصويت ب ج.ع 1</th>
+                        <th class="th-background">تاريخ إحالة على م.م 2</th>
+                        <th class="th-background">تاريخ إحالة على ل.ق 2</th>
+                        <th class="th-background">تاريخ برمجة ب ل.ق 2</th>
+                        <th class="th-background">تاريخ تصويت ب ل.ق 2</th>
+                        <th class="th-background">تاريخ تصويت ب ج.ع 2</th>
+                        <th class="th-background" style="width:115px !important"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var law in lawsDetail)
+                    {
+                        <tr>
+                            <td style="vertical-align:middle;">
+                                <button type="button" class="btn btn-light" @onclick="@(()=>ShowLawDocuments(law.Id))"><i class="fa-solid fa-folder-open text-warning"></i></button>
+                            </td>
+                            <td>@law.Label</td>
+                            <td>@law.Year</td>
+                            <td>@law.Number</td>
+                            <td>@law.PhaseName</td>
+                            <td>@law.TeameName</td>
+                            <td>@law.CommissionName</td>
+                            <td>@law.DateAffectaionBureau_1?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateAffectaionCommission_1?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateProgramationCommission_1?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateVoteCommission_1?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateVoteSession_1?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateAffectaionBureau_2?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateAffectaionCommission_2?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateProgramationCommission_2?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateVoteCommission_2?.ToShortDateString().Replace("01/01/0001", "-")</td>
+                            <td>@law.DateVoteSession_2?.ToShortDateString().Replace("01/01/0001","-")</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning" @onclick="@(()=>browsNodesOfLaw(law.Id))">تصفح المشروع</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation examplemb-5" style="margin-top:-10px">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    @foreach (int p in pages)
+                    {
+                        <li class="page-item">
+                            <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                        </li>
+                    }
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@if (isProcessing)
+{
+    <LoadingSpinner />
+}
+</div>
+<BrowsLaw LawId="LawId" />
+<LawDocuments LawId="LawDocumentId" />

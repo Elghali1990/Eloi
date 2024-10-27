@@ -1,0 +1,14 @@
+D:\Loi\E.Loi\mef.db.plf.edition.data\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+D:\Loi\E.Loi\mef.db.plf.edition.data\bin\Debug\net6.0\License\LicenseAspose.cs
+D:\Loi\E.Loi\mef.db.plf.edition.data\bin\Debug\net6.0\E.Loi.Edition.Generation.deps.json
+D:\Loi\E.Loi\mef.db.plf.edition.data\bin\Debug\net6.0\E.Loi.Edition.Generation.dll
+D:\Loi\E.Loi\mef.db.plf.edition.data\bin\Debug\net6.0\E.Loi.Edition.Generation.pdb
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.csproj.AssemblyReference.cache
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.AssemblyInfoInputs.cache
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.AssemblyInfo.cs
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.csproj.CoreCompileInputs.cache
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.dll
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\refint\E.Loi.Edition.Generation.dll
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\E.Loi.Edition.Generation.pdb
+D:\Loi\E.Loi\mef.db.plf.edition.data\obj\Debug\net6.0\ref\E.Loi.Edition.Generation.dll

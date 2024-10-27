@@ -1,0 +1,249 @@
+﻿.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 95% !important;
+}
+
+﻿.tree-view {
+    padding: 0;
+    border: 1px solid red;
+    width: 300px;
+    height: 500px;
+}
+
+﻿.item span {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.item:hover {
+    background-color: #f1c40f !important;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+   text-decoration:underline
+}
+
+.item.selected {
+    background-color: #f1c40f !important;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+  
+}
+
+.item > .arrow, .arrow-placeholder {
+    min-width: 16px;
+    user-select: none;
+}
+
+    .item > .arrow:hover {
+        color: steelblue;
+    }
+    /*Utils*/
+.ml-10{
+    margin-left:10px !important
+}
+.ml-5 {
+    margin-left: 5px !important
+}
+.mt-50 {
+    margin-top: 50px !important
+}
+.navbar {
+    background-color: #b32f31 !important;
+    border-bottom: 1px solid #b32f31 !important;
+}
+.border-radius-0 {
+    border-radius: 0 !important;
+}
+
+.height-34 {
+    height: 34px;
+}
+.active-phase {
+    border: 1px solid #b53032;
+}
+
+.scroll-card {
+    height: 22% !important;
+    overflow-y: auto !important;
+}
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+ .dropdown-toggle::after {
+    display: none !important;
+    margin-right: 0 !important;
+    vertical-align: 0 !important;
+    content: "" !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.nav-item .nav-link  {
+    color: #fff;
+}
+
+.nav-item .nav-link i {
+    font-size: 18px !important;
+    padding-left: 7px;
+    color: #fff;
+
+}
+
+.ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
+    border-top: 1px solid #eee !important;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+}
+div[align] button {
+    display: none
+}
+
+.note-editor.note-airframe .note-editing-area, .note-editor.note-frame .note-editing-area {
+    height: 500px;
+}
+
+
+.hasContent {
+    background: #198754;
+    color: #fff !important;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hasAccesptAmendment {
+    background: #b32f31;
+    color: #fff !important;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: 45px;
+        border-radius: 0;
+    }
+}
+
+
+.custom-btn-background {
+    background-color: #b32f31 !important;
+    color: #fff !important;
+    border-color: #b32f31
+}
+
+
+tbody tr ,thead th{
+    text-align:right !important
+}
+
+.ant-picker {
+    display: block !important;
+}
+
+/*start Breadcrumb*/
+.ant-breadcrumb-link  {
+    color: #000 !important
+}
+.ant-breadcrumb-link a {
+    color: #c0392b !important
+}
+/*end Breadcrumb*/
+
+.ant-spin-blur {
+    opacity: 1 !important;
+}
+
+.ant-alert-message {
+    text-align: center !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 39px;
+    padding-bottom:10px;
+    color: #000 !important;
+}
+
+.ant-alert-info {
+    background-color: #e6f7ff;
+    border: 1px solid #e6f7ff;
+    border-radius: 5px;
+}
+.ant-spin-dot-item {
+    background-color: #000 !important;
+}
+.validation-message{
+    color:red !important
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        --bs-modal-width: 80% !important;
+    }
+}
+.rz-growl-icon-close, .rz-growl-image.rzi-check {
+    display: none !important;
+}
+
+.rz-growl-message{
+    color:#000 !important;
+}
+
+.rz-growl-message-success .rz-growl-item {
+    background-color: #2ecc71 !important;
+}
+
+.overly {
+    height: 100%;
+    position: absolute;
+    background: #34495e61;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+.blazored-toast-success .blazored-toast-icon[b-jnm4noxjw5] {
+    margin-left: 10px !important;
+    margin-right: -23px !important;
+}
+.blazored-toast-close {
+    display: none !important
+}
+
+@media (min-width: 992px) {
+    .ModalAddUser .modal-lg, .modal-xl {
+        --bs-modal-width: 50%;
+    }
+}
+
+table tbody tr td {
+    font-size: 13px !important;
+    vertical-align: middle !important;
+    /*font-weight: 600 !important*/
+    font-weight: normal
+}
+table tbody tr td button {
+    font-size: 12px !important;
+    font-weight:normal
+}
+
+.blazored-toast-message {
+    margin-right: 20px !important
+}
+
+.pagination li a {
+    padding: 5px 10px !important;
+}

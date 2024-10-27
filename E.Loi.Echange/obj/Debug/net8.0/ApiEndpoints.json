@@ -1,0 +1,154 @@
+[
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.AmendmentsController",
+    "Method": "GetAmendmentsAsync",
+    "RelativePath": "api/Amendments/getAmendmentsAsync/{LawId}/{PhaseLawId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhaseLawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.AmendmentsController",
+    "Method": "InsertGovernmentAmendmentsAsync",
+    "RelativePath": "api/Amendments/insertGovernmentAmendmentsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendments",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Dtos.AmendmentDto, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.LawsController",
+    "Method": "createLawAsync",
+    "RelativePath": "api/Laws/createLawAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawDto",
+        "Type": "E.Loi.DataAccess.Dtos.LawDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.NodesController",
+    "Method": "createNodesAsync",
+    "RelativePath": "api/Nodes/createNodesAsync/{LawId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeDtos",
+        "Type": "E.Loi.DataAccess.Dtos.NodeDto[]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.NodeTypesController",
+    "Method": "InsertNodeTypesAsync",
+    "RelativePath": "api/NodeTypes/insertNodeTypesAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.PhasesController",
+    "Method": "getAllAsync",
+    "RelativePath": "api/Phases/getAllAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.TeamsController",
+    "Method": "getAllAsync",
+    "RelativePath": "api/Teams/getAllAsync/{LawId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.VoteController",
+    "Method": "GetVoteAmendmentsAsync",
+    "RelativePath": "api/Vote/getVoteAmendmentsAsync/{NodeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Controllers.VoteController",
+    "Method": "GetVoteNodesAsync",
+    "RelativePath": "api/Vote/getVoteNodesAsync/{sectionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

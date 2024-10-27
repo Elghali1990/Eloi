@@ -1,0 +1,257 @@
+﻿@page "/follow-laws"
+@inject ILogger<FollowLaws> _logger
+
+<div class="container-fluid">
+    <PageTitle>تتبع مسشاريع القوانين</PageTitle>
+    @if (isLoad)
+    {
+        <LoadingSpinner />
+    }
+
+    else
+    {
+        <div class="">
+            <UnderMenu pageName="تتبع النصوص القانونية قيد الدرس" />
+        </div>
+
+        if (startSubmitedText)
+        {
+            <LoadingSpinner />
+        }
+        <DownloadWord laws="laws_" />
+        <div class="card mt-2 mb-4">
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th tyle="vertical-align:middle;">ملفات</th>
+                            <th scope="col" style="vertical-align:middle;min-width:150px">
+                                النصوص القانونية
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Label"))" placeholder="كلمة مفتاح" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle">
+                                السنة
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Year"))" placeholder="البحث بالسنة" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;">
+                                الرقم
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Number"))" placeholder="البحث بالرقم" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;">
+                                المرحلة
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"PhaseLawId"))">
+                                        <option value="" selected>البحث بالمرحلة</option>
+                                        @foreach (var phase in phases)
+                                        {
+                                            <option value="@phase.Id">@phase.Title</option>
+                                        }
+                                    </select>
+                                </div>
+
+                            </th>
+
+                            <th style="vertical-align:middle;">
+                                صاحب النص
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"TeamName"))">
+                                        <option value="" selected>البحث بصاحب النص</option>
+                                        @foreach (var team in teams)
+                                        {
+                                            <option value="@team.Label">@team.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th>
+                                اللجنة
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"CommissionName"))">
+                                        <option value="" selected>البحث باللجنة</option>
+                                        @foreach (var commission in commissionsFilter)
+                                        {
+                                            <option value="@commission.Label">@commission.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;width:8%">
+                                الوضعية
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Statu"))">
+                                        <option value="" selected>البحث بالوضعية</option>
+                                        @foreach (var statut in status)
+                                        {
+                                            <option value="@statut.Label">@statut.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;width:38%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var law in laws!)
+                        {
+                            <tr>
+                                <td style="vertical-align:middle;">
+                                    <button type="button" class="btn btn-light" @onclick="@(()=>ShowLawDocuments(law.Id))"><i class="fa-solid fa-folder-open text-warning"></i></button>
+                                </td>
+                                <td style="vertical-align:middle">@law.Label</td>
+                                <td style="vertical-align:middle">
+                                    @* <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-warning">@law.Year</span> *@
+                                   @law.Year
+                                </td>
+                                <td style="vertical-align:middle">
+                                    @* <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-primary">@law.Number</span> *@
+                                   @law.Number
+                                </td>
+                                <td style="vertical-align:middle">@law.PhaseName</td>
+                                <td style="vertical-align:middle;">@law.TeamName</td>
+                                <td>@law.CommissionName</td>
+                                <td style="vertical-align:middle">
+                                  @law.StatuName
+                                </td>
+                                <td style="vertical-align:middle">
+                                    @if (ShowAction(law.PhaseIds))
+                                    {
+                                        <button type="button" class="btn btn-light btn-sm ml-5 my-1" @onclick="@(_=>HandleSetLawInfo(law.Id))">
+                                            <i class="fa-regular fa-keyboard fs-6 ml-10"></i>
+                                            تحديث
+                                            @if (IsLoadLawInfo)
+                                            {
+                                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                                <span class="visually-hidden" role="status">Loading...</span>
+                                            }
+                                        </button>
+                                    }
+                              
+                                    @if (!stateContainerService.user!.Roles!.Any(r => r.Name.Equals(_roleOptions.Value.MEMBER_LEGISLATION)))
+                                    {
+                                        if (law.HasAction)
+                                        {
+                                            <button type="button" class="btn btn-light btn-sm ml-5 my-1" @onclick="@(()=>_navigationManager.NavigateTo($"/suivi-amendments/{law.Id}"))">
+                                                <i class="fa-solid fa-bars-progress fs-6 ml-10"></i>
+                                                تتبع التعديلات
+                                            </button>
+                                            @if (ShowAction(law.PhaseIds!))
+                                            {
+                                                <button type="button" class="btn btn-light btn-sm ml-5 my-1" @onclick="@(()=>RedirectToOrderAmendmernts(law.Id))">
+                                                    <i class="fa-solid fa-sort fs-6 ml-10"></i>
+                                                    ترتيب التعديلات
+                                                </button>
+                                            }
+                                            <button class="btn btn-light btn-sm ml-5 my-1" @onclick="@(()=>_navigationManager.NavigateTo($"/vote/Law/{law.Id}"))">
+                                                <i class="fa-regular fa-hand ml-10 fs-6"></i>
+                                                التصويت
+                                            </button>
+                                        }
+                                    }
+
+                                    @if (stateContainerService.user.Roles!.Any(role =>role.Name == _roleOptions.Value.UPDATE_TEXT_FORMULA))
+                                    {
+                                        <button type="button" class="btn btn-light btn-sm my-1" @onclick="@(_=>LoadLawNodes(law.Id))">
+                                            <i class="fa-solid fa-pen-to-square fs-6 ml-10"></i>
+                                            تحيين الصيغة
+                                        </button>
+                                        <button type="button" class="btn btn-light btn-sm my-1" @onclick="@(_=>cloneNodeLawToDestinationPhase(law.Id))">
+                                            <i class="fa-solid fa-copy fs-6 ml-10"></i>
+                                            إحالة الصيغة النهائية
+                                            @if (isClone)
+                                            {
+                                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                                <span class="visually-hidden" role="status">Loading...</span>
+                                            }
+                                        </button>
+                                    }
+                                    @if (stateContainerService.user!.Roles!.Any(r => (r.Name.Equals(_roleOptions.Value.MEMBER_LEGISLATION) || r.Name.Equals(_roleOptions.Value.DIRECTEUR_LEGISLATION))))
+                                    {
+                                        if (!string.IsNullOrEmpty(law.CommissionName) && (law.PhaseLawId.ToString()!.ToLower().Trim() == _phaseOptions.Value.PHASE_AFFECTATION_BUREUA_1.ToLower().Trim() || law.PhaseLawId.ToString()!.ToLower().Trim() == _phaseOptions.Value.PHASE_AFFECTATION_BUREUA_2.ToLower().Trim()))
+                                        {
+                                            <Popconfirm Title="هل فعلا تريد إحالة هذا النص على اللجنة المعنية ." OkText="نعم" OnConfirm="()=>SubmitLawToCommission(law.Id,(Guid)law.PhaseLawId!)" CancelText="لا">
+                                                <button type="button" class="btn btn-light btn-sm my-1"><i class="fa-solid fa-share ml-10"></i>الإحالة على اللجنة</button>
+                                            </Popconfirm>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation examplemb-5" style="margin-top:-20px">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                @foreach (int p in pages)
+                {
+                    <li class="page-item">
+                        <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                    </li>
+                }
+                <li class="page-item">
+                    <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+<br />
+<br />
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalClonePlf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">إحالة الصيغة المحينة</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 mb-3">
+                     @foreach (var node in nodeSection.ToList())
+                    {
+                        <div class="form-check">
+                            <input name="radio" class="form-check-input" type="radio" value="@node.Id" id="@node.Id" @onchange="@((e)=>ChoseSection(e))">
+                            <label class="form-check-label" for="@node.Id">
+                                @node.Label
+                            </label>
+                        </div>
+                    } 
+
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">إخفاء</button>
+                <button type="button" class="btn btn-primary btn-sm" @onclick="@(()=>cloneLawSection())"> إحالة الصيغة 
+                    @if (startCloneSection)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span class="visually-hidden" role="status">Loading...</span>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<LawInformations LawId="LawInformationId" OnSetLawInfo="_=>setLawInfo(_)" />
+<BrowsLaw LawId="BrowsLawId" />
+<LawDocuments LawId="LawId" />
+<EditLawContent LawId="EditlawContentId" />

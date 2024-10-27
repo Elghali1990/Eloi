@@ -1,0 +1,6 @@
+@E.Loi.Echange_HostAddress = http://localhost:5240
+
+GET {{E.Loi.Echange_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

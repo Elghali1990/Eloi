@@ -1,0 +1,127 @@
+﻿@using E.Loi.DataAccess.Vm.Amendment
+@inherits BaseComponent
+@inject ILogger<UploadAmendment> _logger
+<style>
+    .accordion-button:not(.collapsed) {
+        background-color: #fff !important
+    }
+</style>
+@if (IsDisplay)
+{
+    if ( amendmentsListVms?.Length==0)
+    {
+        <div class="border border-danger py-2 px-2">
+            <p class="p-0 m-0">
+                <i class="fa-solid fa-exclamation text-danger" style="font-size:20px;margin-left:10px"></i>
+                <span class="text-danger">لا توجد تعديلات لتشبت بها  بالجلسة العامة.</span>
+            </p>
+        </div>
+    }
+    else
+    {
+     
+        @if (amendmentsListVms!=null && amendmentsListVms.Length>0){
+
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa-solid fa-bars-progress ml-10"></i>
+                        التعديلات المتشبة بها
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="my-3 mx-2">
+                            @if (submittedAmendmentList != null)
+                            {
+                                <Table @ref="table"
+                                       TItem="E.Loi.DataAccess.Vm.Amendment.AmendmentsListVm"
+                                       DataSource="@(submittedAmendmentList)"
+                                       Total="_total"
+                                       @bind-PageIndex="_pageIndex"
+                                       @bind-PageSize="_pageSize"
+                                       Size="TableSize.Small"
+                                       RowKey="x=>x.Id">
+                                    <PropertyColumn Title="رقم النظام" Property="c=>c.NumberSystem" Sortable Filterable />
+                                     <PropertyColumn Title="رقم الفريق" Property="c=>c.Number" Sortable Filterable />
+                                     <PropertyColumn Title="رقم الترتيبي" Property="c=>c.Order" />
+                                     <PropertyColumn Title="عنوان المادة" Property="c=>c.NodeTitle" Sortable />
+                                     <PropertyColumn Title="موضوع التعديل" Property="c=>c.Title" />
+                                     <PropertyColumn Title="النوع" Property="c=>c.AmendmentIntent" Sortable />
+                                     <PropertyColumn Title="حالة التعديل" Property="c=>c.AmendmentsStatus" Sortable />
+                                     <PropertyColumn Title="صاحب التعديل" Property="c=>c.Team" Sortable />
+                                 </Table>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa-regular fa-square-check ml-10"></i>
+                        اختيار  التعديلات 
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    @if (!isLoad)
+                    {
+                        <div class="mx-4 mt-5">
+                            <Loading />
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="my-3 mx-2">
+                            <Table @ref="table"
+                                   TItem="AmendmentsListVm"
+                                   DataSource="@(amendmentsListVms)"
+                                   Total="_total"
+                                   @bind-PageIndex="_pageIndex"
+                                   @bind-PageSize="_pageSize"
+                                   @bind-SelectedRows="selectedAmendments"
+                                   Size="TableSize.Small"
+                                   RowKey="x=>x.Id">
+                                <Selection Key="@(context.Id.ToString())" />
+                                <PropertyColumn Title="الرقم" Property="c=>c.Number" Sortable />
+                                <PropertyColumn Title="الرقم الترتيبي" Property="c=>c.Order" Sortable />
+                                 <PropertyColumn Title="عنوان المادة" Property="c=>c.NodeTitle" Sortable />
+                                 <PropertyColumn Title="موضوع التعديل" Property="c=>c.Title" />
+                                 <PropertyColumn Title="النوع" Property="c=>c.AmendmentIntent" Sortable />
+                                 <PropertyColumn Title="حالة التعديل" Property="c=>c.AmendmentsStatus" Sortable />
+                                 <PropertyColumn Title="صاحب التعديل" Property="c=>c.Team" Sortable />
+                                 <PropertyColumn Title="موقف الحكومة" Property="c=>c.GovernmentPosition" Sortable />
+                                 <PropertyColumn Title="نتيجة التصويت " Property="c=>c.VoteResult" Sortable />
+                                 <ActionColumn Title="اجراءات" style="width:120px !important">
+                                     <Space>
+                                         <SpaceItem>
+                                            <button class="btn btn-warning btn btn-sm mx-1" type="button" @onclick="@(()=>handleGetAmendmentDetails(context.Id))"><Icon Type="edit" Theme="outline" /> تفاصيل</button>
+                                         </SpaceItem>
+                                     </Space>
+                                 </ActionColumn>
+                             </Table>
+                         </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-sm custom-btn-background mt-2" @onclick=@(_=>SubmitAmendments())>
+            <i class="fa-regular fa-share-from-square ml-10"></i>
+            التشبت بالتعديلات
+            @if (isSubmit)
+            {
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span class="visually-hidden" role="status">Loading...</span>
+            }
+            </button>
+        }
+        else
+        {
+            <p class="text-danger">لا يوجد أيت تعديلات لرفعها .</p>
+        }
+
+        <AmendmentDetail AmdId="AmendId" />
+    }
+}

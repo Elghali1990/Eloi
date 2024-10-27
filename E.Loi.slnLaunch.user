@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Nouveau profil",
+    "Projects": [
+      {
+        "Name": "E.Loi\\E.Loi.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "E.Loi.Api\\E.Loi.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "mef.db.plf.edition.api\\E.Loi.Edition.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "E.Loi.Web\\E.Loi.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

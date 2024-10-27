@@ -1,0 +1,129 @@
+[
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "createLawAsync",
+    "RelativePath": "api/Passerelle/createLawAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lawDto",
+        "Type": "E.Loi.DataAccess.Dtos.LawDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "createNodesAsync",
+    "RelativePath": "api/Passerelle/createNodesAsync/{LawId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NodeDtos",
+        "Type": "E.Loi.DataAccess.Dtos.NodeDto[]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "GetAllTeamsAsync",
+    "RelativePath": "api/Passerelle/getAllTeamsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamDtos",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Vm.Team.TeamDto, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "GetAmendmentsAsync",
+    "RelativePath": "api/Passerelle/getAmendmentsAsync/{LawIdFinace}/{phase}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendments",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Dtos.AmendmentDto, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "LawIdFinace",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "phase",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "InsertGovernmentAmendmentsAsync",
+    "RelativePath": "api/Passerelle/insertGovernmentAmendmentsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "amendments",
+        "Type": "System.Collections.Generic.List\u00601[[E.Loi.DataAccess.Dtos.AmendmentDto, E.Loi.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "SendVoteAmendmentsAsync",
+    "RelativePath": "api/Passerelle/sendVoteAmendmentsAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "votes",
+        "Type": "E.Loi.DataAccess.Dtos.VoteDto[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E.Loi.Echange.Passerelle.Controllers.PasserelleController",
+    "Method": "SendVoteNodesAsync",
+    "RelativePath": "api/Passerelle/sendVoteNodesAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "votes",
+        "Type": "E.Loi.DataAccess.Dtos.VoteDto[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspose.BarCode" Version="22.1.0" />
+    <PackageReference Include="Aspose.Cells" Version="22.1.0" />
+    <PackageReference Include="Aspose.PDF" Version="22.1.0" />
+    <PackageReference Include="Aspose.Words" Version="22.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\E.Loi.DataAccess\E.Loi.DataAccess.csproj" />
+    <ProjectReference Include="..\E.Loi.Helpers\E.Loi.Helpers.csproj" />
+    <ProjectReference Include="..\E.Loi.Services\E.Loi.Services.csproj" />
+  </ItemGroup>
+</Project>

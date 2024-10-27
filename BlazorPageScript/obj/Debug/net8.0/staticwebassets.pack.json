@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Loi\\E.Loi\\BlazorPageScript\\wwwroot\\BlazorPageScript.lib.module.js",
+      "PackagePath": "staticwebassets\\BlazorPageScript.lib.module.js"
+    },
+    {
+      "Id": "D:\\Loi\\E.Loi\\BlazorPageScript\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "D:\\Loi\\E.Loi\\BlazorPageScript\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorPageScript.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorPageScript.props",
+      "PackagePath": "build\\BlazorPageScript.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorPageScript.props",
+      "PackagePath": "buildMultiTargeting\\BlazorPageScript.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorPageScript.props",
+      "PackagePath": "buildTransitive\\BlazorPageScript.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

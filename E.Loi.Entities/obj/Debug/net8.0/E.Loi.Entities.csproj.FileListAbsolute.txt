@@ -1,0 +1,11 @@
+D:\Loi\E.Loi\E.Loi.Entities\bin\Debug\net8.0\E.Loi.Entities.deps.json
+D:\Loi\E.Loi\E.Loi.Entities\bin\Debug\net8.0\E.Loi.Entities.dll
+D:\Loi\E.Loi\E.Loi.Entities\bin\Debug\net8.0\E.Loi.Entities.pdb
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.AssemblyInfoInputs.cache
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.AssemblyInfo.cs
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.csproj.CoreCompileInputs.cache
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.dll
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\refint\E.Loi.Entities.dll
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\E.Loi.Entities.pdb
+D:\Loi\E.Loi\E.Loi.Entities\obj\Debug\net8.0\ref\E.Loi.Entities.dll

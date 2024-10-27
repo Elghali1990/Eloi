@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+<AntContainer />
+<RadzenComponents />
+<BlazoredToasts />
+@if (stateContainerService.user?.FullName != string.Empty && stateContainerService.user?.FullName != null)
+{
+    <NavMenu />
+
+    @Body
+
+}
+else
+{
+    <E.Loi.Components.Pages.Auth.Login />
+}
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender) => await setUser();
+    protected override async Task OnParametersSetAsync() => await setUser();
+    private async Task setUser()
+    {
+        var userString = await _sessionStorageService.GetItemAsStringAsync("User");
+        if (!string.IsNullOrEmpty(userString))
+        {
+            var user = JsonConvert.DeserializeObject<UserVm>(userString);
+            stateContainerService.user = new() { UserName = user!.FullName, Roles = user.Roles };
+            stateContainerService.user = user;
+        }
+    }
+}

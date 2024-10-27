@@ -1,0 +1,100 @@
+﻿@inject ILogger<AddLaw> _logger
+<div class="modal fade" id="AddNewlawModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <EditForm FormName="AddNewLaw" Model="model" OnValidSubmit="HandleEventAddLaw">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" style="font-size:16px !important">إضافة نص جديد</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="mt-0">
+                                @if (!IsSelectPdf)
+                                {
+                                    <li class="text-danger">المرجو إختيار ملف PDF</li>
+                                }
+                                @if (!IsSelectWord)
+                                {
+                                    <li class="text-danger">المرجو إختيار ملف WORD</li>
+                                }
+                            </ul>
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label class="form-label">عنوان النص</label>
+                            <input type="text" class="form-control" @bind-value="model.Title" />
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">السنة</label>
+                            <input type="number" class="form-control" @bind-value="model.Year" />
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">الرقم</label>
+                            <input type="text" class="form-control" @bind-value="model.Number" />
+                        </div>
+                        @if (stateContainerService.user.Roles.Any(r => r.Name == _roleOptions.Value.MEMBER_LEGISLATION))
+                        {
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label">نوع النص</label>
+                                <select class="form-select" @bind="model.Category">
+                                    <option value="">إخترمن قائمة</option>
+                                    <option value="مشروع قانون">
+                                        مشروع قانون
+                                    </option>
+                                    <option value="مشروع مرسوم بقانون">
+                                        مشروع مرسوم بقانون
+                                    </option>
+                                    <option value="مشروع قانون تنظيمي">
+                                        مشروع قانون تنظيمي
+                                    </option>
+                                    <option value="مشروع قانون - إطار">
+                                        مشروع قانون - إطار
+                                    </option>
+                                    <option value="مقترح قانون">
+                                        مقترح قانون
+                                    </option>
+                                    <option value="مقترح قانون تنظيمي">
+                                        مقترح قانون تنظيمي
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label">المرحلة</label>
+                                <select class="form-select" @bind="model.PhaseId">
+                                    <option value="@Guid.Empty">إخترمن قائمة</option>
+                                    @foreach (var phase in phases)
+                                    {
+                                        <option value="@phase.Id">@phase.Title</option>
+                                    }
+                                </select>
+                            </div>
+                        }
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">صيغة WORD</label>
+                            <InputFile class="form-control" OnChange="SelectWORDLaw" type="file" accept=".docx" />
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">صيغة PDF</label>
+                            <InputFile class="form-control" OnChange="SelectPDFLaw" type="file" accept=".pdf" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-sm" >
+                        <i class="fa-solid fa-check ml-10"></i> حفظ
+                       @if(isProcessing){
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span class="visually-hidden" role="status">Loading...</span>
+                        }
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10"></i> إخفاء</button>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+</div>

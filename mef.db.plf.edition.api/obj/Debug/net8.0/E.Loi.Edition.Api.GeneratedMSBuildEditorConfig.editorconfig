@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = E.Loi.Edition.Api
+build_property.RootNamespace = E.Loi.Edition.Api
+build_property.ProjectDir = F:\eloisnew-master\E.Loi\mef.db.plf.edition.api\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\eloisnew-master\E.Loi\mef.db.plf.edition.api
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/amendments/TeamAmendmentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYW1lbmRtZW50c1xUZWFtQW1lbmRtZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/amendments/VoteAmendmentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYW1lbmRtZW50c1xWb3RlQW1lbmRtZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/AnnexeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5uZXhlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/ChapitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/editor-content/EditorContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZWRpdG9yLWNvbnRlbnRcRWRpdG9yQ29udGVudFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvYmFsVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/GroupeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/node/NodeContent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncbm9kZVxOb2RlQ29udGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/PartieTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGllVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/ProjetLoiTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0TG9pVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/TableTarificationTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVUYXJpZmljYXRpb25UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/TextLaw/TextLaw.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGV4dExhd1xUZXh0TGF3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/TitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/Voteresult/VoteResultAmendment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZXJlc3VsdFxWb3RlUmVzdWx0QW1lbmRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/VotingFileCommission/VotingFilePresidentCommission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90aW5nRmlsZUNvbW1pc3Npb25cVm90aW5nRmlsZVByZXNpZGVudENvbW1pc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/eloisnew-master/E.Loi/mef.db.plf.edition.api/Views/VotingFileSession/VotingFileTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90aW5nRmlsZVNlc3Npb25cVm90aW5nRmlsZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

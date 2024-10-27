@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <base href="/" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/material-base.css">
+    <link href="_content/AntDesign/css/ant-design-blazor.css" rel="stylesheet" />
+    <link href="font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/solid.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/fontawesome.min.css" rel="stylesheet" />
+    @* <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet"> *@
+    @* <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.13/css/froala_editor.pkgd.min.css" rel="stylesheet"> *@
+
+    <!--Google Font-->
+    <!--Almarai-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link href="E.Loi.styles.css" rel="stylesheet">
+   
+
+    <HeadOutlet @rendermode="InteractiveServer" />
+    <style>
+        * {
+            text-align: right !important;
+/*             direction: rtl !important;
+ */        }
+
+            *:not(i) {
+                font-family: "Almarai", sans-serif;
+            }
+
+        div[align] button {
+            display: none !important
+        }
+
+
+        div[align] button {
+            display: none
+        }
+
+        .note-editor.note-airframe .note-editing-area, .note-editor.note-frame .note-editing-area {
+            height: 300px;
+        }
+
+        .pagination li a {
+            padding: 10px 10px !important;
+        }
+
+        .scroll-card {
+            height: 26% !important;
+            overflow-y: auto !important;
+        }
+
+        .ant-message {
+            width: 200px !important;
+            left: 45% !important;
+        }
+    </style>
+</head>
+<!--#f8f9fa-->
+<body class="" style="direction:rtl !important;text-align:right !important;">
+
+    <Routes @rendermode="new InteractiveServerRenderMode(prerender:false)" />
+    <script src="_framework/blazor.web.js"></script>
+    <script src="jquery/jquery.min.js"></script>
+    <script src="popper.js/umd/popper.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="_content/AntDesign/js/ant-design-blazor.js"></script>
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.13/js/froala_editor.pkgd.min.js"></script>
+
+    <script>
+        window.downloadFileFromStream = async (fileName, contentStreamReference) => {
+            const arrayBuffer = await contentStreamReference.arrayBuffer();
+            const blob = new Blob([arrayBuffer]);
+            const url = URL.createObjectURL(blob);
+            const anchorElement = document.createElement('a');
+            anchorElement.href = url;
+            anchorElement.download = fileName ?? '';
+            anchorElement.click();
+            anchorElement.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        window.HideModal = (Id) => {
+            let myModalEl = document.getElementById(Id)
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide()
+        }
+
+        window.ShowModal = (ID) => {
+            var myModal = new bootstrap.Modal(document.getElementById(ID), { keyboard: false });
+            myModal.show();
+        }
+
+        window.ShowCanvas = (ID) => {
+            const myOffcanvas = document.getElementById(ID)
+            const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
+            bsOffcanvas.show();
+        }
+        window.HideCanvas = (ID) => {
+            const myOffcanvas = document.getElementById(ID)
+            let openedCanvas = bootstrap.Offcanvas.getInstance(myOffcanvas);
+            openedCanvas.hide()
+        }
+
+        window.AddActiveClass = (ID) => {
+            const myOffcanvas = document.getElementById(ID)
+            let openedCanvas = bootstrap.Offcanvas.getInstance(myOffcanvas);
+            openedCanvas.hide()
+        }
+
+        window.initializeSummernote = () => {
+            $('#summernote').summernote({
+                height: 300,   // Set the height of the editor
+                placeholder: 'Type your content here...'
+            });
+        };
+        window.setSummernoteContent = (content) => {
+            $('#summernote').summernote('code', content);
+        };
+
+        window.initializeFroala = () => {
+            new FroalaEditor(`#froala-editor`, {
+                direction: 'rtl'
+            });
+        };
+
+        window.setFroalaContent = (content) => {
+            var editor = new FroalaEditor('#froala-editor');
+            if (editor) {
+                editor.html.set(content);
+            }
+           console.log(editor)
+          
+        };
+
+        window.uncheckAllCheckbox=()=>{
+            document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+        }
+
+        // window.setSummernoteContent = (content) => {
+        //     //      $('#summernote').summernote('code', content);
+        //     //  $('#froalaEditor').froalaEditor('html.set', content);
+        //     console.log(content);
+        //     var editor = new FroalaEditor('#froalaEditor');
+        //     editor.html.set(content);
+            
+        // };
+
+
+        // window.getsummernotecontent = (elementid) => {
+        //     return $('#' + elementid).summernote('code');
+        // };
+    </script>
+
+</body>
+
+</html>

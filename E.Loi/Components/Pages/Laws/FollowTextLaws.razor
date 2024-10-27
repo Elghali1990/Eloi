@@ -1,0 +1,142 @@
+﻿@page "/follow-text-laws"
+<PageTitle>تتبع النصوص القوانين</PageTitle>
+
+<div class="container-fluid">
+    <div class="">
+        <UnderMenu pageName="تتبع النصوص القانونية " />
+    </div>
+    @if (IsLoad)
+    {
+        <div class="position-relative" style="">
+            <div class="w-25" style="margin: 20% auto 0;">
+                <Loading />
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card mt-2 mb-4">
+            <div class="card-body">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="vertical-align:middle">
+                                النصوص القانونية
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" placeholder="كلمة مفتاح" @oninput="@((e)=>Filter(e,"Label"))" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle">
+                                السنة
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" placeholder="البحث بالسنة" @oninput="@((e)=>Filter(e,"Year"))" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;">
+                                الرقم
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" placeholder="البحث بالرقم" @oninput="@((e)=>Filter(e,"Number"))" />
+                                </div>
+                            </th>
+                            <th scope="col" style="vertical-align:middle;">
+                                الوضعية
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"StatuName"))">
+                                        <option value="" selected>البحث بالوضعية</option>
+                                        @foreach (var statu in status)
+                                        {
+                                            <option value="@statu.Id">@statu.Label</option>
+                                        }
+                                    </select>
+                                </div>
+
+                            </th>
+                            <th style="vertical-align:middle;">
+                                صاحب النص
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"TeamName"))">
+                                        <option value="" selected>البحث بصاحب النص</option>
+                                        @foreach (var team in teams)
+                                        {
+                                            <option value="@team.Label">@team.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th tyle="vertical-align:middle;">ملفات</th>
+                            <th>
+                                اللجنة
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"CommissionName"))">
+                                        <option value="" selected>البحث باللجنة</option>
+                                        @foreach (var commission in commissions)
+                                        {
+                                            <option value="@commission.Label">@commission.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th scope="col" style="width:18%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var law in laws!)
+                        {
+                            <tr>
+                                <td style="vertical-align:middle">@law.Label</td>
+                                <td style="vertical-align:middle">
+                                    <span>@law.Year</span>
+                                </td>
+                                <td style="vertical-align:middle">
+                                    <span>@law.Number</span>
+                                </td>
+                                <td style="vertical-align:middle">@law.StatuName</td>
+                                <td style="vertical-align:middle;">@law.TeamName</td>
+                                <td style="vertical-align:middle;">
+                                    <button type="button" class="btn btn-light" @onclick="@(()=>ShowLawDocuments(law.Id))"><i class="fa-solid fa-folder-open text-warning"></i></button>
+                                </td>
+                                <td>@law.CommissionName</td>
+                                <td style="vertical-align:middle">
+                                    <button class="btn btn-light btn-sm" type="button" @onclick="@(()=>BrowseLaw(law.Id))"><i class="fa-solid fa-arrows-to-eye ml-10"></i>تصفح محتوى النص</button>
+                                    <button type="button" class="btn btn-light btn-sm ml-5" @onclick="@(()=>BrowsLawAmendments(law.Id))">
+                                        <i class="fa-solid fa-box-archive fs-6 ml-10"></i>
+                                        التعديلات المقدمة
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <nav aria-label="Page navigation examplemb-5" style="margin-top:-20px">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                @foreach (int p in pages)
+                {
+                    <li class="page-item">
+                        <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                    </li>
+                }
+                <li class="page-item">
+                    <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    }
+
+</div>
+<BrowsLaw LawId="BrowsLawId" />
+<LawDocuments LawId="LawDocumentId" />
+<BrowsAmendments LawId="BrowsLawAmendmentsId" />
+<br />
+<br />
+

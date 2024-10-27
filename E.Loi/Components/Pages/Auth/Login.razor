@@ -1,0 +1,54 @@
+﻿@page "/login"
+@inject ILogger<Login> _logger
+<style>
+    body{
+        overflow:hidden
+    }
+</style>
+<PageTitle>
+    صفحة تسجيل الدخول
+</PageTitle>
+<div class="" style="margin-top:200px !important">
+ 
+    <RadzenRow Gap="0" Class="rz-my-12 rz-mx-auto rz-border-radius-6 rz-shadow-10" Style="width: 100%; max-width: 800px; overflow: hidden;">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenCard Class="rz-shadow-0 rz-border-radius-0 rz-text-align-center rz-p-12" Style="height: 100%; border-left:1px solid #f8f9fa">
+                <img src="../images/logo.png" style="display:block;height:200px;margin:auto" />
+                <p class="text-center my-1 mt-3" style="font-size:18px">المنصة الإلكترونية للتشريع</p>
+                <p class="text-center my-1 mt-3" style="font-size:18px">E-LOIS</p>
+            </RadzenCard>
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenCard Class="rz-shadow-0 rz-border-radius-0 rz-p-12">
+                <RadzenText TextStyle="TextStyle.H5" TagName="TagName.H2" Class="rz-mb-6">
+                    <p>صفحة تسجيل الدخول</p>
+                </RadzenText>
+                <div>
+                    <EditForm Model="loginVm" FormName="loginForm" OnValidSubmit="handleLogin">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <div class="mb-2">
+                            <input type="text" class="form-control" @bind-value="loginVm.UserName" placeholder="إسم المستخدم" />
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control" @bind-value="loginVm.Password" placeholder="كلمة المرور" />
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-check ml-10"></i>
+                                تسجيل الدخول
+                                @if (isSubmit)
+                                {
+                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                }
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </RadzenCard>
+        </RadzenColumn>
+    </RadzenRow>
+
+</div>
+

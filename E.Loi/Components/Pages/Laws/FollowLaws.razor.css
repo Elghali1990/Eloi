@@ -1,0 +1,14 @@
+﻿.pagination li a {
+    padding: 5px 10px !important;
+}
+
+.item.selected {
+    background-color: #f1c40f !important;
+}
+
+.count-Amendmentelement {
+    background: #f1c40f3d;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}

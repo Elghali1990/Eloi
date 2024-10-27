@@ -1,0 +1,28 @@
+﻿.rz-tabview-panel {
+    padding: 15px 0 !important;
+    overflow: hidden
+}
+
+.pagination li a {
+    padding: 5px 10px !important;
+}
+
+.item.selected {
+    background-color: #f1c40f !important;
+}
+
+table thead th {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.th-background {
+    background-color: #caf0f8 !important;
+    vertical-align: middle
+}
+
+.rz-tabview-nav li a {
+    letter-spacing: 0;
+    font-weight: 600;
+    color: #000;
+}

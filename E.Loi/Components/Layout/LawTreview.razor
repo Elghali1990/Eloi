@@ -1,0 +1,39 @@
+﻿﻿@if (nodes != null)
+{
+    foreach (var item in nodes)
+    {
+        <li class="position-relative "
+            style="padding-right: @(Level * 16)px;padding-bottom:15px"
+            @onclick="() => ItemSelected(item)">
+            @if (item.HasChildren)
+            {
+                <span class="arrow"
+                      @onclick="() => item.IsCollapsed = !item.IsCollapsed"
+                @onclick:stopPropagation>
+                    <img style="width: 17px;height: 20px;margin-left: 10px; position: relative;top: -3px;" src="../images/@(item.IsCollapsed ? "chevron.png" : "chevron-dwon.png")" />
+                </span>
+            }
+            else
+            {
+                <span class="arrow-placeholder">
+                    <img style="width: 17px;height: 20px;margin-left: 10px; position: relative;top: 0;" src="../images/menu.png" />
+                </span>
+            }
+
+            <span class="text item@(item.IsSelected ? " selected" : "")" style="padding-left:5px !important">
+                @item.Label
+            </span>
+
+        </li>
+        @if (item.HasChildren && !item.IsCollapsed)
+        {
+            <LawTreview nodes="@item.childrens"
+                          Level="@(Level + 1)"
+                          OnSelect="ItemSelected">
+            </LawTreview>
+        }
+    }
+}
+
+
+

@@ -1,0 +1,128 @@
+﻿<div class="modal fade" id="ModalDetail" tabindex="-1" aria-labelledby="ModalDetailLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-xl modal-dialog-scrollable" style="width:80% !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p style="margin-bottom: 0;color:#000;font-size: 22px;" class="text-danger">
+                    <i class="fa-solid fa-info ml-10"></i>
+                    تفاصيل التعديل
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="">
+                        <div>
+                            <MapsNodeParent ParentsNode="parentsNode" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mt-2">
+                                    <div class="card-body">
+                                        <p class="fs-6 fw-bolder pb-2 " style="border-bottom: 1px solid #0000002d;">
+                                            <i class="fa-regular fa-file-lines ml-10 fs-5"></i>
+                                            معلومات التعديل
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="form-label">صاجب التعديل</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.TeamName">
+                                            </div>
+                                            <div class="col-md-4 mt-2">
+                                                <label class="form-label">طبيعة التعديل</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.AmendmentIntent">
+                                            </div>
+                                            <div class="col-md-4 mt-2">
+                                                <label class="form-label">رقم التعديل</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Number">
+                                            </div>
+                                            <div class="col-md-4 mt-2">
+                                                <label class="form-label">عنوان التعديل</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Title">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mt-2">
+                                    <div class="card-body">
+                                        <p class="fs-6 fw-bolder pb-2 " style="border-bottom: 1px solid #0000002d;">
+                                            <i class="fa-solid fa-check-to-slot ml-10 fs-5"></i>
+                                            نتيجة التصويت
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="form-label">الموافقون</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.InFavor">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label">المعارضون</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Against">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label">الممتنعون</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Neutral">
+                                            </div>
+                                            <div class="col-md-4 mt-2">
+                                                <label class="form-label">نتيجة التصويت</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Result">
+                                            </div>
+                                            <div class="col-md-8 mt-2">
+                                                <label class="form-label">ملاحظات</label>
+                                                <input type="text" class="form-control form-control-sm" value="@amendmentDetails?.Observation">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <p class="fs-6 fw-bolder pb-2 " style="border-bottom: 1px solid #0000002d;">
+                                    <i class="fa-regular fa-file-lines ml-10 fs-5"></i>
+                                    <span> نص الأصلي</span>
+                                    <button type="button" class="btn  position-absolute top-0" style="left: 16px;">
+                                        <img src="./images/printer.png" />
+                                    </button>
+                                </p>
+                                <RadzenHtmlEditor style="height: 35vh;" Value="@amendmentDetails?.OriginalContent" />
+                            </div>
+                        </div>
+
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <p class="fs-6 fw-bolder pb-2" style="border-bottom: 1px solid #0000002d;">
+                                    <i class="fa-solid fa-file-pen fs-5 ml-10"></i>
+                                    <span> نص التعديل</span>
+                                    <button type="button" class="btn  position-absolute top-0" style="left: 16px;">
+                                        <img src="./images/printer.png" />
+                                    </button>
+                                </p>
+                                <RadzenHtmlEditor style="height: 35vh;" Value="@amendmentDetails?.Content" />
+                            </div>
+                        </div>
+
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <p class="fs-6 fw-bolder pb-2" style="border-bottom: 1px solid #0000002d;">
+                                    <i class="fa-solid fa-pen fs-5 ml-10"></i>
+                                    <span>  تعليل</span>
+                                    <button type="button" class="btn  position-absolute top-0" style="left: 16px;">
+                                        <img src="./images/printer.png" />
+                                    </button>
+                                </p>
+                                <RadzenHtmlEditor style="height: 35vh;" Value="@amendmentDetails?.Justification" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <div class="w-100 text-center">
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10"></i> إخفاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qyvev+58a6sCaVvHCjsPV3GNu5HEwQIh+FRMlDQJvhM=",
+  "Source": "mef.db.plf.edition.api",
+  "BasePath": "_content/mef.db.plf.edition.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

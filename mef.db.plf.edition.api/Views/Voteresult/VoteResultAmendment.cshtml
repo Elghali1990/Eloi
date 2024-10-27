@@ -1,0 +1,117 @@
+﻿@model IEnumerable<E.Loi.DataAccess.Dtos.VoteAmendmentsTeam>
+
+@{
+    string GetVoteResult(string result) => result switch
+    {
+        "VALID" => "مقبول",
+        "REJECT" => "غير مقبول",
+        "PARTIAL" => "مقبول جزءيا",
+        "UNANIMOUS" => "بالإجماع",
+        "CONSENSUS" => "توافقي",
+        "SUPPRESSED" => "مسحوب",
+        _ => string.Empty
+    };
+}
+
+<style>
+    * {
+        vertical-align: middle;
+        text-align: center;
+        font-family: 'calibri' !important;
+        font-weight: bold !important;
+    }
+
+    p {
+        margin: 0 !important
+    }
+</style>
+
+@foreach (var model in Model)
+{
+
+    foreach (var teamLaw in model.TeamLaws)
+    {
+        <p>نتيجة التصويت على التعديلات المقدمة</p>
+        <p>@($"من طرف : {teamLaw.TeamName}")</p>
+        <p>@($"بخصوص : {teamLaw.LawName}")</p>
+        <div dir="rtl" style="margin: 10px;">
+            <table dir="rtl" border="1" style="width: 100%;border-collapse: collapse;">
+                <thead>
+                <th style="width: 10%;">رقم التعديل</th>
+                <th style="width: 50%;">المادة</th>
+                <th style="width: 30%;">
+                    <div>
+                        <p>التصويت </p>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="width: 33.33%;border-top: 1px solid #000;"> المعارضون </td>
+                                <td style="width: 33.33%;border-top: 1px solid #000;border-left: 1px solid #000;border-right: 1px solid #000;">
+                                    موافقون
+                                </td>
+                                <td style="width: 33.33%;border-top: 1px solid #000;"> ممتنعون</td>
+                            </tr>
+                        </table>
+                    </div>
+                </th>
+                <th style="width: 10%;">ملاحظات</th>
+                </thead>
+                <tbody>
+                    @foreach (E.Loi.DataAccess.Dtos.VoteResultDto vote in model.VoteResult)
+                    {
+                        <tr>
+                            @if (vote.Result == "UNANIMOUS" || vote.Result == "SUPPRESSED")
+                            {
+                                <td>@vote.Number</td>
+                                <td>
+                                    <p>@vote.ParentNode.Parent</p>
+                                    <p>@vote.ParentNode.Child</p>
+                                    <p>@vote.NodeLabel</p>
+                                </td>
+                                <td>
+                                    @GetVoteResult(vote.Result)
+                                </td>
+                                <td>
+                                    @vote.Observation
+                                </td>
+                            }
+                            else
+                            {
+                                <td>@vote.Number</td>
+                                <td>
+                                    <p>@vote.ParentNode.Parent</p>
+                                    <p>@vote.ParentNode.Child</p>
+                                    <p>@(vote.NodeLabel.Contains("مادة وظيفية") ? vote.NodeLabel.Replace("مادة وظيفية","فصل") : vote.NodeLabel)</p>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="width: 100%; border-collapse: collapse;">
+                                            <tr>
+                                                <td style="width: 33.33%;">
+                                                    @vote.Against
+                                                </td>
+                                                <td style="border-right: 1px solid #000;border-left: 1px solid #000;">
+                                                    @vote.InFavor
+                                                </td>
+                                                <td style="width: 33.33%;">
+                                                    @vote.Neutral
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    @vote.Observation
+                                </td>
+                            }
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    <br/>
+    <br/>
+    <br/>
+}
+

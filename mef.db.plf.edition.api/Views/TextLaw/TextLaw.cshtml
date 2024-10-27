@@ -1,0 +1,18 @@
+﻿@using E.Loi.DataAccess.Vm.Node
+@model FlatNode
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    * {
+        font-family: "Almarai", sans-serif;
+    }
+</style>
+<div style="direction: rtl;text-align: right; margin: 5px 20px;">
+    <p style="font-size: 20px;font-weight: 600;">
+        @Model.Label
+    </p>
+    <p style="font-size: 18px;">@Model.Content</p>
+</div>
+

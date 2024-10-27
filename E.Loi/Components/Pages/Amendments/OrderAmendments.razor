@@ -1,0 +1,182 @@
+﻿@page "/order-amendments/{LawId}/{PhaseId}"
+@inject ILogger<OrderAmendments> _logger
+
+
+  <div class="container-fluid">
+<PageTitle>ترتيب التعديلات</PageTitle>
+
+
+@if (IsLoad)
+{
+    <div class="w-25 top-50 position-fixed" style="right:40%">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="mt-3">
+        <UnderMenu pageName="ترتيب التعديلات" />
+    </div>
+
+    <hr style="margin-bottom:0 !important" />
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                @if (IsLoadAmendments)
+                {
+                   <div class="position-relative" style="height:100vh">
+                       <div class="position-absolute top-50 w-100">
+                            <Loading />
+                       </div>
+                    </div>
+                }else{
+          
+                    @if (amendmentsListVms !=null &&amendmentsListVms.Length > 0)
+                    {
+                   
+                        <div class="card mt-2">
+                            <p class="card-header fs-6">لائحة التعديلات</p>
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width:150px !important;vertical-align:middle">اجراءات</th>
+                                            <th scope="col" style="vertical-align:middle">رقم النظام</th>
+                                            <th scope="col">رقم الفريق</th>
+                                            <th scope="col" style="vertical-align:middle">رقم الترتيبي</th>
+                                            <th scope="col" style="vertical-align:middle">عنوان المادة</th>
+                                            <th scope="col" style="vertical-align:middle">موضوع التعديل</th>
+                                            <th scope="col" style="vertical-align:middle">النوع</th>
+                                            <th scope="col" style="vertical-align:middle">حالة التعديل	</th>
+                                            <th scope="col" style="vertical-align:middle"> صاحب التعديل</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var amendment in amendmentsListVms)
+                                        {
+                                            <tr>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+
+                                                    <button type="button" class="btn btn-outline-primary ml-10"  onclick="@(()=>ShowModal(amendment.Order))">
+                                                       <i class="fa-solid fa-sort text-primary"></i>
+                                                    </button>
+
+                                                    @if(loupCounter>0){                                                      
+                                                    <button type="button" class="btn btn-outline-success ml-10" @onclick="_=>DecreseOrder(amendment.Id)"><i class="fa-solid fa-arrow-up-long"></i></button>
+                                                    }
+                                                    @if(loupCounter < (amendmentsListVms.Length -1)){                                                        
+                                                    <button type="button" class="btn btn-outline-danger" @onclick="_=>IncreseOrder(amendment.Id)"><i class="fa-solid fa-arrow-down"></i></button>
+                                                    }
+                                                    
+                                                </td>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-info">@amendment.NumberSystem</span>
+                                                </td>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-warning">@amendment.Number</span>
+                                                </td>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    <input class="form-control" disabled value="@amendment.Order" style="width:80px !important"/>
+                                                </td>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                   <span>@amendment.ParentNodeTitle</span>
+                                                   <span>-</span>
+                                                   <span> @amendment.NodeTitle</span>
+                                                </td>
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    @amendment.Title
+                                                </td >
+                                                <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    @amendment.AmendmentIntent
+                                                </td style="vertical-align:middle;">
+                                                <td style="vertical-align:middle ; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                    <span style="color: #fff !important;font-size: 12px; font-weight: normal;" class="badge text-bg-danger"> @amendment.AmendmentsStatus</span>
+                                                </td>
+                                                <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                                    @amendment.Team
+                                                </td>
+                                                <td>
+                                                      <button type="button" class="btn btn-outline-primary btn-sm"  @onclick="_=>handleGetAmendmentDetails(amendment.Id)"><i class="fa-solid fa-share ml-10"></i> تفاصيل التعديل</button>
+                                                </td>
+                                            </tr>
+                                            loupCounter++;
+                                        }
+                                    </tbody>
+                                </table>            
+                                <nav aria-label="Page navigation example" style="margin-top: -10px;margin-bottom: -25px;">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                 <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        @for (int i = 1; i <= TotaleRows; i++)
+                                        {
+                                             <li class="page-item">
+                                                 <a class="page-link" href="#">@i</a>
+                                             </li>
+                                        }
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                              <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>                      
+                            </div>
+                            <div class="card-footer bg-transparent">
+                         <div class="">
+                                <button type="button" class="btn btn-success" @onclick="@(() =>HandleSetOrdersAmendments())">
+                                    <i class="fa-solid fa-check fs-6 ml-10"></i> ترتيب التعديلات
+                                        @if (IsProcessing)
+                                        {
+                                             <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                    <span class="visually-hidden" role="status">Loading...</span>
+                                        }
+                                    </button>
+                            </div>
+                            </div>                         
+                        </div>                  
+                    }else{
+                        
+                    <div class="">
+                        <p class="p-2 m-0 mt-2 border border-danger">
+                            <i class="fa-solid fa-exclamation text-danger" style="font-size:20px;margin-left:10px"></i>
+                            <span class="text-danger">لا توجد أي  تعديلات بخصوص هذه العقدة</span>
+                        </p>
+                    </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}
+</div>
+<br/>
+<br/>
+<br/>
+
+
+<div class="modal fade" id="ModalOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">إدخال رقم الترتيبي</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <input class="form-control form-control-sm" type="number" @bind="newOrder" placeholder="رقم الترتيبي" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-5"></i> إخفاء</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="@(()=>setAmendmentOrder())"><i class="fa-solid fa-check ml-5"></i> حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<AmendmentDetail AmdId="amendmentId"/>

@@ -1,0 +1,325 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = mef.db.plf.edition.api
+build_property.RootNamespace = mef.db.plf.edition.api
+build_property.ProjectDir = D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/amendments/AmendmentVoteResultTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcYW1lbmRtZW50c1xBbWVuZG1lbnRWb3RlUmVzdWx0VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/amendments/GroupeTemplateDBH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcYW1lbmRtZW50c1xHcm91cGVUZW1wbGF0ZURCSC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/amendments/SuiviAmendmentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcYW1lbmRtZW50c1xTdWl2aUFtZW5kbWVudFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/amendments/VoteAmendmentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcYW1lbmRtZW50c1xWb3RlQW1lbmRtZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/AnnexeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcQW5uZXhlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcQXJ0aWNsZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/ChapitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcQ2hhcGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/content/ContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcY29udGVudFxDb250ZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcR2xvYmFsVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/GroupeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcR3JvdXBlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxBcnRpY2xlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/ContentOriginalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxDb250ZW50T3JpZ2luYWxUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/ContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxDb250ZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/GlobalContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxHbG9iYWxDb250ZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxHbG9iYWxUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/NotePresentationTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxOb3RlUHJlc2VudGF0aW9uVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/ParentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxQYXJlbnRUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/node/TitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcbm9kZVxUaXRyZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/PartieTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcUGFydGllVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/db/PresentationArticleMinistreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkYlxQcmVzZW50YXRpb25BcnRpY2xlTWluaXN0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/db/PresentationArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkYlxQcmVzZW50YXRpb25BcnRpY2xlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/douane/PresentationArticleDouaneTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkb3VhbmVcUHJlc2VudGF0aW9uQXJ0aWNsZURvdWFuZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/douane/PresentationArticleMetierDouaneTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkb3VhbmVcUHJlc2VudGF0aW9uQXJ0aWNsZU1ldGllckRvdWFuZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/douane/PresentationArticleMetierMinistreDouaneTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkb3VhbmVcUHJlc2VudGF0aW9uQXJ0aWNsZU1ldGllck1pbmlzdHJlRG91YW5lVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/douane/PresentationArticleMinistreDouaneTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkb3VhbmVcUHJlc2VudGF0aW9uQXJ0aWNsZU1pbmlzdHJlRG91YW5lVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/douane/PresentationDouaneIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxkb3VhbmVcUHJlc2VudGF0aW9uRG91YW5lSW50ZXJjYWxsYWlyZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/impot/PresentationArticleImpotTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxpbXBvdFxQcmVzZW50YXRpb25BcnRpY2xlSW1wb3RUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/impot/PresentationArticleMinistreImpotTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxpbXBvdFxQcmVzZW50YXRpb25BcnRpY2xlTWluaXN0cmVJbXBvdFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/presentationArticle/impot/PresentationImpotIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccHJlc2VudGF0aW9uQXJ0aWNsZVxpbXBvdFxQcmVzZW50YXRpb25JbXBvdEludGVyY2FsbGFpcmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/ProjetLoiTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcUHJvamV0TG9pVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/referencelaw/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccmVmZXJlbmNlbGF3XEFydGljbGVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/referencelaw/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccmVmZXJlbmNlbGF3XEdsb2JhbFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/referencelaw/ParentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJccmVmZXJlbmNlbGF3XFBhcmVudFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/TableTarificationTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcVGFibGVUYXJpZmljYXRpb25UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/TitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcVGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/votePlenier/PageVotePlenierWithTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVBsZW5pZXJcUGFnZVZvdGVQbGVuaWVyV2l0aFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/votePlenier/PageVotePlenierWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVBsZW5pZXJcUGFnZVZvdGVQbGVuaWVyV09UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/votePlenier/PlenierPresentationIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVBsZW5pZXJcUGxlbmllclByZXNlbnRhdGlvbkludGVyY2FsbGFpcmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/votePlenier/VotePlenierHeaderIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVBsZW5pZXJcVm90ZVBsZW5pZXJIZWFkZXJJbnRlcmNhbGxhaXJlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/votePlenier/VotePlenierSubHeaderIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVBsZW5pZXJcVm90ZVBsZW5pZXJTdWJIZWFkZXJJbnRlcmNhbGxhaXJlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/FooterCommissionDBTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXEZvb3RlckNvbW1pc3Npb25EQlRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/FooterCommissionDBWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXEZvb3RlckNvbW1pc3Npb25EQldPVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/HeaderTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXEhlYWRlclRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/HeaderWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXEhlYWRlcldPVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/VoteCommissionDBIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXFZvdGVDb21taXNzaW9uREJJbnRlcmNhbGxhaXJlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/VoteCommissionDBMinistreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXFZvdGVDb21taXNzaW9uREJNaW5pc3RyZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/VoteCommissionDBMinistreWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXFZvdGVDb21taXNzaW9uREJNaW5pc3RyZVdPVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/2eme/VoteCommissionDBTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVwyZW1lXFZvdGVDb21taXNzaW9uREJUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/FooterCommissionDBTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxGb290ZXJDb21taXNzaW9uREJUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/FooterCommissionDBWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxGb290ZXJDb21taXNzaW9uREJXT1RlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/HeaderTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxIZWFkZXJUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/HeaderWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxIZWFkZXJXT1RlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/VoteCommissionDBIntercallaireTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxWb3RlQ29tbWlzc2lvbkRCSW50ZXJjYWxsYWlyZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/VoteCommissionDBMinistreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxWb3RlQ29tbWlzc2lvbkRCTWluaXN0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/VoteCommissionDBMinistreWOTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxWb3RlQ29tbWlzc2lvbkRCTWluaXN0cmVXT1RlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/ar/vote/VoteCommissionDBTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXJcdm90ZVxWb3RlQ29tbWlzc2lvbkRCVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/amendments/CommissionTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcYW1lbmRtZW50c1xDb21taXNzaW9uVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/amendments/GroupeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcYW1lbmRtZW50c1xHcm91cGVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/AnnexeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcQW5uZXhlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcQXJ0aWNsZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/ChapitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcQ2hhcGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/content/ContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcY29udGVudFxDb250ZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcR2xvYmFsVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/GroupeTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcR3JvdXBlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/node/ContentOriginalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcbm9kZVxDb250ZW50T3JpZ2luYWxUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/node/ContentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcbm9kZVxDb250ZW50VGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/node/NotePresentationTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcbm9kZVxOb3RlUHJlc2VudGF0aW9uVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/node/TitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcbm9kZVxUaXRyZVRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/PartieTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcUGFydGllVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/presentationArticle/db/PresentationArticleMinistreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJccHJlc2VudGF0aW9uQXJ0aWNsZVxkYlxQcmVzZW50YXRpb25BcnRpY2xlTWluaXN0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/presentationArticle/db/PresentationArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJccHJlc2VudGF0aW9uQXJ0aWNsZVxkYlxQcmVzZW50YXRpb25BcnRpY2xlVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/ProjetLoiTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcUHJvamV0TG9pVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/referencelaw/ArticleTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJccmVmZXJlbmNlbGF3XEFydGljbGVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/referencelaw/GlobalTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJccmVmZXJlbmNlbGF3XEdsb2JhbFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/referencelaw/ParentTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJccmVmZXJlbmNlbGF3XFBhcmVudFRlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/TableTarificationTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcVGFibGVUYXJpZmljYXRpb25UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2022-2023/Projets développements/PLF/plf-02-11-2022/plfbackend/mef.db.plf.edition.api/Views/fr/TitreTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZnJcVGl0cmVUZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

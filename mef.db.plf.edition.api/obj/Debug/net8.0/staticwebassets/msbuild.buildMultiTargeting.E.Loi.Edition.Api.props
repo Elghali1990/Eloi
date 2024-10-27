@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\E.Loi.Edition.Api.props" />
+</Project>

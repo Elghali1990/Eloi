@@ -1,0 +1,188 @@
+﻿@page "/edit-law/{Id}"
+@inject ILogger<EditLaw> _logger
+@inject IToastService toastService
+
+
+<PageTitle>
+   تصفح محتوى النص
+</PageTitle>
+
+@if (IsLoad)
+{
+    <div class="" style="">
+        <div class="w-25" style="margin: 25% auto 0;">
+            <Loading />
+        </div>
+    </div>
+}
+else
+{
+    <div class="" style="border-bottom: 1px solid #cbf3f0;margin-bottom: -5px;margin-top:10px">
+        <p style="display: inline-block;margin-bottom: 0;padding: 10px 20px;font-size: 13px; font-weight: 500;background: #f8f9fa">
+            @if (!showLawAction)
+            {
+                <span>إدخال محتوى النص</span>
+            }
+            else
+            {
+                <span>تصفح محتوى النص</span>
+            }
+        </p>
+    </div>
+
+
+    @if (nodes.Count > 0)
+    {
+        <div class="row w-100">
+            <div class="col-md-4 mt-2">
+                <div class="card overflow-y-auto" style="height: 88.4vh !important;">
+                    <div class="card-header">
+                        النص القانوني
+                    </div>
+                    <div class="card-body">
+                        <ul class="tree-view list-unstyled">
+                            <EditLawTreeView nodes="@nodes"
+                                             OnAddNewNode="_=>AddNewNode(_)"
+                                             OnSelect="node=>SelectNode (node.Id)"
+                                             OnDeleteNode="_=>setIdNodeToDelete(_.Id,_.HasChildren)"
+                                             OnEditNode="_=>EditNodeContent(_)">
+                            </EditLawTreeView>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            @if (showBoxContent)
+            {
+                <div class="col-md-8 mt-3">
+                    <div class="overflow-y-auto" style="padding-left: 5px;height: 85vh !important;">
+                        <MapsNodeParent ParentsNode="parentsNode" />
+                        <span class="badge text-bg-warning" style="    font-size: 14px;font-weight: normal; padding: 5px 10px;">@nodeTypelabel</span>
+                        <div class="card mt-2 mb-4">
+                            <div class="card-header">
+                                معلومات العقدة
+                            </div>
+                            <div class="card-body">
+                                <div class="">
+                                    @if (hasTitle)
+                                    {
+                                        <p class="text-danger mb-0"><i class="fa-solid fa-circle ml-10" style="font-size: 5px !important;"></i>المرجو إدخال عنوان العقدة</p>
+                                    }
+                                    @if (hasContent)
+                                    {
+                                        <p class="text-danger"><i class="fa-solid fa-circle ml-10" style="font-size: 5px !important;"></i>المرجو إدخال محتوى العقدة</p>
+                                    }
+                                </div>
+                                <div class="row">
+                                    @if (!showLawAction){
+                                    <div class="col-md-3">
+                                        <label class="form-label">نوع العقدة</label>
+                                        <select class="form-select form-select-sm  sm mb-3" @onchange="@(_=>SelectNodeType(_))" style="line-height: 2" disabled="@isDisabel">
+                                            <option value="" selected>إختيار نوع العقدة</option>
+                                            @foreach (var nodeType in nodeTypes)
+                                            {
+                                                <option selected="@(TypeId==nodeType.Id)" value="@nodeType.Id">@nodeType.Label</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="col-md-9">
+
+                                        <label class="form-label">عنوان العقدة</label>
+                                        <input type="text" class="form-control" @bind-value="nodeTitle" />
+                                    </div>
+                                    }
+                                    <div class="col-md-12 mt-2">
+
+                                        <div class="d-flex justify-content-between">
+                                            <diV>
+                                                <label class="form-label">محتوى العقدة</label>
+                                            </diV>
+@*                                             <img src="../images/printer.png" class="img-print" />
+ *@                                        </div>
+                                        <RadzenHtmlEditor @bind-Value="nodeContent" style="height: 40vh;" />
+                                  
+                                    </div>
+                                @*     <div class="col-md-12">
+                                        <div class="form-check form-switch mb-2 mt-2">
+                                            <input class="form-check-input" @bind-value="haspresentation" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="height: 18px;width: 35px;">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault" style="margin-right:10px;font-size:16px">هل لديها تقديم</label>
+                                        </div>
+                                    </div> *@
+                                    @if (haspresentation)
+                                    {
+                                        <div class="col-md-12 mt-2">
+                                            <label class="form-label">تفديم العقدة</label>
+                                            <RadzenHtmlEditor @bind-Value="nodeContent" style="height: 40vh;" />
+                                        </div>
+                                    }
+                                    @if (!showLawAction) {
+                                        <div class="col-md-12 mt-2">
+                                            <button type="button" class="btn btn-danger btn-sm" @onclick="@(_=>HandleCancel())"><i class="fa-solid fa-xmark ml-10"></i> </button>
+                                            <button type="button" class="btn btn-primary btn-sm" @onclick="@(_=>HandleAddNewNode())">
+                                                <i class="fa-solid fa-check ml-10"></i> حفظ
+                                                @if (startProcessing)
+                                                {
+                                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                                    <span class="visually-hidden" role="status">Loading...</span>
+                                                }
+                                            </button>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
+
+
+
+
+
+<!-- Modal Confirm Delete Node -->
+<div class="modal fade" id="ModalConfirmDeleteNode" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center text-danger">
+                    <i class="fa-regular fa-circle-question fs-1"></i>
+                </p>
+                <p class="text-center text-danger fs-6">هل تريد حذف هذه العقدة .</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" style="font-size:12px"><i class="fa-solid fa-xmark ml-10"></i>إخفاء</button>
+                <button type="button" class="btn btn-primary btn-sm" style="font-size:12px" @onclick="@(()=>DeleteNode())">
+                    <i class="fa-solid fa-trash ml-10"></i>
+                    حذف
+                    @if (startProcessing)
+                    {
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span class="visually-hidden" role="status">Loading...</span>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Node Has Childrens -->
+<div class="modal fade" id="ModalNodeHasChildrens" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center text-danger">
+                    <i class="fa-regular fa-circle-question fs-1"></i>
+                </p>
+                <p class="text-center text-danger fs-6">لا يمكن حذف هذه العقدة لأنها تحتوي على عقد فرعية</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" style="font-size:12px"><i class="fa-solid fa-xmark ml-10"></i>إخفاء</button>
+            </div>
+        </div>
+    </div>
+</div>
+

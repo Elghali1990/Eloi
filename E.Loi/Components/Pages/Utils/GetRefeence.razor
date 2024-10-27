@@ -1,0 +1,59 @@
+﻿@inject ILogger<GetRefeence> _logger
+<div class="modal fade" id="ModalRefLaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable  modal-xl">
+        <div class="modal-content" style="max-height:90vh !important">
+            <div class="modal-header">
+                <p style="margin-bottom: 0;color:#000;font-size: 22px;">@RefLawLabel</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-hidden" style=" height:80vh">
+                @if (nodes.Count == 0)
+                {
+                    <div class="position-relative" style="">
+                        <div class="w-25" style="margin: 5% auto 0;">
+                            <Loading />
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p style="margin-bottom: 0;">@RefLawLabel</p>
+                                    </div>
+                                    <div class="card-body" style="height: 72vh !important; overflow-y: auto !important;">
+
+                                        <ul class="tree-view list-unstyled">
+                                            <ReferenceLaw nodes="@nodes"
+                                                          OnSelect="item => getNodeContent(item.Id)"></ReferenceLaw>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card">
+                                    <div class="card-header">
+                                        محتوى العقدة
+                                    </div>
+                                    <div class="card-body">
+                                        <RadzenHtmlEditor @bind-Value="NodeRefContent" style="height: 66vh;" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer ">
+                <div class="w-100 text-center">
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10 fs-6"></i> إخفاء</button>
+                    <button type="button" class="btn btn-primary btn-sm" @onclick="SetTextOriginal"><i class="fa-solid fa-check fs-6 ml-10"></i> حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

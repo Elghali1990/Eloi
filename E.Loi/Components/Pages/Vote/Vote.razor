@@ -1,0 +1,128 @@
+﻿@page "/vote/Law/{Id}"
+@inherits BaseComponent
+@inject ILogger<Vote> _logger
+
+@if (!IsLoad)
+{
+    <div class="w-25 m-auto" style="margin-top:25% !important">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="mt-3">
+        <Phases PhaseIds="@PhaseLawIds" EventTogglePhase="_=>ChangePhaseLaw(_)" />
+    </div>
+    <div class="container-fluid">
+        @if (nodes.Count != 0)
+        {
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <div class="card overflow-y-auto" style="margin-left:5px !important;height:85vh !important">
+                        <div class="card-header">
+                            مشروع القانون
+                        </div>
+                        <div class="card-body ">
+                            <ul class="tree-view list-unstyled">
+                                <TreeView Items="@nodes"
+                                          OnSelect="_=>setRoles()"
+                                          handleEventViewNodeContent="node=>getNodeContent(node.Id)"
+                                          handlePrintNodeContent="node =>printNodeContent(node.Id)"
+                                          handleEventAddAmendment="node=>{stateContainerService.state!.HasRightvoteAmendment = true;}"
+                                          handleEventDisplayAmendmentList="node=>DisplayAmendmentList(node.Id)"
+                                          handleEventAddAmendmentConsensus="node=>{}"
+                                          handleEventAddAmendmentHarmonization="node=>{}"
+                                          handleVoteNode="value=>ToggleBoxVote(value)">
+                                </TreeView>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="overflow-y-auto" style="height: 85vh !important;">
+
+                        @if (isPrint)
+                        {
+                            <div class="w-25 m-auto" style="margin-top:25% !important">
+                                <Loading />
+                            </div>
+                        }
+
+                        @if (stateContainerService.state!.ShowViewNodeContent)
+                        {
+                            <NodeContent content="@nodeContent" NodeId="@IdNode" />
+                        }
+                        @if (ShowVoteAmendments)
+                        {
+                            <VoteAmendmentsList NodeId="@IdNode"
+                                                PhaseId="Guid.Parse(PhaseLawId)"
+                                                onVoteAmendment="_=>UpdatedAmendmentsVoteResult(_)"
+                                                onDeleteVoteAmendment="_=>UpdatedAmendmentsAfterDeleteVote(_)" />
+                        }
+                        @if (ShowVoteNodes)
+                        {
+                            @if (LoadNodes)
+                            {
+                                <div class="w-25 m-auto" style="margin-top:25% !important">
+                                    <Loading />
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="fa-solid fa-layer-group ml-10 fs-6"></i>
+                                        <span class="fs-6">تصويت على المواد</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-2">
+                                            @if (stateContainerService.state!.HasRightvoteAmendment)
+                                            {
+                                                <button type="button" class="btn btn-light btn-sm" onclick="@(()=>ShowModelVote())"><i class="fa-solid fa-hand ml-10"></i>التصويت</button>
+                                                <Popconfirm Title="هل تريد  التصويت" OkText="نعم" OnConfirm="()=>DeleteVoteAsync()" CancelText="لا">
+                                                    <button type="button" class="btn btn-light btn-sm"><Icon Type="close" Theme="outline" /> إلغاء التصويت </button>
+                                                </Popconfirm>
+                                            }
+                                            <button type="button" class="btn btn-light btn-sm"><i class="fa-regular fa-file-pdf"></i> تحميل نتائج التصويت بصيغة PDF</button>
+                                            <button type="button" class="btn btn-light btn-sm"><i class="fa-regular fa-file-word"></i> تحميل تحميل نتائج التصويت بصيغة WORD</button>
+                                        </div>
+                                        <div>
+                                            <Table @ref="table"
+                                                   TItem="NodeVoteVm"
+                                                   DataSource="@nodeVoteVms"
+                                                   Total="_total"
+                                                   @bind-PageIndex="_pageIndex"
+                                                   @bind-PageSize="_pageSize"
+                                                   @bind-SelectedRows="selectedNode"
+                                                   Size="TableSize.Small"
+                                                   RowKey="x=>x.Id">
+                                                <Selection Key="@(context.Id.ToString())" />
+                                                <PropertyColumn Title="عنوان المادة" Property="c=>c.Label" Sortable />
+                                                <PropertyColumn Title="الموافقون" Property="c=>c.InFavor" Sortable />
+                                                <PropertyColumn Title="المعارضون" Property="c=>c.Against" Sortable />
+                                                <PropertyColumn Title="الممتنعون" Property="c=>c.Neutral" Sortable />
+                                                <ActionColumn Title="نتيجة التصويت" style="width:120px !important">
+                                                    <Space>
+                                                        <span style="color: #fff !important;font-size: 12px; font-weight: normal;" class="badge @(@context.Result =="مقبول" || @context.Result =="بالإجماع"?"text-bg-success":"text-bg-danger")">@context.Result</span>
+                                                    </Space>
+                                                </ActionColumn>
+                                                <PropertyColumn Title="تاريخ التصويت" Property="c=>c.VoteDate" Sortable />
+                                            </Table>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<EnterVote VoteAmendment="false"
+           VoteNode="true"
+           OnVote="_=>UpdatingDataAfterVote(_)"
+           Ids="selectedNode.Select(n=>n.Id).ToList()" />

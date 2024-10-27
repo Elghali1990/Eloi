@@ -1,0 +1,28 @@
+﻿
+<div class="card mb-2">
+    <div class="card-body" style="padding-bottom:0 !important">
+
+        @if (ParentsNode.Count > 1)
+        {
+            <p class="fs-5 m-0 text-danger">@ParentsNode.Last().Label</p>
+        }
+        <ul class="list-unstyled">
+            @foreach (var parent in ParentsNode)
+            {
+                <li style="margin-right: @(counter >0 ?10*2*counter:0)px">@parent.Label</li>
+                counter++;
+            }
+       </ul>
+    </div>
+</div>
+
+@code {
+    int counter = 0;
+    [Parameter] public List<FlatNode> ParentsNode { get; set; } = new();
+
+    protected override void OnParametersSet()
+    {
+        counter = 0;
+        base.OnParametersSet();
+    }
+}

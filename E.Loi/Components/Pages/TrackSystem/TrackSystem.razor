@@ -1,0 +1,94 @@
+﻿@page "/track-system"
+@inject ILogger<TrackSystem> _logger
+<div class="container-fluid">
+    <UnderMenu pageName="تتبع النظام" />
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h6>لائحة النصوص القانونية</h6>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="">
+                        <select class="form-select" aria-label="Default select example" @onchange="@((ChangeEventArgs e)=>selectedLaw(e))">
+                            <option value="" selected>إختيار النص</option>
+                            @foreach (var law in laws)
+                            {
+                                <option value="@law.Id">@law.Label</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mt-2">
+                        <select class="form-select" aria-label="Default select example" @onchange="@((ChangeEventArgs e)=>setPhaseId(e))">
+                            <option value="" selected>إختيار المرحلة</option>
+                            @foreach (var phase in phases)
+                            {
+                                <option value="@phase.Id">@phase.Label</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary btn-sm ml-10 px-3" style="height: 50px;line-height: 3;" @onclick="@(()=>counteAmendmentsByTeam())">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-sm px-3" style="height: 50px;line-height: 3;">
+                        <i class="fa-solid fa-retweet"></i>
+                    </button>
+                </div>
+                <div class="col-md-12">
+
+                    @if (amendments.Count > 0)
+                    {
+                        <hr />
+                        <span class="badge text-bg-primary fs-6">عدد الإجمالي لتعديلات :  @amendments.Sum(am => am.Count)</span>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">الفريق </th>
+                                    <th scope="col">عدد التعديلات</th>
+                                    <th scope="col">تاريخ إحالة</th>
+                                    <th scope="col">تمت إحالة التعديلات من قِبل</th>
+                                    <th scope="col">تاريخ نشر التعديلات</th>
+                                    <th scope="col">تم نشر التعديلات من قِبَل</th>
+                                    <th scope="col"> تاريخ التصويت</th>
+                                    <th scope="col">تم التصويت من قبل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var amendment in amendments)
+                                {
+                                    <tr>
+                                        <td>@amendment.TeamName</td>
+                                        <td>@amendment.Count</td>
+                                        <td>
+                                            @(amendment.Count > 0 ? amendment.SubmitedDate : "-")
+                                        </td>
+                                        <td>
+                                            @(amendment.Count > 0 ? amendment.SubmitedBy : "-")
+                                        </td>
+                                        <td>@amendment.PuplishedDate</td>
+                                        <td>@amendment.PuplishedBy</td>
+                                        <td>@amendment.VotingDate</td>
+                                        <td>@amendment.VotingBy</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    @if (processing)
+    {
+        <div class="w-25 mt-3 m-auto">
+            <Loading />
+        </div>
+    }
+</div>
+
+

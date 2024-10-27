@@ -1,0 +1,118 @@
+﻿@inject ILogger<EditLawContent> _logger
+
+
+<div class="modal fade" id="ModaleEditLaw" tabindex="-1" aria-labelledby="ModaleEditLawLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-fullscreen  modal-dialog-scrollable">
+        <div class="modal-content" style="max-height:100vh !important">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModaleEditLawLabel">
+                    <i class="fa-solid fa-file-pen fs-5 ml-10"></i>تحيين الصيغة
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-hidden">
+
+                @if (isLoad)
+                {
+                    <div class="container-sm" style="height:85vh !important">
+                        <div class="w-25 top-50 position-fixed" style="right:40%">
+                            <Loading />
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" style="border-bottom: none; border-bottom-right-radius: 0;border-bottom-left-radius: 0;">
+                                    <div class="card-header">
+                                        <p style="margin-bottom: 0;">نص القانون</p>
+                                    </div>
+                                    <div class="card-body" style="height: 82vh !important; overflow-y: auto !important;">
+
+                                        <ul class="tree-view list-unstyled">
+                                            <ReferenceLaw nodes="@nodes"
+                                                          OnSelect="node =>getNodeAmendments(node)"></ReferenceLaw>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8" style="height: 85vh !important; overflow-y: auto !important;">
+                         @*        @if (isSuccess)
+                                {
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        @Constants.SuccessOperation
+                                        <button type="button" class="btn-close" @onclick="@(_=>HideAlert())" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                } *@
+                                @if (!IsLoadAmendments)
+                                {
+                                    <div class="w-25 top-50 position-fixed" style="right:55%">
+                                        <Loading />
+                                    </div>
+                                }
+                                else
+                                {
+                                    @if (IsContentLoaded)
+                                    {
+                                        <MapsNodeParent ParentsNode="parentsNode" />
+                                        <h6 class="count-Amendmentelement"> ورد في هذه العقدة<span class="text-danger mx-2">@(amendments?.Count)</span>تعديلات</h6>
+                                        <div class="card">
+                                            <div class="card-header fs-6">
+                                                النص الأصلي
+                                            </div>
+                                            <div class="card-body">
+                                                <RadzenHtmlEditor style="height: 35vh;" Value="@NodeContent" />
+                                            </div>
+                                        </div>
+                                    }
+                                    @if (amendments?.Count > 0)
+                                    {
+                                        <div class="card mt-2">
+                                            <div class="card-header fs-6">
+                                                نص التعديل
+                                            </div>
+                                            <div class="card-body">
+                                                @foreach (var amendment in amendments!)
+                                                {
+                                                    <div class="@(count>0 ? "mb-2" : string.Empty)">
+                                                        <label class="form-label fs-6 text-primary">صاحب التعديل : @amendment.Team</label>
+                                                        <RadzenHtmlEditor style="height: 35vh;" Value="@amendment.Content" />
+                                                    </div>
+                                                    count++;
+                                                }
+                                            </div>
+                                        </div>
+
+                                        <div class="card mt-2">
+                                            <div class="card-header fs-6">
+                                                تحيين   محتوى العقدة
+                                            </div>
+                                            <div class="card-body">
+                                                <RadzenHtmlEditor style="height: 35vh;" @bind-Value="NewContent" />
+                                                <button class="btn btn-sm btn-primary mt-2" @onclick="@(_=>SetAmendmentContent())">
+                                                    <i class="fa-solid fa-check ml-10"></i>
+                                                    حفظ الصيغة محينة
+                                                  @if(startProcessing){
+                                                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                                        <span class="visually-hidden" role="status">Loading...</span>
+                                                    }
+                                                </button>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                @* <div class="modal-footer ">
+                    <div class="w-100 text-center ">
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-10 fs-6"></i>إخفاء </button>
+                    </div>
+                </div> *@
+            </div>
+        </div>
+    </div>
+</div>

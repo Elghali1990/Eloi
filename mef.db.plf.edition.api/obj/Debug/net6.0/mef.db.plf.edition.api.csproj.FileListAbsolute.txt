@@ -1,0 +1,479 @@
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\LicenseAspose.cs
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.Development.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.exe
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.deps.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.runtimeconfig.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.BarCode.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Cells.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.PDF.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Castle.Core.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\SkiaSharp.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.AssemblyReference.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfoInputs.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfo.cs
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CoreCompileInputs.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cs
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cs
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\scopedcss\bundle\mef.db.plf.edition.api.styles.css
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CopyComplete
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\refint\mef.db.plf.edition.api.dll
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.genruntimeconfig.cache
+D:\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\ref\mef.db.plf.edition.api.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\LicenseAspose.cs
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.Development.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.exe
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.deps.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.runtimeconfig.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.BarCode.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Cells.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.PDF.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Castle.Core.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\SkiaSharp.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.AssemblyReference.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.GeneratedMSBuildEditorConfig.editorconfig
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfoInputs.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfo.cs
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CoreCompileInputs.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cs
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cs
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.mef.db.plf.edition.api.Microsoft.AspNetCore.StaticWebAssets.props
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.build.mef.db.plf.edition.api.props
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.mef.db.plf.edition.api.props
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.mef.db.plf.edition.api.props
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.pack.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.build.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.development.json
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\scopedcss\bundle\mef.db.plf.edition.api.styles.css
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CopyComplete
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\refint\mef.db.plf.edition.api.dll
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.genruntimeconfig.cache
+D:\2022-2023\Projets développements\PLF\plf-02-11-2022\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\ref\mef.db.plf.edition.api.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.Development.json
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.json
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\LicenseAspose.cs
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.exe
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.deps.json
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.runtimeconfig.json
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.pdb
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.BarCode.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Cells.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.PDF.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Castle.Core.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\SkiaSharp.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.dll
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.pdb
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.pdb
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.pdb
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.pdb
+C:\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.pdb
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.AssemblyReference.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfoInputs.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfo.cs
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CoreCompileInputs.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cs
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cs
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.build.json
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.development.json
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\scopedcss\bundle\mef.db.plf.edition.api.styles.css
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CopyComplete
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.dll
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\refint\mef.db.plf.edition.api.dll
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.pdb
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.genruntimeconfig.cache
+C:\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\ref\mef.db.plf.edition.api.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\License\LicenseAspose.cs
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.exe
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.deps.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.runtimeconfig.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.BarCode.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Cells.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.PDF.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\SkiaSharp.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.common.api.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.models.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.repositories.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.shared.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.AssemblyReference.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfoInputs.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfo.cs
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CoreCompileInputs.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.RazorAssemblyInfo.cs
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.sourcelink.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.mef.db.plf.edition.api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.build.mef.db.plf.edition.api.props
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.mef.db.plf.edition.api.props
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.mef.db.plf.edition.api.props
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\scopedcss\bundle\mef.db.plf.edition.api.styles.css
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CopyComplete
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\refint\mef.db.plf.edition.api.dll
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.pdb
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.genruntimeconfig.cache
+C:\Users\m.elghali\Desktop\plfbackend\mef.db.plf.edition.api\obj\Debug\net6.0\ref\mef.db.plf.edition.api.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.AssemblyReference.cache
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfoInputs.cache
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.AssemblyInfo.cs
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CoreCompileInputs.cache
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cs
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.MvcApplicationPartsAssemblyInfo.cache
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\refint\mef.db.plf.edition.api.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\License\Aspose.Total.NET.lic
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\License\LicenseAspose.cs
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.Development.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\appsettings.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.exe
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.deps.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.runtimeconfig.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.api.pdb
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.BarCode.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Cells.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.PDF.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Aspose.Words.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Castle.Core.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\SkiaSharp.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.dll
+D:\Loi\E.Loi\mef.db.plf.edition.api\bin\Debug\net6.0\mef.db.plf.edition.generation.pdb
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.build.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.development.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.mef.db.plf.edition.api.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.build.mef.db.plf.edition.api.props
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.mef.db.plf.edition.api.props
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.mef.db.plf.edition.api.props
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\scopedcss\bundle\mef.db.plf.edition.api.styles.css
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.csproj.CopyComplete
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\mef.db.plf.edition.api.genruntimeconfig.cache
+D:\Loi\E.Loi\mef.db.plf.edition.api\obj\Debug\net6.0\ref\mef.db.plf.edition.api.dll

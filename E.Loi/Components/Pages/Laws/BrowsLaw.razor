@@ -1,0 +1,97 @@
+﻿@inject ILogger<BrowsLaw> _logger
+<style>
+    ul li span {
+        color: #000 !important
+    }
+
+    .card {
+        border-radius: 0 !important
+    }
+</style>
+<div class="offcanvas offcanvas-start w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="canvasBrowsLaw" aria-labelledby="canvasBrowsLawLabel">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title text-danger fw-bolder" id="canvasBrowsLawLabel">@LawTitle</h6>
+        <button type="button" class="btn-close" onclick="@(()=>CloseCanvase())"></button>
+    </div>
+    <div class="offcanvas-body">
+        @if (isLoadToBrowse)
+        {
+            <div class="position-relative" style="">
+                <div class="w-25" style="margin: 20% auto 0;">
+                    <Loading />
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="mb-2" style="margin-left:-16px;margin-right:-16px">
+                <PhasesConsultation PhaseId="@IdPhase" EventTogglePhase="phase=>ChangePhaseLaw(phase)" />
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="card border-radius-0">
+                        <div class="card-header" style="background-color:#fff">
+                            <p style="margin-bottom: 0;">
+                                <i class="fa-regular fa-file-lines ml-10 fs-5"></i>
+                                <span>
+                                    النص القانوني
+                                </span>
+                            </p>
+                        </div>
+                        <div class="card-body" style="height: 81vh !important; overflow-y: auto !important;">
+
+                            <ul class="tree-view list-unstyled">
+                                <LawTreview nodes="nodes"
+                                            OnSelect="node => getNodeContent(node)"></LawTreview>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div style="height: 85vh !important; overflow-y: auto !important;">
+
+                        @if (DisplayBoxViewNodeContent)
+                        {
+                            <MapsNodeParent ParentsNode="parentsNode" />
+                            @if (IsPrintNodeContent)
+                            {
+                                <div class="col-md-12 mt-3">
+                                    <div class="position-relative" style="">
+                                        <div class="w-50" style="margin:auto;">
+                                            <Loading />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="card border-radius-0">
+                                <div class="card-header" style="background-color:#fff">
+                                    <i class="fa-solid fa-file-lines fs-5 ml-10"></i>
+                                    <span>محتوى العقدة</span>
+                                </div>
+                                <div class="card-body">
+                                    <RadzenHtmlEditor style="height: 55vh;" @bind-Value="@NodeContent" />
+                                    <br />
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12 mt-2">
+                                <button type="button" class="btn btn-light btn-sm" onclick="@(()=>PrintNodeContent())"><i class="fa-solid  fa-print ml-10 fs-6"></i> طباعة محتوى العقدة</button>
+                                @if (stateContainerService.user.Roles!.Any(role=>role.Name==_roleOptions.Value.UPDATE_NODE_CONTENT) && ShowBtnSetNewNodeContent)
+                                {
+                                    <Popconfirm Title="هل فعلاً تريد تحديث محتوى العقد؟" OkText="نعم" OnConfirm="()=>SetNewContent()" CancelText="لا">
+                                    <button type="button" class="btn btn-light btn-sm"><i class="fa-solid  fa-pen ml-10 fs-6"></i> تحيين محتوى العقدة</button>
+                                    </Popconfirm>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+

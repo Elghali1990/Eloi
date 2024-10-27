@@ -1,0 +1,146 @@
+﻿@page "/manage-teams"
+@inject ILogger<Teams> _logger
+
+    <div class="container-fluid">
+<UnderMenu pageName="تدبير الفرق"/>
+@if (IsLoad)
+{
+    <div class="w-25 m-auto" style="margin-top:20% !important;">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="mt-2">
+        <button type="button" class="btn btn-primary btn-sm" @onclick="@(()=>ShowModal())">
+            <i class="fa-solid fa-plus ml-10"></i>
+            إضافة فريق جديد
+        </button>
+    </div>
+    <div class="card mt-2">
+        <div class="card-header">
+            <i class="fa-solid fa-bars-progress ml-10 fs-5"></i>
+            <span class="fs-6">لائحة الفرق</span>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <span>الإسم</span>
+                            <div class="mt-1">
+                                    <input type="text" class="form-control form-control-sm" @oninput="@((e)=>FilterTeams(e,"Label"))" />
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <span>نوع</span>
+                            <div class="mt-1 w-50">
+                                <select class="form-select form-select-sm" @onchange="@((e)=>FilterTeams(e,"IsMajority"))">
+                                    <option value="" selected>إختر من القائمة</option>
+                                    <option value="الأغلبية">الأغلبية</option>
+                                    <option value="المعارضة">المعارضة</option>
+                                </select>
+                            </div>
+                        </th>
+                        <th scope="col">الترتيب</th>
+                        <th scope="col">الوزن</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var _team in _teams)
+                    {
+                        <tr>
+                            <td>@_team.Label</td>
+                            <td>@(_team.IsMajority ? "الأغلبية" : "المعارضة")</td>
+                            <td>@_team.Order</td>
+                            <td>@_team.Weight</td>
+                            <td>
+                                    <button type="button" class="btn btn-outline-success btn-sm" @onclick="@(_=>HandleGetTeamById(_team.Id))"><i class="fa-solid fa-pen ml-10"></i>تعديل </button>
+                                <Popconfirm Title="هل تريد حذف هذا المقترح " OkText="نعم" OnConfirm="()=>HandleDeleteTeam(_team.Id)" CancelText="لا">
+                                    <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can ml-10"></i>حذف </button>
+                                </Popconfirm>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav aria-label="Page navigation examplemb-5 mt-5" style="margin-top:10px">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @foreach (var p in pages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="javascript:;" @onclick="@(()=>paginate(p))">@p</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link" href="javascript:;" @onclick="@(()=>lastPage())" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ModalTeams" tabindex="-1" aria-labelledby="ModalTeamsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalTeamsLabel">
+                    <span>إضافة جديدة</span>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <EditForm Model="_team" FormName="addTeams" OnValidSubmit="EventAddOrEditTeam">
+                <div class="modal-body">
+                    <div>
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                    </div>
+                    <div class="mb-2 mt-2">
+                        <label for="exampleFormControlInput1" class="form-label">الإسم</label>
+                        <input type="text" class="form-control" @bind="_team.Label" />
+                    </div>
+                    <div class="mb-2 mt-2">
+                        <label for="exampleFormControlInput1" class="form-label">الترتيب</label>
+                        <input type="number" class="form-control" @bind="_team.Order" />
+                    </div>
+                    <div class="mb-2 mt-2">
+                        <label for="exampleFormControlInput1" class="form-label">الوزن</label>
+                        <input type="number" class="form-control" @bind="_team.Weight" />
+                    </div>
+                    <div class="mb-2 mt-2">
+                        <label for="exampleFormControlInput1" class="form-label">نوع :</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="weight" role="switch" @bind="IsMajority" @oninput="setMajority" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">ألأغلبية</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" name="weight" @bind="IsMinority" @oninput="setminority" id="flexSwitchCheckChecked">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">المعارضة</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-xmark ml-5"> إخفاء</i></button>
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-check ml-5"></i>تسجيل</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,262 @@
+﻿@page "/suivi-amendments/{Id}"
+@inject ILogger<SuiviAmendments> _logger
+@inherits BaseComponent
+
+@if (!IsLoad)
+{
+    <div class="w-25 m-auto" style="margin-top:20% !important;">
+        <Loading />
+    </div>
+}
+else
+{
+    <div class="mt-3">
+        <Phases PhaseIds="@PhaseIds" EventTogglePhase="phases=>ChangePhaseLaw(phases)" />
+    </div>
+    <div class="container-fluid">
+        @if (nodes.Count != 0)
+        {
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="card overflow-y-auto" style="height: 84.5vh !important;">
+                        <div class="card-header">
+                            مشروع القانون
+                        </div>
+                        <div class="card-body ">
+                            <ul class="tree-view list-unstyled">
+                                <TreeView Items="@nodes"
+                                          handlePrintNodeContent="node=>handlePrintNodeContent(node.Id)"
+                                          handleEventShowSubmitedAmendments="node=>handleShowSubmitedAmendments(node.Id)"
+                                          OnSelect="node => OnSelectNode()"
+                                          handleEventAddAmendment="node=>OnSelectNode()"
+                                          handleEventDisplayAmendmentList="node=>{IdNode=node.Id;stateContainerService.state!.ShowTeamAmendments = true;OnSelectNode();}"
+                                          handleEventViewNodeContent="node=>getNodeContent(node.Id)"
+                                          handleEventAddAmendmentConsensus="node=>handle_AddAmendment(node.Id)"
+                                          handleEventShowAmendmentsSupplementary="Node=>{}"
+                                          handleEventAddAmendmentHarmonization="node=>handle_AddAmendment(node.Id)"></TreeView>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 mt-3">
+
+                    @*  @if (stateContainerService.UserVm!.Roles!.Any(r => r.Name == _roleOptions.Value.MEMBER_COMMISSION || r.Name == _roleOptions.Value.MEMBER_SEANCE))
+            { *@
+
+                    @if (isPrint)
+                    {
+                        <div class="top-50 position-fixed" style="right:55%">
+                            <Loading />
+                        </div>
+                    }
+                    @if (stateContainerService.state!.ShowViewNodeContent)
+                    {
+                        <NodeContent content="@NodeContent" NodeId="@IdNode" />
+                    }
+                    @if (stateContainerService.state!.ShowAddAmendment)
+                    {
+                        <Amendments NodeId="@IdNode"
+                                    AmendmentId="@AmendmentId"
+                                    handleEventAddAmendment="@(_=>Console.WriteLine("amend Id =="+_))"
+                                    handleCancelAddAmendment="_=>stateContainerService.state!.ShowAddAmendment=false" />
+                    }
+                    @if (stateContainerService.state!.ShowViewListAmendments)
+                    {
+                        <AmendmentsList HandleEventEditAmendment="e=>EditAmendment(e.ToString())" amendmentId="@AmendmentId" NodeId="@IdNode" />
+                    }
+                    @if (stateContainerService.state.ShowSubmitedAmendments || stateContainerService.state.ShowAmendmentsSupplementary)
+                    {
+                        @if (isDownload)
+                        {
+                            <div class="w-25 m-auto" style="margin-top:20% !important;">
+                                <Loading />
+                            </div>
+                        }
+                        else
+                        {
+                            <div>
+                                <MapsNodeParent ParentsNode="parentsNode" />
+                            </div>
+
+                            <div class="overflow-y-auto" style="padding-left: 5px;height: 78vh !important;">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="fa-solid fa-people-carry-box fs-6 ml-10"></i>
+                                        <span class="fs-6"> لائحة التعديلات</span>
+                                    </div>
+                                    <div class="card-body">
+
+
+                                        @if (amendmentsListVms.Count > 0)
+                                        {
+                                            <div class=" mb-3" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-light btn-sm" @onclick="@(_=>PublishAmendments())"><i class="fa-solid fa-share-from-square ml-10"></i> نشر التعديلات</button>
+                                                <button type="button" class="btn btn-light btn-sm" @onclick="@(_=>Print_PDF())"><i class="fa-regular fa-file-pdf ml-10"></i> تحميل  بصيغة PDF</button>
+                                                <button type="button" class="btn btn-light btn-sm" @onclick="@(_=>Print_WORD())"><i class="fa-regular fa-file-word ml-10"></i> تحميل   بصيغة WORD</button>
+                                            </div>
+                                            @if (isPrint)
+                                            {
+                                                <div class="w-25 m-auto" style="right:50%">
+                                                    <Loading />
+                                                </div>
+                                            }
+                                            <hr />
+                                        }
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input class="form-check-input position-relative" style="width:15px;height:15px;top:-2px" type="checkbox" checked="@checkboxCheckAll" @onchange="CheckAllAmendments" />
+                                                    </th>
+                                                    <th>
+                                                        رقم النظام
+                                                        <div>
+                                                            <input type="number" class="form-control form-control-sm" placeholder="رقم النظام" @oninput="@((e)=>Filter(e,"NumberSystem"))" />
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div>
+                                                            رقم الفريق
+                                                        </div>
+                                                        <div>
+                                                            <input type="number" class="form-control form-control-sm" placeholder="رقم الفريق" @oninput="@((e)=>Filter(e,"Number"))" />
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div>
+                                                            رقم الترتيبي
+                                                        </div>
+                                                        <div>
+                                                            <input type="number" class="form-control form-control-sm" placeholder="رقم الترتيبي" @oninput="@((e)=>Filter(e,"Order"))" />
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        عنوان المادة
+                                                        <div>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="عنوان المادة" @oninput="@((e)=>Filter(e,"NodeTitle"))" />
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        موضوع التعديل
+                                                        <div>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="موضوع التعديل" @oninput="@((e)=>Filter(e,"Title"))" />
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        النوع
+                                                        <div>
+                                                            <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"AmendmentType"))">
+                                                                <option value="" selected> إختر من القائمة</option>
+                                                                <option value="تعديل">تعديل</option>
+                                                                <option value="إضافة">إضافة</option>
+                                                                <option value="حذف">حذف</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        حالة التعديل
+                                                        <div>
+                                                            <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"AmendmentsStatus"))">
+                                                                <option value="" selected> إختر من القائمة</option>
+                                                                <option value="مفتوح">مفتوح</option>
+                                                                <option value="مغلق">مغلق</option>
+                                                                <option value="محال">محال</option>
+                                                                <option value="عام">عام</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        صاحب التعديل
+                                                        <div>
+                                                            <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Team"))">
+                                                                <option value="" selected> إختر من القائمة</option>
+                                                                @foreach (var team in teams)
+                                                                {
+                                                                    <option value="@team.Label">@team.Label</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>تاريخ التعديل</th>
+                                                    <th>تاريخ الإحالة</th>
+                                                    <th scope="col" style="width:125px">اجراءات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if (amendmentsListVms!.Count > 0)
+                                                {
+
+                                                    @foreach (var amendment in amendmentsListVms)
+                                                    {
+                                                        <tr >
+                                                            <td>
+                                                                <input class="form-check-input" style="width:15px;height:15px;" type="checkbox" onchange="@((ChangeEventArgs e)=>CheckAmendment(e,amendment.Id))" checked="@checkAll" />
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-info">@amendment.NumberSystem</span>
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-warning">@amendment.Number</span>
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                <span style="color: #fff !important;font-size: 12px; font-weight: normal;padding-top: 7px" class="badge text-bg-success">@amendment.Order</span>
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                @amendment.NodeTitle
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                <span class="@((amendment.IsAmendementRattrape || amendment.IsAmendmentSession)?"badge text-bg-warning px-2 fs-12":"")"> @amendment.Title</span>
+                                                            </td>
+                                                            <td style="vertical-align:middle; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                @amendment.AmendmentIntent
+                                                            </td>
+                                                            <td style="vertical-align:middle ; @(amendment.IsOrderChanged?"background: #dff9fb;":"")">
+                                                                <span style="color: #fff !important;font-size: 12px; font-weight: normal;" class="badge text-bg-danger"> @amendment.AmendmentsStatus</span>
+                                                            </td>
+                                                            <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                                                @amendment.Team
+                                                            </td>
+                                                            <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                                                @amendment.CreationDate
+                                                            </td>
+                                                            <td style="vertical-align:middle;@(amendment.IsOrderChanged ?"background: #dff9fb;":"")">
+                                                                <span class="@(amendment.IsAmendementRattrape ?"badge text-bg-warning px-2 fs-12":"")"> @amendment.SubmitedDate</span>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn btn-light btn btn-sm mx-1" @onclick="@(()=>GetAmendmentDetails(amendment.Id))" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><Icon Type="edit" Theme="outline" /> تفاصيل</button>
+
+                                                                <button type="button" class="btn btn-light mt-1" @onclick="@(()=>handleReassignmentAmendment(amendment.Id,amendment.NodeId))">
+                                                                    نقل التعديل
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                        @if (amendmentsListVms!.Count == 0)
+                                        {
+                                            <p class="text-danger">
+                                                لا توجد أيت تعديلات
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<AmendmentDetail AmdId="AmendId" />
+<ReassignmentAmendment 
+    PhaseId="PhaseId" 
+    NodeId="IdNode" 
+    AmendmentId="AmendId" 
+    HandleEventChangeAmendmentNodeId="flag=>EventChangeAmendmentNodeId(flag)" />

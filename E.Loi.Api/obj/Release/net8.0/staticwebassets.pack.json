@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\AllPhases.json",
+      "PackagePath": "staticwebassets\\Data\\AllPhases.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\InitialPhases.json",
+      "PackagePath": "staticwebassets\\Data\\InitialPhases.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\Phase.json",
+      "PackagePath": "staticwebassets\\Data\\Phase.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\PhaseBureau.json",
+      "PackagePath": "staticwebassets\\Data\\PhaseBureau.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\PhasesCommission.json",
+      "PackagePath": "staticwebassets\\Data\\PhasesCommission.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\PhasesLegislation.json",
+      "PackagePath": "staticwebassets\\Data\\PhasesLegislation.json"
+    },
+    {
+      "Id": "D:\\PROJET_E_LOI\\Loi\\E.Loi\\E.Loi.Api\\wwwroot\\Data\\PhasesSession.json",
+      "PackagePath": "staticwebassets\\Data\\PhasesSession.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.E.Loi.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.E.Loi.Api.props",
+      "PackagePath": "build\\E.Loi.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.E.Loi.Api.props",
+      "PackagePath": "buildMultiTargeting\\E.Loi.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.E.Loi.Api.props",
+      "PackagePath": "buildTransitive\\E.Loi.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

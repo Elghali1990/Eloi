@@ -1,0 +1,164 @@
+﻿@page "/"
+@page "/space-teams"
+@inject ILogger<SpaceTeams> _logger
+<PageTitle>
+    النصوص القانونية قيد الدرس
+</PageTitle>
+<div class="container-fluid">
+    @if (IsLoad)
+    {
+        <div class="">
+            <UnderMenu pageName=" النصوص القانونية قيد الدرس" />
+        </div>
+   
+        <DownloadWord laws="_laws" />
+        <div class="card mt-2 mb-4">
+            <div class="card-body">
+              @*   <p class="fs-6" style="border-bottom:1px solid #0000002d;padding-bottom:10px;margin-bottom:0">
+                    لائحة النصوص القانونية قيد الدرس 
+                </p> *@
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align:middle;width:2%">
+                                ملفات النص
+                            </th>
+                            <th style="vertical-align:middle;width:34%">
+                                النصوص القانونية
+                                <div>
+                                    <input type="text" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Label"))" placeholder="كلمة المفتاح" />
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:7%">
+                                السنة
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Year"))" placeholder="بحث بالسنة" />
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:7%">
+                                رقم
+                                <div>
+                                    <input type="number" class="form-control form-control-sm" @oninput="@((e)=>Filter(e,"Number"))" placeholder="بحث بالرقم" />
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:7%">
+                                صاحب النص
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Team"))">
+                                        <option selected value="@string.Empty">بحث بالفريق</option>
+                                        @foreach (var team in teams)
+                                        {
+                                            <option value="@team.Label">@team.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:12%">
+                                اللجنة
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Commission"))">
+                                        <option selected value="@string.Empty">بحث باللجنة</option>
+                                        @foreach (var commission in commissions)
+                                        {
+                                            <option value="@commission.Label">@commission.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:12%">
+                                المرحلة
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Phase"))">
+                                        <option selected value="@string.Empty">بحث بالمرحلة</option>
+                                        @foreach (var _phase in _phases)
+                                        {
+                                            <option value="@_phase.Id">@_phase.Title</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th>
+                                وضعية النص
+                                <div>
+                                    <select class="form-select form-select-sm" @onchange="@((e)=>Filter(e,"Statu"))">
+                                        <option selected value="@string.Empty">بحث بالوضعية</option>
+                                        @foreach (var statut in status)
+                                        {
+                                            <option value="@statut.Label">@statut.Label</option>
+                                        }
+                                    </select>
+                                </div>
+                            </th>
+                            <th style="vertical-align:middle;width:7%">إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var law in laws!)
+                        {
+                            <tr>
+                                <th style="vertical-align:middle">
+                                    <button type="button" class="btn btn-light" @onclick="@(()=>ShowLawDocuments(law.Id))"><i class="fa-solid fa-folder-open text-warning"></i></button>
+                                </th>
+                                <td style="vertical-align:middle">@law.Label</td>
+                                <td style="vertical-align:middle">
+                                    <span>@law.Year</span>
+                                </td>
+                                <td style="vertical-align:middle">
+                                    <span>@law.Number</span>
+                                </td>
+                                <td>
+                                    @law.TeamName
+                                </td>
+                                <td style="vertical-align:middle">@law.CommissionName</td>
+                                <td style="vertical-align:middle">@law.PhaseName</td>
+                                <td style="vertical-align:middle">@law.StatuName</td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary btn-sm" @onclick="@(()=>_navigationManager.NavigateTo("/home-law-id/"+law.Id))">
+                                        <i class="fa-regular fa-copy fs-6 ml-10"></i>
+                                        التعديلات
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        @if (pages.Count > 0)
+        {
+            <nav aria-label="Page navigation examplemb-5" style="margin-top:-20px">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;" @onclick="@(()=>firstPage())" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    @foreach (int p in pages)
+                    {
+                        <li class="page-item">
+                            <a class="page-link @p" href="javascript:;" @onclick="_=>paginate(p)">@p</a>
+                        </li>
+                    }
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" href="javascript:;" @onclick="@(()=>lastPage())">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        }
+    }
+    else
+    {
+        <div class="w-25 top-50 position-fixed" style="right:40%">
+            <Loading />
+        </div>
+    }
+</div>
+<LawDocuments LawId="LawId" />

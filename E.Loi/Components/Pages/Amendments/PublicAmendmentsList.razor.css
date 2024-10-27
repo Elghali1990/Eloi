@@ -1,0 +1,12 @@
+﻿.pagination li a {
+    padding: 5px 10px !important;
+}
+
+input {
+    font-size: 12px !important
+}
+
+table thead tr th {
+    vertical-align: middle !important;
+    font-size: 11px
+}
